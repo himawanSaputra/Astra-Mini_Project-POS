@@ -50,6 +50,14 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\resources" />
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\service" />
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\model" />
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\dao" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -146,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574217592190</updated>
-      <workItem from="1574217595079" duration="8723000" />
+      <workItem from="1574217595079" duration="9238000" />
     </task>
     <servers />
   </component>
