@@ -17,10 +17,9 @@ public class TAdjustmentHistory {
     @Column(name = "status", length = 20, nullable = false)
     private String status;
 
-    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="created_by", referencedColumnName = "id")
-    private MstUser createdBy;
+    @Column(name="created_by")
+    private String createdBy;
 
-    @Column(name = "created_on", nullable = true)
+    @Column(name = "created_on")
     private Date createdOn;
 }

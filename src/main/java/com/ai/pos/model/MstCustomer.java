@@ -37,18 +37,16 @@ public class MstCustomer {
     @JoinColumn(name="district_id", referencedColumnName = "id")
     private MstDistrict mstDistrict;
 
-    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="created_by", referencedColumnName = "id")
-    private MstUser createdBy;
+    @Column(name="created_by")
+    private String createdBy;
 
-    @Column(name = "created_on", nullable = true)
+    @Column(name = "created_on")
     private Date createdOn;
 
-    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="modified_by", referencedColumnName = "id")
-    private MstUser modifiedBy;
+    @Column(name="modifiedBy")
+    private String modifiedBy;
 
-    @Column(name = "modified_on", nullable = true)
+    @Column(name = "modified_on")
     private Date modifiedOn;
 
     @Column(name = "active", nullable = false)
