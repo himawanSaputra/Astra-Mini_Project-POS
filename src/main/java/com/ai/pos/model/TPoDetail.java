@@ -10,9 +10,9 @@ public class TPoDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = TPo.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "po_id", referencedColumnName = "id")
-    private TPo tPo;
+//    @ManyToOne(targetEntity = TPo.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "po_id", referencedColumnName = "id")
+//    private TPo tPo;
 
     @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "variant_id", referencedColumnName = "id")

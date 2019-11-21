@@ -10,12 +10,12 @@ public class EmployeeOutlet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToMany(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="employee_id", referencedColumnName = "id")
-    private MstEmployee mstEmployee;
-
-    @ManyToMany(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="outlet_id", referencedColumnName = "id")
-    private MstOutlet mstOutlet;
+//    @ManyToMany(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name="employee_id", referencedColumnName = "id")
+//    private MstEmployee mstEmployee;
+//
+//    @ManyToMany(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name="outlet_id", referencedColumnName = "id")
+//    private MstOutlet mstOutlet;
 
 }

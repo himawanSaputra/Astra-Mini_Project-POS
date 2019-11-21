@@ -11,9 +11,9 @@ public class MstItemVariant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = MstItem.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "item_id", referencedColumnName = "id")
-    private MstItem mstItem;
+//    @ManyToOne(targetEntity = MstItem.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "item_id", referencedColumnName = "id")
+//    private MstItem mstItem;
 
     @Column(name = "name", nullable = false)
     private  String name;

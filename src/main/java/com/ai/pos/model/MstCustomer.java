@@ -25,17 +25,17 @@ public class MstCustomer {
     @Column(name = "address")
     private String address;
 
-    @ManyToOne(targetEntity = MstProvince.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="province_id", referencedColumnName = "id")
-    private MstProvince mstProvince;
-
-    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="region_id", referencedColumnName = "id")
-    private MstRegion mstRegion;
-
-    @ManyToOne(targetEntity = MstDistrict.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="district_id", referencedColumnName = "id")
-    private MstDistrict mstDistrict;
+//    @ManyToOne(targetEntity = MstProvince.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name="province_id", referencedColumnName = "id")
+//    private MstProvince mstProvince;
+//
+//    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name="region_id", referencedColumnName = "id")
+//    private MstRegion mstRegion;
+//
+//    @ManyToOne(targetEntity = MstDistrict.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name="district_id", referencedColumnName = "id")
+//    private MstDistrict mstDistrict;
 
     @Column(name="created_by")
     private String createdBy;

@@ -10,9 +10,9 @@ public class TAdjustment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="outlet_id", referencedColumnName = "id")
-    private  MstOutlet mstOutlet;
+//    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name="outlet_id", referencedColumnName = "id")
+//    private  MstOutlet mstOutlet;
 
     @Column(name = "notes", nullable = true, length = 255)
     private String notes;
