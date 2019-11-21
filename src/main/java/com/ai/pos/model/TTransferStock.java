@@ -36,4 +36,84 @@ public class TTransferStock {
 
     @Column(name = "modified_on")
     private Date modifiedOn;
+    @Column(name = "modified_by")
+    private String modifiedBy;
+
+    @Column(name = "modified_on")
+    private String modifiedOn;
+
+    public TTransferStock() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public MstOutlet getFromOutlet() {
+        return fromOutlet;
+    }
+
+    public void setFromOutlet(MstOutlet fromOutlet) {
+        this.fromOutlet = fromOutlet;
+    }
+
+    public MstOutlet getToOutlet() {
+        return toOutlet;
+    }
+
+    public void setToOutlet(MstOutlet toOutlet) {
+        this.toOutlet = toOutlet;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public Date getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
+    }
+
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
+
+    public String getModifiedOn() {
+        return modifiedOn;
+    }
+
+    public void setModifiedOn(String modifiedOn) {
+        this.modifiedOn = modifiedOn;
+    }
 }

@@ -9,6 +9,7 @@ public class MstSupplier {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
 
     @Column(name = "name", length = 50, nullable = false)
@@ -27,27 +28,27 @@ public class MstSupplier {
     @JoinColumn(name = "province_id", referencedColumnName = "id")
     private MstProvince mstProvince;
 
-//    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "region_id", referencedColumnName = "id")
-//    private MstRegion mstRegion;
-//
-//    @ManyToOne(targetEntity = MstDistrict.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "district_id", referencedColumnName = "id")
-//    private MstDistrict mstDistrict;
-//
-//    @Column(name = "postal_code", length = 50, nullable = true)
-//    private String postalCode;
-//
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name="created_by", referencedColumnName = "id")
-//    private MstUser createdBy;
+    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "region_id", referencedColumnName = "id")
+    private MstRegion mstRegion;
+
+    @ManyToOne(targetEntity = MstDistrict.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "district_id", referencedColumnName = "id")
+    private MstDistrict mstDistrict;
+
+    @Column(name = "postal_code", length = 50, nullable = true)
+    private String postalCode;
+
+    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
+    @JoinColumn(name="created_by", referencedColumnName = "id")
+    private MstUser createdBy;
 
     @Column(name = "created_on", nullable = true)
     private Date createdOn;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name="modified_by", referencedColumnName = "id")
-//    private MstUser modifiedBy;
+    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
+    @JoinColumn(name="modified_by", referencedColumnName = "id")
+    private MstUser modifiedBy;
 
     @Column(name = "modified_on", nullable = true)
     private Date modifiedOn;
@@ -103,37 +104,37 @@ public class MstSupplier {
         this.mstProvince = mstProvince;
     }
 
-//    public MstRegion getMstRegion() {
-//        return mstRegion;
-//    }
-//
-//    public void setMstRegion(MstRegion mstRegion) {
-//        this.mstRegion = mstRegion;
-//    }
-//
-//    public MstDistrict getMstDistrict() {
-//        return mstDistrict;
-//    }
-//
-//    public void setMstDistrict(MstDistrict mstDistrict) {
-//        this.mstDistrict = mstDistrict;
-//    }
-//
-//    public String getPostalCode() {
-//        return postalCode;
-//    }
-//
-//    public void setPostalCode(String postalCode) {
-//        this.postalCode = postalCode;
-//    }
+    public MstRegion getMstRegion() {
+        return mstRegion;
+    }
 
-//    public MstUser getCreatedBy() {
-//        return createdBy;
-//    }
-//
-//    public void setCreatedBy(MstUser createdBy) {
-//        this.createdBy = createdBy;
-//    }
+    public void setMstRegion(MstRegion mstRegion) {
+        this.mstRegion = mstRegion;
+    }
+
+    public MstDistrict getMstDistrict() {
+        return mstDistrict;
+    }
+
+    public void setMstDistrict(MstDistrict mstDistrict) {
+        this.mstDistrict = mstDistrict;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public MstUser getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(MstUser createdBy) {
+        this.createdBy = createdBy;
+    }
 
     public Date getCreatedOn() {
         return createdOn;
@@ -143,13 +144,13 @@ public class MstSupplier {
         this.createdOn = createdOn;
     }
 
-//    public MstUser getModifiedBy() {
-//        return modifiedBy;
-//    }
-//
-//    public void setModifiedBy(MstUser modifiedBy) {
-//        this.modifiedBy = modifiedBy;
-//    }
+    public MstUser getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public void setModifiedBy(MstUser modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
 
     public Date getModifiedOn() {
         return modifiedOn;
