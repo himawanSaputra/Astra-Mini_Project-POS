@@ -4,21 +4,19 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "pos_t_adjustment")
-public class TAdjustment {
+@Table(name = "pos_mst_district")
+public class MstDistrict {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="outlet_id", referencedColumnName = "id")
-    private  MstOutlet mstOutlet;
+    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
+    @JoinColumn(name="region_id", referencedColumnName = "id")
+    private  MstRegion mstRegion;
 
-    @Column(name = "notes", nullable = true, length = 255)
-    private String notes;
-
-    @Column(name = "status", nullable = false, length = 20)
-    private String status;
+    @Column(name = "name", length = 50, nullable = false)
+    private String name;
 
     @Column(name="created_by")
     private String createdBy;
@@ -31,4 +29,7 @@ public class TAdjustment {
 
     @Column(name = "modified_on")
     private Date modifiedOn;
+
+    @Column(name = "active", nullable = false)
+    private Boolean active;
 }

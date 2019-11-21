@@ -4,20 +4,25 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "pos_t_adjustment")
-public class TAdjustment {
+@Table(name = "pos_t_transfer_stock")
+public class TTransferStock {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="outlet_id", referencedColumnName = "id")
-    private  MstOutlet mstOutlet;
+    @JoinColumn(name="from_outlet", referencedColumnName = "id")
+    private  MstOutlet fromMstOutlet;
 
-    @Column(name = "notes", nullable = true, length = 255)
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @JoinColumn(name="to_outlet", referencedColumnName = "id")
+    private  MstOutlet toMstOutlet;
+
+    @Column(name = "notes")
     private String notes;
 
-    @Column(name = "status", nullable = false, length = 20)
+    @Column(name = "status", length = 20, nullable = false)
     private String status;
 
     @Column(name="created_by")
