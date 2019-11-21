@@ -14,8 +14,8 @@ public class EmployeeOutlet {
 //    @JoinColumn(name="employee_id", referencedColumnName = "id")
 //    private MstEmployee mstEmployee;
 
-    @ManyToMany(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="outlet_id", referencedColumnName = "id")
-    private MstOutlet mstOutlet;
+//    @ManyToMany(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name="outlet_id", referencedColumnName = "id")
+//    private MstOutlet mstOutlet;
 
 }
