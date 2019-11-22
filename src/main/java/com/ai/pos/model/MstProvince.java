@@ -14,18 +14,16 @@ public class MstProvince {
     @Column(name = "name", length = 50, nullable = false)
     private String name;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name="created_by", referencedColumnName = "id")
-//    private MstUser createdBy;
+    @Column(name = "created_by")
+    private String createdBy;
 
-    @Column(name = "created_on", nullable = true)
+    @Column(name = "created_on")
     private Date createdOn;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name="modified_by", referencedColumnName = "id")
-//    private MstUser modifiedBy;
+    @Column(name = "modified_by")
+    private String modifiedBy;
 
-    @Column(name = "modified_on", nullable = true)
+    @Column(name = "modified_on")
     private Date modifiedOn;
 
     @Column(name = "active", nullable = false)
@@ -47,13 +45,13 @@ public class MstProvince {
         this.name = name;
     }
 
-//    public MstUser getCreatedBy() {
-//        return createdBy;
-//    }
-//
-//    public void setCreatedBy(MstUser createdBy) {
-//        this.createdBy = createdBy;
-//    }
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
 
     public Date getCreatedOn() {
         return createdOn;
@@ -63,13 +61,13 @@ public class MstProvince {
         this.createdOn = createdOn;
     }
 
-//    public MstUser getModifiedBy() {
-//        return modifiedBy;
-//    }
-//
-//    public void setModifiedBy(MstUser modifiedBy) {
-//        this.modifiedBy = modifiedBy;
-//    }
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
 
     public Date getModifiedOn() {
         return modifiedOn;
@@ -87,16 +85,16 @@ public class MstProvince {
         this.active = active;
     }
 
-//    @Override
-//    public String toString() {
-//        return "MstProvince{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", createdBy=" + createdBy +
-//                ", createdOn=" + createdOn +
-//                ", modifiedBy=" + modifiedBy +
-//                ", modifiedOn=" + modifiedOn +
-//                ", active=" + active +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "MstProvince{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", createdBy='" + createdBy + '\'' +
+                ", createdOn=" + createdOn +
+                ", modifiedBy='" + modifiedBy + '\'' +
+                ", modifiedOn=" + modifiedOn +
+                ", active=" + active +
+                '}';
+    }
 }
