@@ -7,12 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstItemVariant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstItemVariant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TAdjustment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TAdjustment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TAdjustmentHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TAdjustmentHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPoDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPoDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-grid-min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-grid-min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-reboot-min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-reboot-min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap-bundle-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap-bundle-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap-bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap-bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/bootstrap/js/bootstrap.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
