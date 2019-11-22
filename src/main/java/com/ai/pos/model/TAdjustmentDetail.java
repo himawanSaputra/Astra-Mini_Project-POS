@@ -36,84 +36,9 @@ public class TAdjustmentDetail {
 
     @Column(name = "modified_on")
     private Date modifiedOn;
-    @Column(name = "modified_by")
-    private MstUser modifiedBy;
 
-    @Column(name = "modified_on")
-    private Date modifiedOn;
 
     public TAdjustmentDetail() {
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public TAdjustment gettAdjustment() {
-        return tAdjustment;
-    }
-
-    public void settAdjustment(TAdjustment tAdjustment) {
-        this.tAdjustment = tAdjustment;
-    }
-
-    public MstItemVariant getMstItemVariant() {
-        return mstItemVariant;
-    }
-
-    public void setMstItemVariant(MstItemVariant mstItemVariant) {
-        this.mstItemVariant = mstItemVariant;
-    }
-
-    public int getInStock() {
-        return inStock;
-    }
-
-    public void setInStock(int inStock) {
-        this.inStock = inStock;
-    }
-
-    public int getActualStock() {
-        return actualStock;
-    }
-
-    public void setActualStock(int actualStock) {
-        this.actualStock = actualStock;
-    }
-
-    public MstUser getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(MstUser createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Date getCreatedOn() {
-        return createdOn;
-    }
-
-    public void setCreatedOn(Date createdOn) {
-        this.createdOn = createdOn;
-    }
-
-    public MstUser getModifiedBy() {
-        return modifiedBy;
-    }
-
-    public void setModifiedBy(MstUser modifiedBy) {
-        this.modifiedBy = modifiedBy;
-    }
-
-    public Date getModifiedOn() {
-        return modifiedOn;
-    }
-
-    public void setModifiedOn(Date modifiedOn) {
-        this.modifiedOn = modifiedOn;
-    }
 }

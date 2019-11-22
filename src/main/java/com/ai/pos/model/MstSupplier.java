@@ -12,7 +12,7 @@ public class MstSupplier {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "name", length = 50, nullable = false)
+    @Column(name = "name", length = 50, nullable = true)
     private String name;
 
     @Column(name = "address", length = 255, nullable = true)
@@ -53,8 +53,11 @@ public class MstSupplier {
     @Column(name = "modified_on", nullable = true)
     private Date modifiedOn;
 
-    @Column(name = "active", nullable = false)
+    @Column(name = "active", nullable = true)
     private Boolean active;
+
+    public MstSupplier() {
+    }
 
     public Integer getId() {
         return id;
@@ -167,7 +170,6 @@ public class MstSupplier {
     public void setActive(Boolean active) {
         this.active = active;
     }
-
 //    @Override
 //    public String toString() {
 //        return "MstSupplier{" +

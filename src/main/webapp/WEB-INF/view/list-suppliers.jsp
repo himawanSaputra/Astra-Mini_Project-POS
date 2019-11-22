@@ -32,8 +32,7 @@
 
         <!-- put new Button: Add Button -->
         <input type="button" value="Create"
-<%--               onClick="window.location.href='showFormForAdd'; --%>
-<%--               return false;"--%>
+               onClick="window.location.href='supplierForm';return false;"
 <%--               class="add-button"--%>
         />
         <br/>
@@ -54,29 +53,29 @@
 
 
             <!-- loop over and print out customers -->
-            <c:forEach var="tempCustomer" items="${customer}">
+            <c:forEach var="tempSupplier" items="${suppliers}">
 
                 <!-- construct an "update" link with customer id -->
-                <c:url var="updateLink" value="/customer/showFormForUpdate">
-                    <c:param name="customerId" value="${tempCustomer.id}"/>
+                <c:url var="updateLink" value="/supplier/updateSupplier">
+                    <c:param name="supplierId" value="${tempSupplier.id}"/>
                 </c:url>
 
-                <c:url var="deleteLink" value="/customer/deleteCustomer">
-                    <c:param name="customerId" value="${tempCustomer.id}"/>
-                </c:url>
+<%--                <c:url var="deleteLink" value="/supplier/deleteSupplier">--%>
+<%--                    <c:param name="supplierId" value="${tempSupplier.id}"/>--%>
+<%--                </c:url>--%>
 
                 <tr>
-                    <td>${tempCustomer.firstName}</td>
-                    <td>${tempCustomer.lastName}</td>
-                    <td>${tempCustomer.email}</td>
+                    <td>${tempSupplier.name}</td>
+                    <td>${tempSupplier.phone}</td>
+                    <td>${tempSupplier.email}</td>
                     <td>
                         <!-- display the update link -->
-                        <a href="${updateLink}">Update</a>
+                        <a href="${updateLink}">Edit</a>
                     </td>
-                    <td>
-                        <!-- direct delete -->
-                        <a href="${deleteLink}">Delete</a>
-                    </td>
+<%--                    <td>--%>
+<%--                        <!-- direct delete -->--%>
+<%--                        <a href="${deleteLink}">Delete</a>--%>
+<%--                    </td>--%>
                 </tr>
 
             </c:forEach>
