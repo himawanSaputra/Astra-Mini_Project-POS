@@ -31,10 +31,10 @@
     <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
-<!--        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/point_of_sales?useSSL=false&amp;serverTimezone=UTC" />-->
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/point_of_sales" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/point_of_sales?useSSL=false&amp;serverTimezone=UTC" />
+<!--        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/point_of_sales" />-->
         <property name="user" value="root" />
-        <property name="password" value="" />
+        <property name="password" value="admin" />
 
         <!-- these are connection pool properties for C3P0 -->
         <property name="minPoolSize" value="5" />
@@ -100,6 +100,8 @@
     <tx:annotation-driven transaction-manager="myTransactionManager" />
 
     <!-- Add support for reading web resource: css, js, images, etc -->
-    <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+<!--    <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>-->
+
+<!--    <bean id="asetDAO" class="com.ai.pos"/>-->
 
 </beans>
