@@ -45,6 +45,7 @@ public class SupplierDAO implements DAO<MstSupplier> {
     }
 
     @Override
+
     public void delete(MstSupplier object) {
         Session session = sessionFactory.getCurrentSession();
         session.delete(object);
