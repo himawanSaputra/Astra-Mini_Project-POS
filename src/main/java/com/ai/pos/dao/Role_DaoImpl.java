@@ -3,13 +3,15 @@ package com.ai.pos.dao;
 import com.ai.pos.model.MstRole;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
-
+@Repository
 public class Role_DaoImpl implements Role_Dao {
-
+    @Autowired
+    @Qualifier("sessionFactory")
     private SessionFactory sessionFactory;
 
     public void setSessionFactory(SessionFactory sf){
@@ -18,40 +20,35 @@ public class Role_DaoImpl implements Role_Dao {
 
     @Override
     public void addRole(MstRole mstRole) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.persist(mstRole);
+        session.flush();
     }
 
     @Override
     public void updateRole(MstRole mstRole) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.update(mstRole);
+        session.flush();
     }
 
     @Override
-    public void deleteRole(int id) {
-        Session session = this.sessionFactory.getCurrentSession();
-        MstRole mstRole = (MstRole) session.load(MstRole.class, new Integer(id));
-        if(null != mstRole){
-            session.delete(mstRole);
-        }
+    public void deleteRole(MstRole mstRole) {
+        Session session = sessionFactory.getCurrentSession();
+        session.delete(mstRole);
+        session.flush();
     }
 
 
     @Override
     public MstRole findOne(int id) {
-        Session session = this.sessionFactory.getCurrentSession();
-        MstRole mstRole = (MstRole) session.load(MstRole.class, new Integer(id));
-        return mstRole;
+        Session session = sessionFactory.getCurrentSession();
+        return session.get(MstRole.class, id);
     }
 
     @Override
     public List<MstRole> listMstRole() {
-        Session session = this.sessionFactory.getCurrentSession();
-        List<MstRole> mstRoleList = session.createQuery("from Role").list();
-        for(MstRole mstRole : mstRoleList){
-            LOGGER.info("Role list:"+mstRole);
-        }
-        return mstRoleList;
+        Session session = sessionFactory.getCurrentSession();
+        return session.createCriteria(MstRole.class).list();
     }
 }

@@ -8,7 +8,7 @@ public interface EmployeeOutlet_Dao {
 
     public void addEmployeeOutlet(EmployeeOutlet employeeOutlet);
     public void updateEmployeeOutlet(EmployeeOutlet employeeOutlet);
-    public void deleteEmployeeOutlet(int id);
+    public void deleteEmployeeOutlet(EmployeeOutlet employeeOutlet);
     public EmployeeOutlet findOne(int id);
     public List<EmployeeOutlet> employeeOutlet();
 }
