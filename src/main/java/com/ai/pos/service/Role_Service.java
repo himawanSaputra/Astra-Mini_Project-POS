@@ -8,7 +8,7 @@ public interface Role_Service {
 
     public void addRole(MstRole mstRole);
     public void updateRole(MstRole mstRole);
-    public void deleteRole(int id);
+    public void deleteRole(MstRole mstRole);
     public MstRole getMstRole(int id);
     public List<MstRole> listMstRole();
 }
