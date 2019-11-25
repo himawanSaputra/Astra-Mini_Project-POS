@@ -9,5 +9,5 @@ public interface MstCategoryDao {
     public void update(MstCategory mstCategory);
     public void delete(MstCategory mstCategory);
     public MstCategory getCategory(int id);
-    public List<MstCategory> gettAllCategory();
+    public List<MstCategory> getAllCategory();
 }

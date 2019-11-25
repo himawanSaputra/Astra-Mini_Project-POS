@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class MstCategoryService {
+public class MstCategoryServiceImpl implements MstCategoryService{
 
     @Autowired
     private MstCategoryDao mstCategoryDao;
@@ -32,6 +32,8 @@ public class MstCategoryService {
     }
 
     public List<MstCategory> getAllCategory(){
-        return mstCategoryDao.gettAllCategory();
+        return mstCategoryDao.getAllCategory();
     }
+
+
 }
