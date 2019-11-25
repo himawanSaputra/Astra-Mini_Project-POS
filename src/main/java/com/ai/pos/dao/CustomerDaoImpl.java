@@ -1,47 +1,47 @@
 package com.ai.pos.dao;
 
-import com.ai.pos.model.MstOutlet;
+import com.ai.pos.model.MstCustomer;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class OutletDaoImpl implements OutletDao{
+public class CustomerDaoImpl implements CustomerDao {
 
     @Autowired
     SessionFactory sessionFactory;
 
     @Override
-    public void addOutlet(MstOutlet mstOutlet) {
+    public void addCustomer(MstCustomer mstCustomer) {
         Session session = sessionFactory.getCurrentSession();
-        session.save(mstOutlet);
+        session.save(mstCustomer);
         session.flush();
     }
 
     @Override
-    public void updateOutlet(MstOutlet mstOutlet) {
+    public void updateCustomer(MstCustomer mstCustomer) {
         Session session = sessionFactory.getCurrentSession();
-        session.update(mstOutlet);
+        session.update(mstCustomer);
         session.flush();
     }
 
     @Override
-    public void deleteOutlet(MstOutlet mstOutlet) {
+    public void deleteCustomer(MstCustomer mstCustomer) {
         Session session = sessionFactory.getCurrentSession();
-        session.delete(mstOutlet);
+        session.delete(mstCustomer);
         session.flush();
     }
 
     @Override
-    public MstOutlet findOne(int id) {
+    public MstCustomer findOne(int id) {
         Session session = sessionFactory.getCurrentSession();
-        return session.find(MstOutlet.class, id);
+        return session.find(MstCustomer.class, id);
     }
 
     @Override
-    public List<MstOutlet> listMstOutlet() {
+    public List<MstCustomer> listMstCustomer() {
         Session session = sessionFactory.getCurrentSession();
-        return session.createCriteria(MstOutlet.class).list();
+        return session.createCriteria(MstCustomer.class).list();
     }
 }

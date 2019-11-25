@@ -8,7 +8,7 @@ public interface Role_Dao {
 
     public void addRole(MstRole mstRole);
     public void updateRole(MstRole mstRole);
-    public void deleteRole(MstRole mstRole);
+    public void deleteRole(int id);
     public MstRole findOne(int id);
     public List<MstRole> listMstRole();
 }
