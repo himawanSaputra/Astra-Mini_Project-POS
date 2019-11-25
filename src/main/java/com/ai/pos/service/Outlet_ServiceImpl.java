@@ -2,10 +2,13 @@ package com.ai.pos.service;
 
 import com.ai.pos.dao.OutletDao;
 import com.ai.pos.model.MstOutlet;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
+@Transactional
 public class Outlet_ServiceImpl implements Outlet_Service {
 
     private OutletDao outletDao;
