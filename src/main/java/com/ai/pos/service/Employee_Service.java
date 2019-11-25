@@ -8,7 +8,7 @@ public interface Employee_Service {
 
     public void addEmployee(MstEmployee mstEmployee);
     public void updateEmployee(MstEmployee mstEmployee);
-    public void deleteEmployee(int id);
+    public void deleteEmployee(MstEmployee mstEmployee);
     public MstEmployee getMstEmployeeById(int id);
     public List<MstEmployee> listMstEmployee();
 }

@@ -29,8 +29,8 @@ public class Role_ServiceImpl implements Role_Service {
 
     @Override
     @Transactional
-    public void deleteRole(int id) {
-        this.role_dao.deleteRole(id);
+    public void deleteRole(MstRole mstRole) {
+        this.role_dao.deleteRole(mstRole);
     }
 
     @Override
