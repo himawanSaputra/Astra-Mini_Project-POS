@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class MstItemService {
+public class MstItemServiceImpl implements MstItemService {
 
     @Autowired
     private MstItemDao mstItemDao;

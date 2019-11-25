@@ -1,8 +1,8 @@
 package com.ai.pos.controller;
 
 import com.ai.pos.model.MstCategory;
-import com.ai.pos.service.MstCategoryService;
-import com.ai.pos.service.MstItemService;
+import com.ai.pos.service.MstCategoryServiceImpl;
+import com.ai.pos.service.MstItemServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,10 +14,10 @@ import java.util.List;
 public class MstCategoryController {
 
     @Autowired
-    MstCategoryService mstCategoryService;
+    MstCategoryServiceImpl mstCategoryService;
 
     @Autowired
-    MstItemService mstItemService;
+    MstItemServiceImpl mstItemService;
 
     @RequestMapping("/category")
     public ModelAndView getAllCategory(){
