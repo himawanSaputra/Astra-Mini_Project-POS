@@ -16,6 +16,13 @@ public class Employee_Controller {
     @Autowired
     private Employee_Service employee_service;
 
+    //get all data
+    @RequestMapping(value = "/employee", method = RequestMethod.GET)
+    public String getAllUser(ModelMap model) {
+        model.addAttribute("listemployee",employee_service.listMstEmployee());
+        return "index/";
+    }
+
     //add
     @RequestMapping(value = "/add_employee", method = RequestMethod.POST)
     public String addEmployee(@ModelAttribute("employee")MstEmployee mstEmployee){
