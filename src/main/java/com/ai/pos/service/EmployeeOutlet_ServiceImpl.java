@@ -2,6 +2,7 @@ package com.ai.pos.service;
 
 import com.ai.pos.dao.EmployeeOutlet_Dao;
 import com.ai.pos.model.EmployeeOutlet;
+import com.ai.pos.model.MstEmployee;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -28,8 +29,8 @@ public class EmployeeOutlet_ServiceImpl implements EmployeeOutlet_Service {
 
     @Override
     @Transactional
-    public void deleteEmployee(int id) {
-        this.employeeOutlet_dao.deleteEmployeeOutlet(id);
+    public void deleteEmployee(EmployeeOutlet employeeOutlet) {
+        this.employeeOutlet_dao.deleteEmployeeOutlet(employeeOutlet);
     }
 
     @Override
@@ -41,6 +42,6 @@ public class EmployeeOutlet_ServiceImpl implements EmployeeOutlet_Service {
     @Override
     @Transactional
     public List<EmployeeOutlet> listEmployeeOutlet() {
-        return this.employeeOutlet_dao.listEmployeeOutlet();
+        return this.employeeOutlet_dao.employeeOutlet();
     }
 }

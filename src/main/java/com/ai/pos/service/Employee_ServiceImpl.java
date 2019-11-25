@@ -28,8 +28,8 @@ public class Employee_ServiceImpl implements Employee_Service {
 
     @Override
     @Transactional
-    public void deleteEmployee(int id) {
-        this.employee_dao.deleteEmployee(id);
+    public void deleteEmployee(MstEmployee mstEmployee) {
+        this.employee_dao.deleteEmployee(mstEmployee);
     }
 
     @Override
