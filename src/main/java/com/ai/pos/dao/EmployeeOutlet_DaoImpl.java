@@ -4,13 +4,16 @@ package com.ai.pos.dao;
 import com.ai.pos.model.EmployeeOutlet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
-
+@Repository
 public class EmployeeOutlet_DaoImpl implements EmployeeOutlet_Dao{
-
+    @Autowired
+    @Qualifier("sessionFactory")
     private SessionFactory sessionFactory;
 
     public void setSessionFactory(SessionFactory sf){
@@ -19,40 +22,35 @@ public class EmployeeOutlet_DaoImpl implements EmployeeOutlet_Dao{
 
     @Override
     public void addEmployeeOutlet(EmployeeOutlet employeeOutlet) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.persist(employeeOutlet);
+        session.flush();
     }
 
     @Override
     public void updateEmployeeOutlet(EmployeeOutlet employeeOutlet) {
-        Session session = this.sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.update(employeeOutlet);
+        session.flush();
     }
 
     @Override
-    public void deleteEmployeeOutlet(int id) {
-        Session session = this.sessionFactory.getCurrentSession();
-        EmployeeOutlet employeeOutlet = (EmployeeOutlet) session.load(EmployeeOutlet.class, new Integer(id));
-        if(null != employeeOutlet){
-            session.delete(employeeOutlet);
-        }
+    public void deleteEmployeeOutlet(EmployeeOutlet employeeOutlet) {
+        Session session = sessionFactory.getCurrentSession();
+        session.delete(employeeOutlet);
+        session.flush();
     }
 
 
     @Override
     public EmployeeOutlet findOne(int id) {
-        Session session = this.sessionFactory.getCurrentSession();
-        EmployeeOutlet employeeOutlet = (EmployeeOutlet) session.load(EmployeeOutlet.class, new Integer(id));
-        return employeeOutlet;
+        Session session = sessionFactory.getCurrentSession();
+        return session.get(EmployeeOutlet.class, id);
     }
 
     @Override
     public List<EmployeeOutlet> employeeOutlet() {
-        Session session = this.sessionFactory.getCurrentSession();
-        List<EmployeeOutlet> employeeOutletList = session.createQuery("from Employee outlet").list();
-        for(EmployeeOutlet employeeOutlet : employeeOutletList){
-            LOGGER.info("Employee outlet List::"+employeeOutlet);
-        }
-        return employeeOutletList;
+        Session session = sessionFactory.getCurrentSession();
+        return session.createCriteria(EmployeeOutlet.class).list();
     }
 }

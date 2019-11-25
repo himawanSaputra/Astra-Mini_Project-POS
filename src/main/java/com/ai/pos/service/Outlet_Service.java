@@ -10,5 +10,5 @@ public interface Outlet_Service {
     public void updateOutlet(MstOutlet mstOutlet);
     public void deleteOutlet(int id);
     public MstOutlet getMstOutlet(int id);
-    public List<MstOutlet> listMstOutlets();
+    public List<MstOutlet> listMstOutlet();
 }

@@ -27,9 +27,9 @@ public class OutletDaoImpl implements OutletDao{
     }
 
     @Override
-    public void deleteOutlet(MstOutlet mstOutlet) {
+    public void deleteOutlet(int id) {
         Session session = sessionFactory.getCurrentSession();
-        session.delete(mstOutlet);
+        session.delete(listMstOutlet());
         session.flush();
     }
 

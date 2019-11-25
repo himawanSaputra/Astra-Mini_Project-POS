@@ -10,8 +10,8 @@ public class Outlet_ServiceImpl implements Outlet_Service {
 
     private OutletDao outletDao;
 
-    public void setEmployee_dao(OutletDao employee_dao) {
-        this.outletDao = employee_dao;
+    public void setOutletDao(OutletDao outletDao) {
+        this.outletDao = outletDao;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Outlet_ServiceImpl implements Outlet_Service {
     }
 
     @Override
-    public List<MstOutlet> listMstOutlets() {
-        return this.listMstOutlets();
+    public List<MstOutlet> listMstOutlet() {
+        return this.listMstOutlet();
     }
 }
