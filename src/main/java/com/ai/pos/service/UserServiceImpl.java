@@ -1,0 +1,48 @@
+package com.ai.pos.service;
+
+import com.ai.pos.dao.UserDAO;
+import com.ai.pos.model.MstUser;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+@Service
+@Transactional
+public class UserServiceImpl implements UserService {
+
+    @Autowired
+    UserDAO userDAO;
+
+    @Override
+    public MstUser get(Integer id) {
+        return this.userDAO.get(id);
+    }
+
+    @Override
+    public MstUser getByUsernamePassword(String username, String password){
+        return this.userDAO.getByUsernamePassword(username, password);
+    }
+
+    @Override
+    public List<MstUser> getAll() {
+        return this.userDAO.getAll();
+    }
+
+    @Override
+    public void insert(MstUser object){
+        this.userDAO.insert(object);
+    }
+
+    @Override
+    public void update(MstUser object) {
+        this.userDAO.update(object);
+    }
+
+    @Override
+    public void delete(MstUser object) {
+        this.userDAO.delete(object);
+    }
+
+}
