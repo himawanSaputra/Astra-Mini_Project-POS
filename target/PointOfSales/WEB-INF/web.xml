@@ -8,8 +8,7 @@
          id="Your_WebApp_ID" version="2.5">
   <display-name>Archetype Created Web Application</display-name>
 
-  <absolute-ordering />
-
+<!--  <absolute-ordering />-->
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>index.html</welcome-file>

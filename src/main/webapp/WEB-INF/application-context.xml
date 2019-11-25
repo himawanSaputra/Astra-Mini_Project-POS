@@ -31,10 +31,10 @@
     <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/point_of_sales?useSSL=false&amp;serverTimezone=UTC" />
-<!--        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/point_of_sales" />-->
+<!--        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/point_of_sales?useSSL=false&amp;serverTimezone=UTC" />-->
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/point_of_sales" />
         <property name="user" value="root" />
-        <property name="password" value="admin" />
+        <property name="password" value="" />
 
         <!-- these are connection pool properties for C3P0 -->
         <property name="minPoolSize" value="5" />
@@ -81,7 +81,8 @@
         <property name="packagesToScan" value="com.ai.pos.model" />
         <property name="hibernateProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.current_session_context_class">
                     org.springframework.orm.hibernate5.SpringSessionContext
@@ -100,8 +101,11 @@
     <tx:annotation-driven transaction-manager="myTransactionManager" />
 
     <!-- Add support for reading web resource: css, js, images, etc -->
-<!--    <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>-->
+    <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 
-<!--    <bean id="asetDAO" class="com.ai.pos"/>-->
+    <bean id="userDAO" class="com.ai.pos.dao.UserDAO"/>
 
+    <bean id="userService" class="com.ai.pos.service.UserService">
+        <property name="userDAO" ref="userDAO"/>
+    </bean>
 </beans>
