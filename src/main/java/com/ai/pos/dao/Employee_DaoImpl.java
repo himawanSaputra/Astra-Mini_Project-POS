@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 @Repository
@@ -36,6 +40,22 @@ public class Employee_DaoImpl implements Employee_Dao {
         Session session = sessionFactory.getCurrentSession();
         session.delete(mstEmployee);
         session.flush();
+    }
+
+    @Override
+    public MstEmployee getEmployeeByEmail(String email) {
+        Session session = sessionFactory.getCurrentSession();
+        CriteriaBuilder cb = session.getCriteriaBuilder();
+        CriteriaQuery<MstEmployee> query = cb.createQuery(MstEmployee.class);
+        Root<MstEmployee> root = query.from(MstEmployee.class);
+        query.select(root)
+                .where(cb.equal(root.get("email"), email));
+        Query q = session.createQuery(query);
+        List<MstEmployee> employee = q.getResultList();
+        if(employee.isEmpty()){
+            return null;
+        }
+        return (MstEmployee) q.getSingleResult();
     }
 
     @Override
