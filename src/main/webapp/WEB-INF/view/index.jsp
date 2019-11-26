@@ -43,7 +43,7 @@
                         <a href="<c:url value="/forgot_password"/>">Forgot Password</a>
                     </div>
                     <div class="col-6 justify-content-end">
-                        <button class="btn btn-primary" type="submit">Login</button>
+                        <button class="btn btn-primary float-right" type="submit">Login</button>
                     </div>
                 </div>
             </form:form>

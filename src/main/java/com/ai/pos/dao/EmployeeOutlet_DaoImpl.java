@@ -52,7 +52,7 @@ public class EmployeeOutlet_DaoImpl implements EmployeeOutlet_Dao{
     }
 
     @Override
-    public List<EmployeeOutlet> getByEmployeeId(int id) {
+    public List<EmployeeOutlet> getEmployeeOutletByEmployeeId(int id) {
         Session session = this.sessionFactory.getCurrentSession();
         CriteriaBuilder cb = session.getCriteriaBuilder();
         CriteriaQuery<EmployeeOutlet> query = cb.createQuery(EmployeeOutlet.class);

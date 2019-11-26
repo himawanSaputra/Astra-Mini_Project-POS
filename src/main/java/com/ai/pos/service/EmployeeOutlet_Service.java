@@ -1,16 +1,16 @@
-package com.ai.pos.dao;
+package com.ai.pos.service;
 
 import com.ai.pos.model.EmployeeOutlet;
 
 import java.util.List;
 
-public interface EmployeeOutlet_Dao {
+public interface EmployeeOutlet_Service {
 
     public void addEmployeeOutlet(EmployeeOutlet employeeOutlet);
     public void updateEmployeeOutlet(EmployeeOutlet employeeOutlet);
-    public void deleteEmployeeOutlet(EmployeeOutlet employeeOutlet);
+    public void deleteEmployee(EmployeeOutlet employeeOutlet);
 
-    public EmployeeOutlet findOne(int id);
+    public EmployeeOutlet getEmployeeOutletById(int id);
     public List<EmployeeOutlet> getEmployeeOutletByEmployeeId(int id);
-    public List<EmployeeOutlet> employeeOutlet();
+    public List<EmployeeOutlet> listEmployeeOutlet();
 }
