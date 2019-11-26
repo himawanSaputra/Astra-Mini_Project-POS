@@ -37,6 +37,10 @@ public class UserDAOImpl implements UserDAO{
                 .where(cb.equal(root.get("username"), username))
                 .where(cb.equal(root.get("password"), password));
         Query q = session.createQuery(query);
+        List<MstUser> user = q.getResultList();
+        if(user.isEmpty()){
+            return null;
+        }
         return (MstUser) q.getSingleResult();
     }
 
