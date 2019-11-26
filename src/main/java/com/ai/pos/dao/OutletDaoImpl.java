@@ -4,6 +4,7 @@ import com.ai.pos.model.MstOutlet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,7 +12,12 @@ import java.util.List;
 public class OutletDaoImpl implements OutletDao{
 
     @Autowired
+    @Qualifier("sessionFactory")
     SessionFactory sessionFactory;
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     @Override
     public void addOutlet(MstOutlet mstOutlet) {
