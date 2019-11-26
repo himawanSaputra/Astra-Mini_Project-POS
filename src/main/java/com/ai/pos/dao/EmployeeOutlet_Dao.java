@@ -12,6 +12,5 @@ public interface EmployeeOutlet_Dao {
 
     public EmployeeOutlet findOne(int id);
     public List<EmployeeOutlet> getByEmployeeId(int id);
-
     public List<EmployeeOutlet> employeeOutlet();
 }

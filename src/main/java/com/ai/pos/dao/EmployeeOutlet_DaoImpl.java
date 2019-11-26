@@ -45,7 +45,6 @@ public class EmployeeOutlet_DaoImpl implements EmployeeOutlet_Dao{
         session.flush();
     }
 
-
     @Override
     public EmployeeOutlet findOne(int id) {
         Session session = sessionFactory.getCurrentSession();

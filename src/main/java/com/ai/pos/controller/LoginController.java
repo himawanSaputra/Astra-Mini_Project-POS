@@ -43,7 +43,7 @@ public class LoginController {
         MstUser user = this.userService.getByUsernamePassword(username, password);
         if(user != null){
             session.setAttribute("user", user);
-            return "redirect:/home";
+            return "redirect:/login_outlet";
         }
         //IF NO USER FOUND
         session.setAttribute("error", "Wrong Username or Password");
@@ -81,13 +81,21 @@ public class LoginController {
         return "redirect:/";
     }
 
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    @RequestMapping(value = "/login_outlet", method = RequestMethod.GET)
     public String home(HttpSession session,
                        Model m){
-        MstUser user = (MstUser) session.getAttribute("user");
-        m.addAttribute("message", user.getUsername());
-        return "home";
+        return "choose_outlet";
     }
+
+//    @RequestMapping
+
+//    @RequestMapping(value = "/home", method = RequestMethod.GET)
+//    public String home(HttpSession session,
+//                       Model m){
+//        MstUser user = (MstUser) session.getAttribute("user");
+//        m.addAttribute("message", user.getUsername());
+//        return "home";
+//    }
 
     @RequestMapping(value = "/logout")
     public String logout(HttpSession session,
