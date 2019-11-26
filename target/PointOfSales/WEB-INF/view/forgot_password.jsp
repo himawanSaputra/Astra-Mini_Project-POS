@@ -22,8 +22,10 @@
                 </div>
             </div>
 
+            <c:if test = "${error != null}">
+                <span class="alert alert-danger mb-4 w-100">${error}</span>
+            </c:if>
             <form:form method="post" action="/reset_password">
-<%--                <span class="alert alert-danger">${message}</span>--%>
                 <div class="form-group">
                     <label for="forgotPasswordEmailInput">Email</label>
                     <input class="form-control" type="text" name="email" id="forgotPasswordEmailInput"/>
@@ -38,7 +40,7 @@
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <button class="btn btn-primary" onclick="<c:url value="/"/>">Back</button>
+                        <a href="<c:url value="/"/>">Back</a>
                     </div>
                     <div class="col-6">
                         <button class="btn btn-primary" type="submit">Submit</button>

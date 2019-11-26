@@ -45,22 +45,50 @@ public class UserDAOImpl implements UserDAO{
     }
 
     @Override
+    public MstUser getByEmployeeId(Integer id) {
+        Session session = this.sessionFactory.getCurrentSession();
+        CriteriaBuilder cb = session.getCriteriaBuilder();
+        CriteriaQuery<MstUser> query = cb.createQuery(MstUser.class);
+        Root<MstUser> root = query.from(MstUser.class);
+        query.select(root)
+                .where(cb.equal(root.get("employeeId"), id));
+        Query q = session.createQuery(query);
+        List<MstUser> user = q.getResultList();
+        if(user.isEmpty()){
+            return null;
+        }
+        return (MstUser) q.getSingleResult();
+    }
+
+    @Override
     public List<MstUser> getAll() {
-        return null;
+        Session session = this.sessionFactory.getCurrentSession();
+        CriteriaBuilder cb = session.getCriteriaBuilder();
+        CriteriaQuery<MstUser> query = cb.createQuery(MstUser.class);
+        Root<MstUser> root = query.from(MstUser.class);
+        query.select(root);
+        Query q = session.createQuery(query);
+        return q.getResultList();
     }
 
     @Override
     public void insert(MstUser object) {
-
+        Session session = sessionFactory.getCurrentSession();
+        session.delete(object);
+        session.flush();
     }
 
     @Override
     public void update(MstUser object) {
-
+        Session session = sessionFactory.getCurrentSession();
+        session.update(object);
+        session.flush();
     }
 
     @Override
     public void delete(MstUser object) {
-
+        Session session = sessionFactory.getCurrentSession();
+        session.delete(object);
+        session.flush();
     }
 }

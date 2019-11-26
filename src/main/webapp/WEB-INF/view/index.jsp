@@ -24,7 +24,10 @@
             </div>
 
             <c:if test = "${message != null}">
-                <span class="alert alert-danger mb-4 w-100">${message}</span>
+                <span class="alert alert-success mb-4 w-100">${message}</span>
+            </c:if>
+            <c:if test = "${error != null}">
+                <span class="alert alert-danger mb-4 w-100">${error}</span>
             </c:if>
             <form:form method="post" action="/login">
                 <div class="form-group">

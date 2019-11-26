@@ -21,7 +21,7 @@ public class MstUser {
     @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false)
     private MstRole roleId;
 
-    @ManyToOne(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
+    @OneToOne(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "employee_id", referencedColumnName = "id", nullable = false)
     private MstEmployee employeeId;
 
