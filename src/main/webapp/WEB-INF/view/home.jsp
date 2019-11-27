@@ -38,11 +38,30 @@
                             </a>
                             <div class="collapse" id="mstCollapse">
                                 <ul>
-                                    <li><a href="#">Category</a></li>
-                                    <li><a href="#">Supplier</a></li>
-                                    <li><a href="#">Outlet</a></li>
-                                    <li><a href="#">Items</a></li>
-                                    <li><a href="#">Employee</a></li>
+                                    <c:if test="${
+                                        (sessionScope.user.mstRole.id == 1) ||
+                                        (sessionScope.user.mstRole.id == 2)}">
+                                        <li><a href="#">Category</a></li>
+                                    </c:if>
+                                    <c:if test="${
+                                        (sessionScope.user.mstRole.id == 1) ||
+                                        (sessionScope.user.mstRole.id == 2)}">
+                                        <li><a href="#">Supplier</a></li>
+                                    </c:if>
+                                    <c:if test="${sessionScope.user.mstRole.id == 1}">
+                                        <li><a href="#">Outlet</a></li>
+                                    </c:if>
+                                    <c:if test="${
+                                        (sessionScope.user.mstRole.id == 1) ||
+                                        (sessionScope.user.mstRole.id == 2) ||
+                                        (sessionScope.user.mstRole.id == 3)}">
+                                        <li><a href="#">Items</a></li>
+                                    </c:if>
+                                    <c:if test="${
+                                        (sessionScope.user.mstRole.id == 1) ||
+                                        (sessionScope.user.mstRole.id == 2)}">
+                                        <li><a href="#">Employee</a></li>
+                                    </c:if>
                                 </ul>
                             </div>
                         </li>
@@ -53,12 +72,26 @@
                             </a>
                             <div class="collapse" id="txCollapse">
                                 <ul>
-                                    <li><a href="#">Purchase Request</a></li>
-                                    <li><a href="#">Purchase Order</a></li>
-                                    <li><a href="#">Adjustment</a></li>
-                                    <li><a href="#">Transfer Stock</a></li>
-                                    <li><a href="#">Sales Order</a></li>
-                                    <li><a href="#">Summary</a></li>
+                                    <c:if test="${sessionScope.user.mstRole.id == 2}">
+                                        <li><a href="#">Purchase Request</a></li>
+                                    </c:if>
+                                    <c:if test="${sessionScope.user.mstRole.id == 2}">
+                                        <li><a href="#">Purchase Order</a></li>
+                                    </c:if>
+                                    <c:if test="${sessionScope.user.mstRole.id == 2}">
+                                        <li><a href="#">Adjustment</a></li>
+                                    </c:if>
+                                    <c:if test="${sessionScope.user.mstRole.id == 2}">
+                                        <li><a href="#">Transfer Stock</a></li>
+                                    </c:if>
+                                    <c:if test="${
+                                        (sessionScope.user.mstRole.id == 2) ||
+                                        (sessionScope.user.mstRole.id == 3)}">
+                                        <li><a href="#">Sales Order</a></li>
+                                    </c:if>
+                                    <c:if test="${sessionScope.user.mstRole.id == 2}">
+                                        <li><a href="#">Summary</a></li>
+                                    </c:if>
                                 </ul>
                             </div>
                         </li>
@@ -74,7 +107,7 @@
                                 <ul class="list-inline header-top pull-right align-items-center">
                                     <li>
                                         <h4 align="center" class="mb-0">
-                                            Hello, ${user.username}
+                                            Hello, ${sessionScope.user.username}
                                         </h4>
                                     </li>
                                     <li>

@@ -19,11 +19,11 @@ public class MstUser {
 
     @ManyToOne(targetEntity = MstRole.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false)
-    private MstRole roleId;
+    private MstRole mstRole;
 
     @OneToOne(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "employee_id", referencedColumnName = "id", nullable = false)
-    private MstEmployee employeeId;
+    private MstEmployee mstEmployee;
 
     @Column(name = "created_by")
     private String createdBy;
@@ -64,20 +64,20 @@ public class MstUser {
         this.password = password;
     }
 
-    public MstRole getRoleId() {
-        return roleId;
+    public MstRole getMstRole() {
+        return mstRole;
     }
 
-    public void setRoleId(MstRole roleId) {
-        this.roleId = roleId;
+    public void setMstRole(MstRole mstRole) {
+        this.mstRole = mstRole;
     }
 
-    public MstEmployee getEmployeeId() {
-        return employeeId;
+    public MstEmployee getMstEmployee() {
+        return mstEmployee;
     }
 
-    public void setEmployeeId(MstEmployee employeeId) {
-        this.employeeId = employeeId;
+    public void setMstEmployee(MstEmployee mstEmployee) {
+        this.mstEmployee = mstEmployee;
     }
 
     public String getCreatedBy() {
@@ -126,8 +126,8 @@ public class MstUser {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", roleId=" + roleId +
-                ", employeeId=" + employeeId +
+                ", roleId=" + mstRole +
+                ", employeeId=" + mstEmployee +
                 ", createdBy='" + createdBy + '\'' +
                 ", createdOn=" + createdOn +
                 ", modifiedBy='" + modifiedBy + '\'' +

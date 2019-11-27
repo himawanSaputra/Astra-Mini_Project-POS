@@ -52,7 +52,7 @@ public class LoginController {
         if(user != null){
             session.setAttribute("user", user);
             //CHECK THE ROLE
-            if(user.getRoleId().getId() == 1){
+            if(user.getMstRole().getId() == 1){
                 return "redirect:/home";
             }
             return "redirect:/login_outlet";
@@ -114,16 +114,12 @@ public class LoginController {
                                Model m){
         //SAVE IN SESSION THE CHOSEN OUTLET
         session.setAttribute("outlet", mstOutlet);
-        MstUser user = (MstUser) session.getAttribute("user");
-        m.addAttribute("role", user.getRoleId().getId());
-        m.addAttribute("user", user);
-        return "home";
+        return "redirect:/home";
     }
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home(HttpSession session,
                        Model m){
-        MstUser user = (MstUser) session.getAttribute("user");
         return "home";
     }
 
