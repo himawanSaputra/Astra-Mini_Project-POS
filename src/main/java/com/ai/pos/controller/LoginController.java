@@ -131,4 +131,15 @@ public class LoginController {
         return "index";
     }
 
+    @RequestMapping(value = "/dashboard", method = RequestMethod.GET)
+    public String dashBoard(HttpSession session,
+                            Model m){
+        MstUser user = (MstUser) session.getAttribute("user");
+        if(user.getMstRole().getId() == 1){
+            return "admin_dashboard";
+        }
+
+        return "";
+    }
+
 }

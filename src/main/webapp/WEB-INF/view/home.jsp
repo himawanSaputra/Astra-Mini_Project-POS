@@ -6,13 +6,8 @@
     <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap-min.css" />">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<%--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstr    ap/4.3.1/css/bootstrap.min.css">--%>
-<%--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--%>
-<%--    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">--%>
-<%--    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>--%>
-<%--    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>--%>
-    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />">
+<%--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>--%>
+<%--    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />">--%>
     <!------ Include the above in your HEAD tag ---------->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 </head>
@@ -25,13 +20,13 @@
                         <li>
                             <h2 class="text-white bi" align="center">Point Of Sales</h2>
                         </li>
-                        <li class="active">
+                        <li class="sidebar-menu">
                             <a href="#">
                                 <i class="fa fa-home" aria-hidden="true"></i>
                                 <span class="hidden-xs hidden-sm">Home</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="sidebar-menu">
                             <a data-toggle="collapse" href="#mstCollapse" role="button" aria-expanded="false" aria-controls="mstCollapse">
                                 <i class="fa fa-tasks" aria-hidden="true"></i>
                                 <span class="hidden-xs hidden-sm">Master Data</span>
@@ -41,31 +36,31 @@
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2)}">
-                                        <li><a href="#">Category</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Category</a></li>
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2)}">
-                                        <li><a href="#">Supplier</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Supplier</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 1}">
-                                        <li><a href="#">Outlet</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Outlet</a></li>
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2) ||
                                         (sessionScope.user.mstRole.id == 3)}">
-                                        <li><a href="#">Items</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Items</a></li>
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2)}">
-                                        <li><a href="#">Employee</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Employee</a></li>
                                     </c:if>
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <li class="sidebar-menu">
                             <a data-toggle="collapse" href="#txCollapse" role="button" aria-expanded="false" aria-controls="txCollapse">
                                 <i class="fa fa-bar-chart" aria-hidden="true"></i>
                                 <span class="hidden-xs hidden-sm">Transaction</span>
@@ -73,24 +68,24 @@
                             <div class="collapse" id="txCollapse">
                                 <ul>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-                                        <li><a href="#">Purchase Request</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Purchase Request</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-                                        <li><a href="#">Purchase Order</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Purchase Order</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-                                        <li><a href="#">Adjustment</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Adjustment</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-                                        <li><a href="#">Transfer Stock</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Transfer Stock</a></li>
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 2) ||
                                         (sessionScope.user.mstRole.id == 3)}">
-                                        <li><a href="#">Sales Order</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Sales Order</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-                                        <li><a href="#">Summary</a></li>
+                                        <li><a href="#" class="pr-5 text-center bg-secondary">Summary</a></li>
                                     </c:if>
                                 </ul>
                             </div>
@@ -117,10 +112,34 @@
                             </div>
                         </div>
                     </header>
+                    <!-- CONTENT GOES HERE -->
+                    <div id="content" class="h-100 w-100 m-5">
+                        <jsp:include page="/dashboard"/>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            //TO HANDLE THE ACTIVE TAB SELECTED
+            $(".sidebar-menu").each(function(index){
+                $(this).on("click", function () {
+                    $(".sidebar-menu").each(function(index){
+                       $(this).removeClass("active");
+                    });
+                   $(this).addClass("active");
+
+                   $(this).find('li a').each(function(index){
+                      $(this).removeClass("active");
+                   });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
+
 
