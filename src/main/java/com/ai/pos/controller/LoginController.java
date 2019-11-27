@@ -51,6 +51,10 @@ public class LoginController {
         MstUser user = this.userService.getByUsernamePassword(username, password);
         if(user != null){
             session.setAttribute("user", user);
+            //CHECK THE ROLE
+            if(user.getRoleId().getId() == 1){
+                return "redirect:/home";
+            }
             return "redirect:/login_outlet";
         }
         //IF NO USER FOUND
@@ -92,11 +96,6 @@ public class LoginController {
     @RequestMapping(value = "/login_outlet", method = RequestMethod.GET)
     public String loginOutlet(HttpSession session,
                        Model m){
-        //IF THE USER IS AN ADMIN
-//        if(session.getAttribute("user") != null){
-//            MstUser user = (MstUser) session.getAttribute("user");
-//            if(user.get)
-//        }
         List<EmployeeOutlet> employeeOutlets = this.employeeOutlet_service.listEmployeeOutlet();
         //TRANSLATE TO HASHMAP
         Map<Integer, String> outletMap = new HashMap<>();
@@ -115,17 +114,18 @@ public class LoginController {
                                Model m){
         //SAVE IN SESSION THE CHOSEN OUTLET
         session.setAttribute("outlet", mstOutlet);
-        System.out.println(mstOutlet.getId());
+        MstUser user = (MstUser) session.getAttribute("user");
+        m.addAttribute("role", user.getRoleId().getId());
+        m.addAttribute("user", user);
         return "home";
     }
 
-//    @RequestMapping(value = "/home", method = RequestMethod.GET)
-//    public String home(HttpSession session,
-//                       Model m){
-//        MstUser user = (MstUser) session.getAttribute("user");
-//        m.addAttribute("message", user.getUsername());
-//        return "home";
-//    }
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home(HttpSession session,
+                       Model m){
+        MstUser user = (MstUser) session.getAttribute("user");
+        return "home";
+    }
 
     @RequestMapping(value = "/logout")
     public String logout(HttpSession session,
