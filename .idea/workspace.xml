@@ -8,11 +8,23 @@
   <component name="ChangeListManager">
     <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstItemVariant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstItemVariant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TAdjustment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TAdjustment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TAdjustmentHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TAdjustmentHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPoDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPoDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/Role_Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/Role_DaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Role_Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Role_ServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/Role_Dao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/Role_DaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Role_Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Role_ServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/Role_Dao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/Role_DaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Role_Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Role_ServiceImpl.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +49,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="jsf" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="pos_master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -51,16 +74,29 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1TrUDsjg3bKOS1iBLtXLtx9Cr3U" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../SpringCRUD2" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -68,6 +104,11 @@
       <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\service" />
       <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\model" />
       <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\dao" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\webapp\WEB-INF\view" />
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\webapp" />
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -82,8 +123,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.29">
     <configuration name="Tomcat 7.0.561" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.561" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="PointOfSales:war exploded">
@@ -155,6 +197,84 @@
         </option>
       </method>
     </configuration>
+    <configuration name="Tomcat 9.0.29" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.29" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="PointOfSales:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Astra-Mini_Project-POS" />
+        <option name="HTTP_PORT" value="8081" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52148" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="PointOfSales:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomcat 7.0.561" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.29" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -167,8 +287,23 @@
       <option name="presentableId" value="Default" />
       <updated>1574217592190</updated>
       <workItem from="1574217595079" duration="8723000" />
-      <workItem from="1574302370191" duration="1907000" />
+      <workItem from="1574306404780" duration="23445000" />
+      <workItem from="1574598625523" duration="1632000" />
+      <workItem from="1574648224136" duration="21611000" />
+      <workItem from="1574675941098" duration="3971000" />
+      <workItem from="1574690498186" duration="7918000" />
+      <workItem from="1574735499864" duration="2181000" />
+      <workItem from="1574776648381" duration="3781000" />
+      <workItem from="1574819562958" duration="20967000" />
     </task>
+    <task id="LOCAL-00001" summary="//">
+      <created>1574309925236</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574309925236</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,5 +321,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="//" />
+    <MESSAGE value="EmployeeOutlet add get by employee id" />
+    <option name="LAST_COMMIT_MESSAGE" value="EmployeeOutlet add get by employee id" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/controller/LoginController.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="this.session" custom="javax.servlet.http.HttpSession" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

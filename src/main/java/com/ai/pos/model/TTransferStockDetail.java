@@ -18,7 +18,7 @@ public class TTransferStockDetail {
     @Column(name = "instock")
     private int instock;
 
-    @OneToMany(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "variant_id", referencedColumnName = "id", nullable = false)
     private MstItemVariant variantId;
 

@@ -10,11 +10,11 @@ public class EmployeeOutlet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstEmployee.class, fetch = FetchType.EAGER)
     @JoinColumn(name="employee_id", referencedColumnName = "id", nullable = false)
     private MstEmployee mstEmployee;
 
-    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.EAGER)
     @JoinColumn(name="outlet_id", referencedColumnName = "id", nullable = false)
     private MstOutlet mstOutlet;
 
