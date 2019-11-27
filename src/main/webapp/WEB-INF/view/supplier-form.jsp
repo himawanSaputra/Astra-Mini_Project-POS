@@ -22,85 +22,81 @@
 
 </head>
 <body>
-<div class="container" >
+<div class="container">
     <div class="col align-self-center">
         <h2>Supplier Detail</h2>
     </div>
 
+
+    <form:form action="saveSupplier" modelAttribute="theSupplier" method="POST">
+        <form:hidden path="id"/>
+        <table>
+            <tbody>
+            <tr>
+                    <%--            <td><label>Supplier Name :</label></td>--%>
+                <td colspan="2"><form:input path="name" placeholder="Supplier Name" class="form-control"/></td>
+            </tr>
+
+
+            <tr>
+                    <%--            <td><label>Address : </label></td>--%>
+                <td colspan="2"><form:input path="address" placeholder="Address" class="form-control"/></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select name="source" class="custom-select">
+                        <option value="rss">Province</option>
+                        <option value="other">OTHER LINK</option>
+                    </select>
+                </td>
+
+                <td>
+                    <select name="source" class="custom-select">
+                        <option value="rss">Region</option>
+                        <option value="other">OTHER LINK</option>
+                    </select>
+                </td>
+
+                <td>
+                    <select name="source" class="custom-select">
+                        <option value="rss">District</option>
+                        <option value="other">OTHER LINK</option>
+                    </select>
+                </td>
+
+
+            </tr>
+
+            <tr>
+                <td>
+                        <%--                            <input type="text" onfocus="this.value=''" value="Postal Code"/>--%>
+                    <form:input path="postalCode" placeholder="Postal Code" class="form-control"/>
+                </td>
+
+                <td>
+                        <%--                            <input type="text" onfocus="this.value=''" value="Phone"/>--%>
+                    <form:input path="phone" placeholder="Phone" class="form-control"/>
+                </td>
+
+                <td>
+                        <%--                            <input type="text" onfocus="this.value=''" value="Email"/>--%>
+                    <form:input path="email" placeholder="Email" class="form-control"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="button" value="cancel" align="right" class="btn btn-primary"
+                           onclick="window.location.href='list';return false;"/></td>
+                <td><input type="submit" value="save" class="btn btn-primary"/></td>
+
+            </tr>
+            </tbody>
+        </table>
+
+    </form:form>
+
 </div>
-
-
-<form:form action="saveSupplier" modelAttribute="theSupplier" method="POST">
-    <form:hidden path="id"/>
-    <table >
-        <tbody>
-        <tr>
-<%--            <td><label>Supplier Name :</label></td>--%>
-            <td colspan="2"><form:input path="name" placeholder="Supplier Name" class="form-control"/></td>
-        </tr>
-
-
-        <tr>
-<%--            <td><label>Address : </label></td>--%>
-            <td colspan="2"><form:input path="address" placeholder="Address" class="form-control"/></td>
-        </tr>
-
-        <tr>
-            <td>
-                <select name="source"  class="custom-select">
-                    <option value="rss">Province</option>
-                    <option value="other">OTHER LINK</option>
-                </select>
-            </td>
-
-            <td>
-                <select name="source"  class="custom-select">
-                    <option value="rss">Region</option>
-                    <option value="other">OTHER LINK</option>
-                </select>
-            </td>
-
-            <td>
-                <select name="source"  class="custom-select">
-                    <option value="rss">District</option>
-                    <option value="other">OTHER LINK</option>
-                </select>
-            </td>
-
-
-        </tr>
-
-        <tr>
-            <td>
-                    <%--                            <input type="text" onfocus="this.value=''" value="Postal Code"/>--%>
-                <form:input path="postalCode" placeholder="Postal Code" class="form-control"/>
-            </td>
-
-            <td>
-                    <%--                            <input type="text" onfocus="this.value=''" value="Phone"/>--%>
-                <form:input path="phone" placeholder="Phone" class="form-control"/>
-            </td>
-
-            <td>
-                    <%--                            <input type="text" onfocus="this.value=''" value="Email"/>--%>
-                <form:input path="email" placeholder="Email" class="form-control"/>
-            </td>
-        </tr>
-
-        <tr>
-            <td></td>
-            <td><input type="button" value="cancel" align="right" class="btn btn-primary" onclick="window.location.href='list';return false;"/></td>
-            <td><input type="submit" value="save" class="btn btn-primary"/></td>
-
-        </tr>
-        </tbody>
-    </table>
-
-</form:form>
-
-
-
-</form>
-
 </body>
 </html>

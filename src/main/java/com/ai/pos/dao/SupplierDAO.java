@@ -45,9 +45,26 @@ public class SupplierDAO implements DAO<MstSupplier> {
     }
 
     @Override
-
     public void delete(MstSupplier object) {
         Session session = sessionFactory.getCurrentSession();
         session.delete(object);
+    }
+
+    @Override
+    public List<MstSupplier> searchSuppliers(String theSearchName) {
+        Session session = sessionFactory.getCurrentSession();
+        Query theQuery = null;
+        if(theSearchName!=null & theSearchName.trim().length() >0){
+            theQuery =
+                    session.createSQLQuery("select * from pos_mst_supplier where lower(name) like :theName")
+                            .addEntity(MstSupplier.class);
+            theQuery.setParameter("theName","%" +theSearchName.toLowerCase() +"%");
+        }else{
+            theQuery = session.createSQLQuery("select * from pos_mst_supplier").addEntity(MstSupplier.class);
+        }
+
+
+        List<MstSupplier> suppliers = theQuery.getResultList();
+        return suppliers;
     }
 }

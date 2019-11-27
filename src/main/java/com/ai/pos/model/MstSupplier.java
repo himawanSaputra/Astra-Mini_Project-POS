@@ -24,29 +24,29 @@ public class MstSupplier {
     @Column(name = "email", nullable = true)
     private String email;
 
-    @ManyToOne(targetEntity = MstProvince.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "province_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "province_id")
     private MstProvince mstProvince;
 
-    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "region_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "region_id")
     private MstRegion mstRegion;
 
-    @ManyToOne(targetEntity = MstDistrict.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "district_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "district_id")
     private MstDistrict mstDistrict;
 
     @Column(name = "postal_code", length = 50, nullable = true)
     private String postalCode;
 
-    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="created_by", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="created_by")
     private MstUser createdBy;
 
     @Column(name = "created_on", nullable = true)
     private Date createdOn;
 
-    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="modified_by", referencedColumnName = "id")
     private MstUser modifiedBy;
 
@@ -170,23 +170,23 @@ public class MstSupplier {
     public void setActive(Boolean active) {
         this.active = active;
     }
-//    @Override
-//    public String toString() {
-//        return "MstSupplier{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", address='" + address + '\'' +
-//                ", phone='" + phone + '\'' +
-//                ", email='" + email + '\'' +
+    @Override
+    public String toString() {
+        return "MstSupplier{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
 //                ", mstProvince=" + mstProvince +
 //                ", mstRegion=" + mstRegion +
 //                ", mstDistrict=" + mstDistrict +
-//                ", postalCode='" + postalCode + '\'' +
-//                ", createdBy=" + createdBy +
-//                ", createdOn=" + createdOn +
-//                ", modifiedBy=" + modifiedBy +
-//                ", modifiedOn=" + modifiedOn +
-//                ", active=" + active +
-//                '}';
-//    }
+                ", postalCode='" + postalCode + '\'' +
+                ", createdBy=" + createdBy +
+                ", createdOn=" + createdOn +
+                ", modifiedBy=" + modifiedBy +
+                ", modifiedOn=" + modifiedOn +
+                ", active=" + active +
+                '}';
+    }
 }
