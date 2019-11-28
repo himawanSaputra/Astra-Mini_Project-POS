@@ -28,15 +28,15 @@
             <form:form method="post" action="/reset_password">
                 <div class="form-group">
                     <label for="forgotPasswordEmailInput">Email</label>
-                    <input class="form-control" type="text" name="email" id="forgotPasswordEmailInput"/>
+                    <input required="required" class="form-control" type="text" name="email" id="forgotPasswordEmailInput"/>
                 </div>
                 <div class="form-group">
                     <label for="forgotPasswordPasswordInput">Password</label>
-                    <input class="form-control" type="password" name="password" id="forgotPasswordPasswordInput"/>
+                    <input required="required" class="form-control" type="password" name="password" id="forgotPasswordPasswordInput"/>
                 </div>
                 <div class="form-group">
                     <label for="forgotPasswordRePasswordInput">Retype Password</label>
-                    <input class="form-control" type="password" name="repassword" id="forgotPasswordRePasswordInput"/>
+                    <input required="required" class="form-control" type="password" name="repassword" id="forgotPasswordRePasswordInput"/>
                 </div>
                 <div class="row">
                     <div class="col-6">

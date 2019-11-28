@@ -96,7 +96,8 @@ public class LoginController {
     @RequestMapping(value = "/login_outlet", method = RequestMethod.GET)
     public String loginOutlet(HttpSession session,
                        Model m){
-        List<EmployeeOutlet> employeeOutlets = this.employeeOutlet_service.listEmployeeOutlet();
+        MstUser user = (MstUser) session.getAttribute("user");
+        List<EmployeeOutlet> employeeOutlets = this.employeeOutlet_service.getEmployeeOutletByEmployeeId(user.getMstEmployee().getId());
         //TRANSLATE TO HASHMAP
         Map<Integer, String> outletMap = new HashMap<>();
         for(EmployeeOutlet curEmpOut : employeeOutlets){
@@ -120,6 +121,7 @@ public class LoginController {
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home(HttpSession session,
                        Model m){
+        m.addAttribute("content_page_url", "/dashboard");
         return "home";
     }
 
@@ -139,7 +141,7 @@ public class LoginController {
             return "admin_dashboard";
         }
 
-        return "";
+        return "admin_dashboard";
     }
 
 }

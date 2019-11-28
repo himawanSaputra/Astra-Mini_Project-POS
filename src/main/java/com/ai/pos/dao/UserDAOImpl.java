@@ -74,7 +74,7 @@ public class UserDAOImpl implements UserDAO{
     @Override
     public void insert(MstUser object) {
         Session session = sessionFactory.getCurrentSession();
-        session.delete(object);
+        session.save(object);
         session.flush();
     }
 

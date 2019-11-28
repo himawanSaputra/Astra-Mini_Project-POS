@@ -32,11 +32,11 @@
             <form:form method="post" action="/login">
                 <div class="form-group">
                     <label for="loginUsernameInput">Username</label>
-                    <input class="form-control" type="text" name="username" id="loginUsernameInput"/>
+                    <input required="required" class="form-control" type="text" name="username" id="loginUsernameInput"/>
                 </div>
                 <div class="form-group">
                     <label for="loginPasswordInput">Password</label>
-                    <input class="form-control" type="password" name="password" id="loginPasswordInput"/>
+                    <input required="required" class="form-control" type="password" name="password" id="loginPasswordInput"/>
                 </div>
                 <div class="row">
                     <div class="col-6 justify-content-start">

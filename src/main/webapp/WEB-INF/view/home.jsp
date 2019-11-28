@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap-min.css" />">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<%--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>--%>
-<%--    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />">--%>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />">
+
     <!------ Include the above in your HEAD tag ---------->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 </head>
@@ -21,7 +22,7 @@
                             <h2 class="text-white bi" align="center">Point Of Sales</h2>
                         </li>
                         <li class="sidebar-menu">
-                            <a href="#">
+                            <a href="<c:url value="/home"/>">
                                 <i class="fa fa-home" aria-hidden="true"></i>
                                 <span class="hidden-xs hidden-sm">Home</span>
                             </a>
@@ -77,7 +78,7 @@
                                         <li><a href="#" class="pr-5 text-center bg-secondary">Adjustment</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Transfer Stock</a></li>
+                                        <li><a href="<c:url value="/transfer_stock"/>" class="pr-5 text-center bg-secondary">Transfer Stock</a></li>
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 2) ||
@@ -114,7 +115,7 @@
                     </header>
                     <!-- CONTENT GOES HERE -->
                     <div id="content" class="h-100 w-100 m-5">
-                        <jsp:include page="/dashboard"/>
+                        <jsp:include page="${content_page_url}"/>
                     </div>
                 </div>
             </div>
@@ -130,10 +131,6 @@
                        $(this).removeClass("active");
                     });
                    $(this).addClass("active");
-
-                   $(this).find('li a').each(function(index){
-                      $(this).removeClass("active");
-                   });
                 });
             });
         });

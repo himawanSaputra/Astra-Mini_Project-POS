@@ -27,7 +27,7 @@
                     <div class="dropdown form-group">
                         <form:select cssClass="btn btn-outline-primary dropdown-toggle" path="id">
                             <div class="dropdown-menu">
-                                <form:option cssClass="dropdown-item" value="0" label="CHOOSE OUTLET"/>
+                                <form:option disabled="true" cssClass="dropdown-item" value="0" label="CHOOSE OUTLET"/>
                                 <form:options cssClass="dropdown-item" items="${outlet_map}"/>
                             </div>
                         </form:select>
