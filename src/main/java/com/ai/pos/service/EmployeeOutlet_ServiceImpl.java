@@ -3,17 +3,18 @@ package com.ai.pos.service;
 import com.ai.pos.dao.EmployeeOutlet_Dao;
 import com.ai.pos.model.EmployeeOutlet;
 import com.ai.pos.model.MstEmployee;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
+@Transactional
 public class EmployeeOutlet_ServiceImpl implements EmployeeOutlet_Service {
 
+    @Autowired
     private EmployeeOutlet_Dao employeeOutlet_dao;
-
-    public void setEmployeeOutlet_dao(EmployeeOutlet_Dao employeeOutlet_dao) {
-        this.employeeOutlet_dao = employeeOutlet_dao;
-    }
 
     @Override
     @Transactional

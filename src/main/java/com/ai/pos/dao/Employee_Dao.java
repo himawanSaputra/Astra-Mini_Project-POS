@@ -1,6 +1,7 @@
 package com.ai.pos.dao;
 
 import com.ai.pos.model.MstEmployee;
+import com.ai.pos.model.MstUser;
 
 import java.util.List;
 
@@ -11,5 +12,6 @@ public interface Employee_Dao {
     public void deleteEmployee(MstEmployee mstEmployee);
     public MstEmployee getEmployeeByEmail(String email);
     public MstEmployee findOne(int id);
-    public List<MstEmployee> listMstEmployee();
+//    public List<MstUser> listMstEmployee();
+    public List<MstEmployee> listMstEmployes();
 }

@@ -10,6 +10,12 @@ public class MstUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+//
+//    @Column(name = "employee_id")
+//    private int employeeId;
+//
+//    @Column(name = "role_id")
+//    private int roleId;
 
     @Column(name = "username", length = 50, nullable = false)
     private String username;
@@ -17,13 +23,14 @@ public class MstUser {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @ManyToOne(targetEntity = MstRole.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstRole.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false)
-    private MstRole roleId;
+    private MstRole mstRole;
 
-    @ManyToOne(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "employee_id", referencedColumnName = "id", nullable = false)
-    private MstEmployee employeeId;
+    //get data objek
+    @OneToOne(targetEntity = MstEmployee.class, fetch = FetchType.EAGER)
+    @JoinColumn(name = "employee_id", referencedColumnName = "id",nullable = false)
+    private MstEmployee mstEmployee;
 
     @Column(name = "created_by")
     private String createdBy;
@@ -48,6 +55,22 @@ public class MstUser {
         this.id = id;
     }
 
+//    public int getEmployeeId() {
+//        return employeeId;
+//    }
+//
+//    public void setEmployeeId(int employeeId) {
+//        this.employeeId = employeeId;
+//    }
+//
+//    public int getRoleId() {
+//        return roleId;
+//    }
+//
+//    public void setRoleId(int roleId) {
+//        this.roleId = roleId;
+//    }
+
     public String getUsername() {
         return username;
     }
@@ -64,20 +87,20 @@ public class MstUser {
         this.password = password;
     }
 
-    public MstRole getRoleId() {
-        return roleId;
+    public MstRole getMstRole() {
+        return mstRole;
     }
 
-    public void setRoleId(MstRole roleId) {
-        this.roleId = roleId;
+    public void setMstRole(MstRole mstRole) {
+        this.mstRole = mstRole;
     }
 
-    public MstEmployee getEmployeeId() {
-        return employeeId;
+    public MstEmployee getMstEmployee() {
+        return mstEmployee;
     }
 
-    public void setEmployeeId(MstEmployee employeeId) {
-        this.employeeId = employeeId;
+    public void setMstEmployee(MstEmployee mstEmployee) {
+        this.mstEmployee = mstEmployee;
     }
 
     public String getCreatedBy() {
@@ -126,8 +149,8 @@ public class MstUser {
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", roleId=" + roleId +
-                ", employeeId=" + employeeId +
+                ", mstRole=" + mstRole +
+                ", mstEmployee=" + mstEmployee +
                 ", createdBy='" + createdBy + '\'' +
                 ", createdOn=" + createdOn +
                 ", modifiedBy='" + modifiedBy + '\'' +
