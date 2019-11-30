@@ -13,7 +13,7 @@ public class TTransferStockHistory {
 
     @ManyToOne(targetEntity = TTransferStock.class, fetch = FetchType.LAZY)
     @JoinColumn(name="transfer_id", referencedColumnName = "id", nullable = false)
-    private  TTransferStock tTransferStock;
+    private TTransferStock tTransferStock;
 
     @Column(name = "status", nullable = false, length = 20)
     private String status;

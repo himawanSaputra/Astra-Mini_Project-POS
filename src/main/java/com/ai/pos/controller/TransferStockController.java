@@ -7,7 +7,9 @@ import com.ai.pos.service.TransferStockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -32,5 +34,12 @@ public class TransferStockController {
         return "home";
     }
 
-
+    @RequestMapping(value = "/transfer_stock_detail/{id}", method = RequestMethod.GET)
+    public String transferStockDetail(@PathVariable int id,
+                                      Model m){
+        TTransferStock transferStock = this.transferStockService.get(id);
+        m.addAttribute("transfer_stock", transferStock);
+        m.addAttribute("content_page_url", "transfer_stock_detail.jsp");
+        return "home";
+    }
 }
