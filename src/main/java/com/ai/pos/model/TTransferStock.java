@@ -1,8 +1,7 @@
 package com.ai.pos.model;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name = "pos_t_transfer_stock")
@@ -38,11 +37,11 @@ public class TTransferStock {
     @Column(name = "modified_on")
     private Date modifiedOn;
 
-    @OneToMany(mappedBy = "transferId")
-    private List<TTransferStockDetail> tTransferStockDetailList;
+    @OneToMany(mappedBy = "transferId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<TTransferStockDetail> tTransferStockDetailList = new HashSet<>();
 
-    @OneToMany(mappedBy = "tTransferStock")
-    private List<TTransferStockHistory> tTransferStockHistoryList;
+    @OneToMany(mappedBy = "tTransferStock", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<TTransferStockHistory> tTransferStockHistoryList = new HashSet<>();
 
     public Integer getId() {
         return id;
@@ -116,19 +115,19 @@ public class TTransferStock {
         this.modifiedOn = modifiedOn;
     }
 
-    public List<TTransferStockDetail> gettTransferStockDetailList() {
+    public Set<TTransferStockDetail> gettTransferStockDetailList() {
         return tTransferStockDetailList;
     }
 
-    public void settTransferStockDetailList(List<TTransferStockDetail> tTransferStockDetailList) {
+    public void settTransferStockDetailList(Set<TTransferStockDetail> tTransferStockDetailList) {
         this.tTransferStockDetailList = tTransferStockDetailList;
     }
 
-    public List<TTransferStockHistory> gettTransferStockHistoryList() {
+    public Set<TTransferStockHistory> gettTransferStockHistoryList() {
         return tTransferStockHistoryList;
     }
 
-    public void settTransferStockHistoryList(List<TTransferStockHistory> tTransferStockHistoryList) {
+    public void settTransferStockHistoryList(Set<TTransferStockHistory> tTransferStockHistoryList) {
         this.tTransferStockHistoryList = tTransferStockHistoryList;
     }
 

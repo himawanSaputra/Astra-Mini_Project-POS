@@ -11,7 +11,7 @@ public class TTransferStockHistory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = TTransferStock.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = TTransferStock.class, fetch = FetchType.EAGER)
     @JoinColumn(name="transfer_id", referencedColumnName = "id", nullable = false)
     private TTransferStock tTransferStock;
 

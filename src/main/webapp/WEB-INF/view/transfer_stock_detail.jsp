@@ -13,30 +13,29 @@
     <title>Point of Sales - Transfer Stock Detail</title>
 </head>
 <body>
-<div class="row">
-    <div class="col-10 pl-0 border-bottom">
-        <h4 class="font-weight-bold">Detail</h4>
-    </div>
-    <div class="col-2 pr-0 text-right">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                More
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Approve</a>
-                <a class="dropdown-item" href="#">Reject</a>
-                <a class="dropdown-item" href="#">Print</a>
-            </div>
+<form:form method="post" action="/transfer_stock_detail_handle_action" >
+    <div class="row">
+        <div class="col-10 pl-0 border-bottom">
+            <h4 class="font-weight-bold">Detail</h4>
+        </div>
+        <div class="col-2 pr-0 text-right">
+            <input name="id" value="${transfer_stock.id}" hidden="hidden"/>
+            <select class="browser-default custom-select" onchange="this.form.submit()" name="status">
+                <option selected>More</option>
+                <option value="1">Approve</option>
+                <option value="2">Reject</option>
+                <option value="3">Print</option>
+            </select>
         </div>
     </div>
-</div>
+</form:form>
 <!-- TRANSFER STOCK DETAIL HEADER -->
 <div class="row">
     <div class="col-12 p-0 mt-3">
         <p>Created By: ${transfer_stock.createdBy}</p>
         <p>Transfer Status: ${transfer_stock.status}</p>
         <p>Notes:</p>
-        <textarea class="h-100" wrap="hard">${transfer_stock.notes}</textarea>
+        <textarea disabled class="h-100" wrap="hard">${transfer_stock.notes}</textarea>
     </div>
 </div>
 <!-- TRANSFER STOCK STATUS HISTORY -->
@@ -81,7 +80,7 @@
 </div>
 <div class="row">
     <div class="col-12 text-right p-0">
-        <button class="btn btn-primary">
+        <button class="btn btn-primary" onclick="location.href='<c:url value="/transfer_stock"/>'">
             Done
         </button>
     </div>

@@ -14,9 +14,9 @@ public class MstItem {
     @Column(name = "name", length = 255)
     private String name;
 
-    @ManyToOne(targetEntity = MstCategory.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstCategory.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
-    private Integer category_id;
+    private MstCategory category_id;
 
     @Column(name="created_by")
     private String createdBy;
@@ -49,11 +49,11 @@ public class MstItem {
         this.name = name;
     }
 
-    public Integer getCategory_id() {
+    public MstCategory getCategory_id() {
         return category_id;
     }
 
-    public void setCategory_id(Integer category_id) {
+    public void setCategory_id(MstCategory category_id) {
         this.category_id = category_id;
     }
 
