@@ -1,7 +1,9 @@
 package com.ai.pos.controller;
 
 import com.ai.pos.model.MstCategory;
+import com.ai.pos.service.MstCategoryService;
 import com.ai.pos.service.MstCategoryServiceImpl;
+import com.ai.pos.service.MstItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -19,7 +21,7 @@ import java.util.List;
 public class MstCategoryController {
 
     @Autowired
-    MstCategoryServiceImpl mstCategoryService;
+    MstCategoryService mstCategoryService;
 
     @RequestMapping(value = "/category")
     public String getAllCategory(ModelMap mv){

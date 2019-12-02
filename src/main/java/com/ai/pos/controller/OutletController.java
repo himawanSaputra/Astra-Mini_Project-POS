@@ -1,6 +1,7 @@
 package com.ai.pos.controller;
 
 import com.ai.pos.model.MstOutlet;
+import com.ai.pos.service.Outlet_Service;
 import com.ai.pos.service.Outlet_ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +24,7 @@ public class OutletController {
 //    Customer_Service customer_service;
 
     @Autowired
-    Outlet_ServiceImpl outlet_service;
+    Outlet_Service outlet_service;
 
 //    @RequestMapping(value = "/outlet")
 //    public String getAllOutlet(ModelMap mv){
@@ -46,7 +47,7 @@ public class OutletController {
     @RequestMapping(value = "/saveOutlet", method = RequestMethod.POST)
     public String saveOutlet (@ModelAttribute("outlet") MstOutlet mstOutlet){
         mstOutlet.setActive(true);
-        outlet_service.save(mstOutlet);
+        outlet_service.addOutlet(mstOutlet);
         return "redirect:/outlet";
     }
 }

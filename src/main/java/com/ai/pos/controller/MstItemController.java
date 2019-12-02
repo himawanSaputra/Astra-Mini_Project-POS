@@ -1,6 +1,7 @@
 package com.ai.pos.controller;
 
 import com.ai.pos.model.MstItem;
+import com.ai.pos.service.MstItemService;
 import com.ai.pos.service.MstItemServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +16,7 @@ import java.util.List;
 public class MstItemController {
 
     @Autowired
-    MstItemServiceImpl mstItemService;
+    MstItemService mstItemService;
 
     @RequestMapping(value = "/item")
     public String getAllItem(ModelMap mv){
