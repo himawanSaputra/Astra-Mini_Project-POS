@@ -13,12 +13,7 @@ import java.util.List;
 public class MstCategoryDaoImpl implements MstCategoryDao {
 
     @Autowired
-    @Qualifier("sessionFactory")
-    private SessionFactory sessionFactory;
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+    SessionFactory sessionFactory;
 
     @Override
     public void save(MstCategory mstCategory) {

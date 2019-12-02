@@ -13,12 +13,7 @@ import java.util.List;
 public class MstItemDaoImpl implements MstItemDao {
 
     @Autowired
-    @Qualifier("sessionFactory")
     private SessionFactory sessionFactory;
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
 
     @Override
     public void save(MstItem mstItem) {

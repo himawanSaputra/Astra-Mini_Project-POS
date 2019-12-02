@@ -2,6 +2,7 @@ package com.ai.pos.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "pos_mst_item")
@@ -14,9 +15,12 @@ public class MstItem {
     @Column(name = "name", length = 255)
     private String name;
 
-    @ManyToOne(targetEntity = MstCategory.class, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "mstItem")
+    private List <MstItemVariant> mstItemVariant;
+
+    @ManyToOne(targetEntity = MstCategory.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
-    private Integer category_id;
+    private MstCategory mstCategory;
 
     @Column(name="created_by")
     private String createdBy;
@@ -49,12 +53,20 @@ public class MstItem {
         this.name = name;
     }
 
-    public Integer getCategory_id() {
-        return category_id;
+    public List<MstItemVariant> getMstItemVariant() {
+        return mstItemVariant;
     }
 
-    public void setCategory_id(Integer category_id) {
-        this.category_id = category_id;
+    public void setMstItemVariant(List<MstItemVariant> mstItemVariant) {
+        this.mstItemVariant = mstItemVariant;
+    }
+
+    public MstCategory getCategory_id() {
+        return mstCategory;
+    }
+
+    public void setCategory_id(MstCategory mstCategory) {
+        this.mstCategory = mstCategory;
     }
 
     public String getCreatedBy() {
@@ -102,7 +114,7 @@ public class MstItem {
         return "MstItem{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", category_id=" + category_id +
+                ", category_id=" + mstCategory +
                 ", createdBy='" + createdBy + '\'' +
                 ", createdOn=" + createdOn +
                 ", modifiedBy='" + modifiedBy + '\'' +

@@ -9,10 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
+@Transactional
 public class MstCategoryServiceImpl implements MstCategoryService{
 
     @Autowired
-    private MstCategoryDao mstCategoryDao;
+     MstCategoryDao mstCategoryDao;
+
 
     public void save(MstCategory mstCategory){
         mstCategoryDao.save(mstCategory);
