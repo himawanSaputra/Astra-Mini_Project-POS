@@ -7,6 +7,7 @@ import com.ai.pos.model.MstRegion;
 import com.ai.pos.service.Customer_Service;
 import com.ai.pos.service.Location_Service;
 import com.ai.pos.service.Outlet_Service;
+import com.ai.pos.service.Outlet_ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -15,11 +16,24 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
 @Controller
+@Resource
 public class OutletController {
+
+//    @Autowired
+//    Outlet_Service outlet_service;
+//
+//    @Autowired
+//    Customer_Service customer_service;
 
     @Autowired
     Outlet_Service outlet_service;
@@ -29,7 +43,6 @@ public class OutletController {
 
     @RequestMapping(value = "/outlet",  method = RequestMethod.GET)
     public String getAllCategory(@ModelAttribute MstOutlet mstOutlet, Model model){
-
         List<MstOutlet> list = outlet_service.listMstOutlet();
         model.addAttribute("outlets", list );
 
@@ -71,5 +84,13 @@ public class OutletController {
         return "redirect:/outlet";
 
 
+    }
+
+
+    @RequestMapping(value = "/saveOutlet", method = RequestMethod.POST)
+    public String saveOutlet (@ModelAttribute("outlet") MstOutlet mstOutlet){
+        mstOutlet.setActive(true);
+        outlet_service.addOutlet(mstOutlet);
+        return "redirect:/outlet";
     }
 }

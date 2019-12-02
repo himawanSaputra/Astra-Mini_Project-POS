@@ -9,10 +9,15 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
+@Transactional
 public class MstItemServiceImpl implements MstItemService {
 
     @Autowired
     private MstItemDao mstItemDao;
+
+    public void setMstItemDao(MstItemDao mstItemDao) {
+        this.mstItemDao = mstItemDao;
+    }
 
     public void save(MstItem mstItem){
         mstItemDao.save(mstItem);

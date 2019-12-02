@@ -2,6 +2,7 @@ package com.ai.pos.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "pos_mst_item_variant")
@@ -11,7 +12,10 @@ public class MstItemVariant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = MstItem.class, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "mstItemVariant")
+    private List<ItemInventory> itemInventory;
+
+    @ManyToOne(targetEntity = MstItem.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "item_id", referencedColumnName = "id", nullable = false)
     private MstItem mstItem;
 
@@ -45,6 +49,14 @@ public class MstItemVariant {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public List<ItemInventory> getItemInventory() {
+        return itemInventory;
+    }
+
+    public void setItemInventory(List<ItemInventory> itemInventory) {
+        this.itemInventory = itemInventory;
     }
 
     public MstItem getMstItem() {
