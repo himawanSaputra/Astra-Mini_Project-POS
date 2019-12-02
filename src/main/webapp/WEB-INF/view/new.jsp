@@ -116,13 +116,13 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="employee" items="${employees}">
+            <c:forEach var="cur_employee" items="${employees}">
                     <tr>
-                        <td>${employee.firstName}</td>
-                        <td>${employee.email}</td>
-                        <td>${employee.haveAccount}</td>
-                        <td>${employee.mstUser.mstRole.description} </td>
-                        <td>${employee.mstUser.mstRole.name} </td>
+                        <td>${cur_employee.firstName}</td>
+                        <td>${cur_employee.email}</td>
+                        <td>${cur_employee.haveAccount}</td>
+                        <td>${cur_employee.mstUser.mstRole.description} </td>
+                        <td>${cur_employee.mstUser.mstRole.name} </td>
                         <td>Edit <span><button type="button" class="btn btn-danger">X</button></span></td>
                     </tr>
             </c:forEach>

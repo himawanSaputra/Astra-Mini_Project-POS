@@ -121,19 +121,19 @@ public class MstUser {
         this.active = active;
     }
 
-    @Override
-    public String toString() {
-        return "MstUser{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", mstRole=" + mstRole +
-                ", mstEmployee=" + mstEmployee +
-                ", createdBy='" + createdBy + '\'' +
-                ", createdOn=" + createdOn +
-                ", modifiedBy='" + modifiedBy + '\'' +
-                ", modifiedOn=" + modifiedOn +
-                ", active=" + active +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "MstUser{" +
+//                "id=" + id +
+//                ", username='" + username + '\'' +
+//                ", password='" + password + '\'' +
+//                ", mstRole=" + mstRole +
+//                ", mstEmployee=" + mstEmployee +
+//                ", createdBy='" + createdBy + '\'' +
+//                ", createdOn=" + createdOn +
+//                ", modifiedBy='" + modifiedBy + '\'' +
+//                ", modifiedOn=" + modifiedOn +
+//                ", active=" + active +
+//                '}';
+//    }
 }

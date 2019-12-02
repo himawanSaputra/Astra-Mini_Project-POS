@@ -141,21 +141,21 @@ public class MstEmployee {
         this.mstUser = mstUser;
     }
 
-    @Override
-    public String toString() {
-        return "MstEmployee{" +
-                "id=" + id +
-                ", mstUser=" + mstUser +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", title='" + title + '\'' +
-                ", haveAccount=" + haveAccount +
-                ", createdBy='" + createdBy + '\'' +
-                ", createdOn=" + createdOn +
-                ", modifiedBy='" + modifiedBy + '\'' +
-                ", modifiedOn=" + modifiedOn +
-                ", active=" + active +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "MstEmployee{" +
+//                "id=" + id +
+//                ", mstUser=" + mstUser +
+//                ", firstName='" + firstName + '\'' +
+//                ", lastName='" + lastName + '\'' +
+//                ", email='" + email + '\'' +
+//                ", title='" + title + '\'' +
+//                ", haveAccount=" + haveAccount +
+//                ", createdBy='" + createdBy + '\'' +
+//                ", createdOn=" + createdOn +
+//                ", modifiedBy='" + modifiedBy + '\'' +
+//                ", modifiedOn=" + modifiedOn +
+//                ", active=" + active +
+//                '}';
+//    }
 }
