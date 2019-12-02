@@ -22,7 +22,9 @@ public class SupplierController {
 
         List<MstSupplier> suppliers = supplierService.getAll();
         theModel.addAttribute("suppliers", suppliers);
-        return "list-suppliers";
+        theModel.addAttribute("content_page_url", "list-suppliers.jsp");
+        theModel.addAttribute("page_title", "Supplier");
+        return "home";
     }
 
     @GetMapping("/supplierForm")

@@ -60,11 +60,14 @@ public class Employee_Controller {
         model.addAttribute("roleList", role);
         model.addAttribute("outletList", outlet);
         model.addAttribute("employee",  new MstEmployee());
-        return "new";
+
+        model.addAttribute("content_page_url", "new.jsp");
+        model.addAttribute("page_title", "Employee");
+        return "home";
     }
 
     //employee
-    @RequestMapping(value= "/employee", method = RequestMethod.POST)
+    @RequestMapping(value= "/add_employee", method = RequestMethod.POST)
     public String add(@ModelAttribute("add_employee") MstEmployee mstEmployee){
         mstEmployee.setActive(true);
         this.employee_service.addEmployee(mstEmployee);

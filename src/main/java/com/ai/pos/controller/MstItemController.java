@@ -23,6 +23,8 @@ public class MstItemController {
         List<MstItem> list = mstItemService.getAllItem();
         mv.addAttribute("allItem", list);
         mv.addAttribute("item", new MstItem());
-        return "item/indexItem";
+        mv.addAttribute("content_page_url", "item/indexItem.jsp");
+        mv.addAttribute("page_title", "Item");
+        return "home";
     }
 }

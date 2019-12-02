@@ -39,26 +39,26 @@
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2)}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Category</a></li>
+                                        <li><a href="<c:url value="/category"/>" class="pr-5 text-center bg-secondary">Category</a></li>
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2)}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Supplier</a></li>
+                                        <li><a href="<c:url value="/supplier/list"/>" class="pr-5 text-center bg-secondary">Supplier</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 1}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Outlet</a></li>
+                                        <li><a href="<c:url value="/outlet"/>" class="pr-5 text-center bg-secondary">Outlet</a></li>
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2) ||
                                         (sessionScope.user.mstRole.id == 3)}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Items</a></li>
+                                        <li><a href="<c:url value="/item"/>" class="pr-5 text-center bg-secondary">Items</a></li>
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2)}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Employee</a></li>
+                                        <li><a href="<c:url value="/employee"/>" class="pr-5 text-center bg-secondary">Employee</a></li>
                                     </c:if>
                                 </ul>
                             </div>
