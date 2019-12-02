@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public class Role_DaoImpl implements Role_Dao {
+
     @Autowired
     @Qualifier("sessionFactory")
     private SessionFactory sessionFactory;

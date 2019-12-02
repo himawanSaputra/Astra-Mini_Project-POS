@@ -1,22 +1,25 @@
 package com.ai.pos.dao;
 
 import com.ai.pos.model.MstEmployee;
+import com.ai.pos.model.MstUser;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
+
 @Repository
 public class Employee_DaoImpl implements Employee_Dao {
-    @Autowired
-    @Qualifier("sessionFactory")
-    private SessionFactory sessionFactory;
 
-    public void setSessionFactory(SessionFactory sf){
-        this.sessionFactory = sf;
-    }
+    @Autowired
+    SessionFactory sessionFactory;
 
     @Override
     public void addEmployee(MstEmployee mstEmployee) {
@@ -40,13 +43,35 @@ public class Employee_DaoImpl implements Employee_Dao {
     }
 
     @Override
+    public MstEmployee getEmployeeByEmail(String email) {
+        Session session = sessionFactory.getCurrentSession();
+        CriteriaBuilder cb = session.getCriteriaBuilder();
+        CriteriaQuery<MstEmployee> query = cb.createQuery(MstEmployee.class);
+        Root<MstEmployee> root = query.from(MstEmployee.class);
+        query.select(root)
+                .where(cb.equal(root.get("email"), email));
+        Query q = session.createQuery(query);
+        List<MstEmployee> employee = q.getResultList();
+        if(employee.isEmpty()){
+            return null;
+        }
+        return (MstEmployee) q.getSingleResult();
+    }
+
+    @Override
     public MstEmployee findOne(int id) {
         Session session = sessionFactory.getCurrentSession();
         return session.get(MstEmployee.class, id);
     }
 
+//    @Override
+//    public List<MstUser> listMstEmployee() {
+//        Session session = sessionFactory.getCurrentSession();
+//        return session.createCriteria(MstUser.class).list();
+//    }
+
     @Override
-    public List<MstEmployee> listMstEmployee() {
+    public List<MstEmployee> listMstEmployes() {
         Session session = sessionFactory.getCurrentSession();
         return session.createCriteria(MstEmployee.class).list();
     }
