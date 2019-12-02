@@ -87,9 +87,11 @@
                 <div class="form-group ">
                     <form:form modelAttribute="outlets">
                         <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">Create</button>
-                        <input class="form-control .col-sm-4" type="search" placeholder="Search"/>
+
                     </form:form>
                 </div>
+
+                <input class="form-control .col-sm-4" type="text" placeholder="Search" id="myInput"/>
             </div>
 
             <div>
@@ -104,9 +106,9 @@
                         <th scope="col">#</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="myTable">
                     <c:forEach var="outlet" items="${outlets}">
-                        <tr>
+                        <tr >
                             <td style="display: none">${outlet.id}</td>
                             <td>${outlet.name}</td>
                             <td>${outlet.address}</td>
@@ -123,6 +125,17 @@
 
 </div>
 </body>
+
+<script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
 <script>
    function toLink(id) {
        console.log("toLink"+id);

@@ -86,11 +86,11 @@ public class OutletController {
 
     }
 
-
-    @RequestMapping(value = "/saveOutlet", method = RequestMethod.POST)
-    public String saveOutlet (@ModelAttribute("outlet") MstOutlet mstOutlet){
-        mstOutlet.setActive(true);
-        outlet_service.addOutlet(mstOutlet);
-        return "redirect:/outlet";
-    }
+//
+//    @RequestMapping(value = "/saveOutlet", method = RequestMethod.POST)
+//    public String saveOutlet (@ModelAttribute("outlet") MstOutlet mstOutlet){
+//        mstOutlet.setActive(true);
+//        outlet_service.addOutlet(mstOutlet);
+//        return "redirect:/outlet";
+//    }
 }

@@ -47,4 +47,11 @@ public class MstCategoryDaoImpl implements MstCategoryDao {
         Session session = sessionFactory.getCurrentSession();
         return session.createCriteria(MstCategory.class).list();
     }
+
+    @Override
+    public void saveOrUpdate(MstCategory mstCategory) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(mstCategory);
+        session.flush();
+    }
 }

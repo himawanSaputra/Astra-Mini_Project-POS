@@ -10,4 +10,5 @@ public interface MstCategoryService {
     public void delete(MstCategory mstCategory);
     public MstCategory getCategory(int id);
     public List<MstCategory> getAllCategory();
+    public void saveOrUpdate(MstCategory mstCategory);
 }

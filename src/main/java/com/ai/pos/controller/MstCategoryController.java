@@ -1,16 +1,15 @@
 package com.ai.pos.controller;
 
 import com.ai.pos.model.MstCategory;
+import com.ai.pos.model.MstEmployee;
 import com.ai.pos.service.MstCategoryService;
 import com.ai.pos.service.MstCategoryServiceImpl;
 import com.ai.pos.service.MstItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -46,8 +45,23 @@ public class MstCategoryController {
 
     @RequestMapping(value = "/editCategory", method = RequestMethod.POST)
     public String editCategory(@ModelAttribute("category") MstCategory mstCategory){
-        mstCategoryService.update(mstCategory);
+        this.mstCategoryService.saveOrUpdate(mstCategory);
         return "redirect:/category";
     }
 
+//    @RequestMapping(value = "/updateCategory", method = RequestMethod.POST)
+//    public String updateCategory(@ModelAttribute("category") MstCategory mstCategory, Model model){
+//        mstCategoryService.saveOrUpdate(mstCategory);
+////        model.addAttribute("updateCategory",  new MstCategory());
+//        return "redirect:/category";
+//    }
+
+
+    @RequestMapping(value="/update/{id}" , method = RequestMethod.GET)
+    public @ResponseBody
+    MstCategory getCategory(@PathVariable int id) {
+        MstCategory category = mstCategoryService.getCategory(id);
+        System.out.println(category.getId());
+        return category;
+    }
 }
