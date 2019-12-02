@@ -12,29 +12,27 @@ public class TPrDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-//    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "pr_id", referencedColumnName = "id")
-//    private TPr tPr;
-//
-//    @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "variant_id", referencedColumnName = "id")
-//    private MstItemVariant mstItemVariant;
-//
-//    @Column(name = "request_qty", nullable = false)
-//    private Integer requestQty;
-//
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name="created_by", referencedColumnName = "id")
-//    private MstUser createdBy;
+    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "pr_id", referencedColumnName = "id", nullable = false)
+    private TPr tPr;
 
-    @Column(name = "created_on", nullable = true)
+    @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "variant_id", referencedColumnName = "id", nullable = false)
+    private MstItemVariant mstItemVariant;
+
+    @Column(name = "request_qty", nullable = false)
+    private Integer requestQty;
+
+    @Column(name = "created_by")
+    private String createdBy;
+
+    @Column(name = "created_on")
     private Date createdOn;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name="modified_by", referencedColumnName = "id")
-//    private MstUser modifiedBy;
+    @Column(name = "modified_by")
+    private String modifiedBy;
 
-    @Column(name = "modified_on", nullable = true)
+    @Column(name = "modified_on")
     private Date modifiedOn;
 
     public Integer getId() {
@@ -45,37 +43,37 @@ public class TPrDetail {
         this.id = id;
     }
 
-//    public TPr gettPr() {
-//        return tPr;
-//    }
-//
-//    public void settPr(TPr tPr) {
-//        this.tPr = tPr;
-//    }
-//
-//    public MstItemVariant getMstItemVariant() {
-//        return mstItemVariant;
-//    }
-//
-//    public void setMstItemVariant(MstItemVariant mstItemVariant) {
-//        this.mstItemVariant = mstItemVariant;
-//    }
+    public TPr gettPr() {
+        return tPr;
+    }
 
-//    public Integer getRequestQty() {
-//        return requestQty;
-//    }
-//
-//    public void setRequestQty(Integer requestQty) {
-//        this.requestQty = requestQty;
-//    }
+    public void settPr(TPr tPr) {
+        this.tPr = tPr;
+    }
 
-//    public MstUser getCreatedBy() {
-//        return createdBy;
-//    }
-//
-//    public void setCreatedBy(MstUser createdBy) {
-//        this.createdBy = createdBy;
-//    }
+    public MstItemVariant getMstItemVariant() {
+        return mstItemVariant;
+    }
+
+    public void setMstItemVariant(MstItemVariant mstItemVariant) {
+        this.mstItemVariant = mstItemVariant;
+    }
+
+    public Integer getRequestQty() {
+        return requestQty;
+    }
+
+    public void setRequestQty(Integer requestQty) {
+        this.requestQty = requestQty;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
 
     public Date getCreatedOn() {
         return createdOn;
@@ -85,13 +83,13 @@ public class TPrDetail {
         this.createdOn = createdOn;
     }
 
-//    public MstUser getModifiedBy() {
-//        return modifiedBy;
-//    }
-//
-//    public void setModifiedBy(MstUser modifiedBy) {
-//        this.modifiedBy = modifiedBy;
-//    }
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
 
     public Date getModifiedOn() {
         return modifiedOn;
@@ -101,17 +99,17 @@ public class TPrDetail {
         this.modifiedOn = modifiedOn;
     }
 
-//    @Override
-//    public String toString() {
-//        return "TPrDetail{" +
-//                "id=" + id +
-//                ", tPr=" + tPr +
-//                ", mstItemVariant=" + mstItemVariant +
-//                ", requestQty=" + requestQty +
-//                ", createdBy=" + createdBy +
-//                ", createdOn=" + createdOn +
-//                ", modifiedBy=" + modifiedBy +
-//                ", modifiedOn=" + modifiedOn +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "TPrDetail{" +
+                "id=" + id +
+                ", tPr=" + tPr +
+                ", mstItemVariant=" + mstItemVariant +
+                ", requestQty=" + requestQty +
+                ", createdBy='" + createdBy + '\'' +
+                ", createdOn=" + createdOn +
+                ", modifiedBy='" + modifiedBy + '\'' +
+                ", modifiedOn=" + modifiedOn +
+                '}';
+    }
 }

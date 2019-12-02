@@ -11,19 +11,18 @@ public class TPrHistory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-//    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "pr_id", referencedColumnName = "id")
-//    private TPr tPr;
+    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "pr_id", referencedColumnName = "id")
+    private TPr tPr;
 
     @Column(name = "status", length = 20, nullable = false)
     private String status;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name="created_by", referencedColumnName = "id")
-//    private MstUser createdBy;
+    @Column(name = "created_by")
+    private String createdBy;
 
-    @Column(name = "created_on", nullable = true)
-    private Date createOn;
+    @Column(name = "created_on")
+    private Date createdOn;
 
     public Integer getId() {
         return id;
@@ -33,13 +32,13 @@ public class TPrHistory {
         this.id = id;
     }
 
-//    public TPr gettPr() {
-//        return tPr;
-//    }
-//
-//    public void settPr(TPr tPr) {
-//        this.tPr = tPr;
-//    }
+    public TPr gettPr() {
+        return tPr;
+    }
+
+    public void settPr(TPr tPr) {
+        this.tPr = tPr;
+    }
 
     public String getStatus() {
         return status;
@@ -49,30 +48,30 @@ public class TPrHistory {
         this.status = status;
     }
 
-//    public MstUser getCreatedBy() {
-//        return createdBy;
-//    }
-//
-//    public void setCreatedBy(MstUser createdBy) {
-//        this.createdBy = createdBy;
-//    }
-
-    public Date getCreateOn() {
-        return createOn;
+    public String getCreatedBy() {
+        return createdBy;
     }
 
-    public void setCreateOn(Date createOn) {
-        this.createOn = createOn;
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
     }
 
-//    @Override
-//    public String toString() {
-//        return "TPrHistory{" +
-//                "id=" + id +
-//                ", tPr=" + tPr +
-//                ", status='" + status + '\'' +
-//                ", createdBy=" + createdBy +
-//                ", createOn=" + createOn +
-//                '}';
-//    }
+    public Date getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
+    }
+
+    @Override
+    public String toString() {
+        return "TPrHistory{" +
+                "id=" + id +
+                ", tPr=" + tPr +
+                ", status='" + status + '\'' +
+                ", createdBy='" + createdBy + '\'' +
+                ", createdOn=" + createdOn +
+                '}';
+    }
 }

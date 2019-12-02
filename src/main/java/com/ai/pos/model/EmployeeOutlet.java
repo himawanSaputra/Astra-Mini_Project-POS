@@ -10,12 +10,44 @@ public class EmployeeOutlet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-//    @ManyToMany(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name="employee_id", referencedColumnName = "id")
-//    private MstEmployee mstEmployee;
+    @ManyToOne(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
+    @JoinColumn(name="employee_id", referencedColumnName = "id", nullable = false)
+    private MstEmployee mstEmployee;
 
-//    @ManyToMany(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name="outlet_id", referencedColumnName = "id")
-//    private MstOutlet mstOutlet;
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @JoinColumn(name="outlet_id", referencedColumnName = "id", nullable = false)
+    private MstOutlet mstOutlet;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public MstEmployee getMstEmployee() {
+        return mstEmployee;
+    }
+
+    public void setMstEmployee(MstEmployee mstEmployee) {
+        this.mstEmployee = mstEmployee;
+    }
+
+    public MstOutlet getMstOutlet() {
+        return mstOutlet;
+    }
+
+    public void setMstOutlet(MstOutlet mstOutlet) {
+        this.mstOutlet = mstOutlet;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeOutlet{" +
+                "id=" + id +
+                ", mstEmployee=" + mstEmployee +
+                ", mstOutlet=" + mstOutlet +
+                '}';
+    }
 }

@@ -18,13 +18,13 @@ public class MstUser {
     @Column(name = "password", nullable = false)
     private String password;
 
-//    @ManyToOne(targetEntity = MstRole.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "role_id", referencedColumnName = "id", insertable = false, updatable = false)
-//    private MstRole roleId;
-//
-//    @ManyToOne(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "employee_id", referencedColumnName = "id", insertable = false, updatable = false)
-//    private MstEmployee employeeId;
+    @ManyToOne(targetEntity = MstRole.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false)
+    private MstRole roleId;
+
+    @ManyToOne(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "employee_id", referencedColumnName = "id", nullable = false)
+    private MstEmployee employeeId;
 
     @Column(name = "created_by")
     private String createdBy;
@@ -41,27 +41,99 @@ public class MstUser {
     @Column(name = "active", nullable = false)
     private Boolean active;
 
-    @OneToMany( mappedBy = "createdBy", cascade = CascadeType.ALL)
-    private List<MstSupplier> mstSupplierCreatedList;
+    public int getId() {
+        return id;
+    }
 
-    @OneToMany( mappedBy = "createdBy", cascade = CascadeType.ALL)
-    private List<MstProvince> mstProvinceCreatedList;
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    @OneToMany( mappedBy = "createdBy", cascade = CascadeType.ALL)
-    private List<MstRegion> mstRegionCreatedList;
+    public String getUsername() {
+        return username;
+    }
 
-    @OneToMany( mappedBy = "createdBy", cascade = CascadeType.ALL)
-    private List<MstDistrict> mstDistrictCreatedList;
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-    @OneToMany( mappedBy = "modifiedBy", cascade = CascadeType.ALL)
-    private List<MstSupplier> mstSupplierModifiedList;
+    public String getPassword() {
+        return password;
+    }
 
-    @OneToMany( mappedBy = "modifiedBy", cascade = CascadeType.ALL)
-    private List<MstProvince> mstProvinceModifiedList;
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-    @OneToMany( mappedBy = "modifiedBy", cascade = CascadeType.ALL)
-    private List<MstRegion> mstRegionModifiedList;
+    public MstRole getRoleId() {
+        return roleId;
+    }
 
-    @OneToMany( mappedBy = "modifiedBy", cascade = CascadeType.ALL)
-    private List<MstDistrict> mstDistrictModifiedList;
+    public void setRoleId(MstRole roleId) {
+        this.roleId = roleId;
+    }
+
+    public MstEmployee getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(MstEmployee employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public Date getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
+    }
+
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
+
+    public Date getModifiedOn() {
+        return modifiedOn;
+    }
+
+    public void setModifiedOn(Date modifiedOn) {
+        this.modifiedOn = modifiedOn;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    @Override
+    public String toString() {
+        return "MstUser{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", roleId=" + roleId +
+                ", employeeId=" + employeeId +
+                ", createdBy='" + createdBy + '\'' +
+                ", createdOn=" + createdOn +
+                ", modifiedBy='" + modifiedBy + '\'' +
+                ", modifiedOn=" + modifiedOn +
+                ", active=" + active +
+                '}';
+    }
 }

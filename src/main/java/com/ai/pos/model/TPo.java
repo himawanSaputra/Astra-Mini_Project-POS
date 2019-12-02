@@ -11,16 +11,16 @@ public class TPo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-//    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "pr_id", referencedColumnName = "id")
-//    private TPr tPr;
-//
-//    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "outlet_id", referencedColumnName = "id")
-//    private MstOutlet mstOutlet;
+    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "pr_id", referencedColumnName = "id", nullable = false)
+    private TPr tPr;
+
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "outlet_id", referencedColumnName = "id", nullable = false)
+    private MstOutlet mstOutlet;
 
     @ManyToOne(targetEntity = MstSupplier.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "supplier_id", referencedColumnName = "id")
+    @JoinColumn(name = "supplier_id", referencedColumnName = "id", nullable = false)
     private MstSupplier mstSupplier;
 
     @Column(name = "po_no", length = 20, nullable = false)
@@ -35,16 +35,14 @@ public class TPo {
     @Column(name = "status", length = 20, nullable = false)
     private String status;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "created_by", referencedColumnName = "id")
-//    private MstUser createdBy;
-//
-//    @Column(name = "created_on")
-//    private Date createdOn;
-//
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "modified_by", referencedColumnName = "id")
-//    private MstUser modifiedBy;
+    @Column(name="created_by")
+    private String createdBy;
+
+    @Column(name = "created_on")
+    private Date createdOn;
+
+    @Column(name="modifiedBy")
+    private String modifiedBy;
 
     @Column(name = "modified_on")
     private Date modifiedOn;
@@ -56,22 +54,22 @@ public class TPo {
     public void setId(Integer id) {
         this.id = id;
     }
-//
-//    public TPr gettPr() {
-//        return tPr;
-//    }
-//
-//    public void settPr(TPr tPr) {
-//        this.tPr = tPr;
-//    }
-//
-//    public MstOutlet getMstOutlet() {
-//        return mstOutlet;
-//    }
-//
-//    public void setMstOutlet(MstOutlet mstOutlet) {
-//        this.mstOutlet = mstOutlet;
-//    }
+
+    public TPr gettPr() {
+        return tPr;
+    }
+
+    public void settPr(TPr tPr) {
+        this.tPr = tPr;
+    }
+
+    public MstOutlet getMstOutlet() {
+        return mstOutlet;
+    }
+
+    public void setMstOutlet(MstOutlet mstOutlet) {
+        this.mstOutlet = mstOutlet;
+    }
 
     public MstSupplier getMstSupplier() {
         return mstSupplier;
@@ -113,29 +111,29 @@ public class TPo {
         this.status = status;
     }
 
-//    public MstUser getCreatedBy() {
-//        return createdBy;
-//    }
+    public String getCreatedBy() {
+        return createdBy;
+    }
 
-//    public void setCreatedBy(MstUser createdBy) {
-//        this.createdBy = createdBy;
-//    }
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
 
-//    public Date getCreatedOn() {
-//        return createdOn;
-//    }
-//
-//    public void setCreatedOn(Date createdOn) {
-//        this.createdOn = createdOn;
-//    }
+    public Date getCreatedOn() {
+        return createdOn;
+    }
 
-//    public MstUser getModifiedBy() {
-//        return modifiedBy;
-//    }
+    public void setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
+    }
 
-//    public void setModifiedBy(MstUser modifiedBy) {
-//        this.modifiedBy = modifiedBy;
-//    }
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
+
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
 
     public Date getModifiedOn() {
         return modifiedOn;
@@ -145,21 +143,21 @@ public class TPo {
         this.modifiedOn = modifiedOn;
     }
 
-//    @Override
-//    public String toString() {
-//        return "TPo{" +
-//                "id=" + id +
-//                ", tPr=" + tPr +
-//                ", mstOutlet=" + mstOutlet +
-//                ", mstSupplier=" + mstSupplier +
-//                ", poNo='" + poNo + '\'' +
-//                ", notes='" + notes + '\'' +
-//                ", grandTotal=" + grandTotal +
-//                ", status='" + status + '\'' +
-//                ", createdBy=" + createdBy +
-//                ", createdOn=" + createdOn +
-//                ", modifiedBy=" + modifiedBy +
-//                ", modifiedOn=" + modifiedOn +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "TPo{" +
+                "id=" + id +
+                ", tPr=" + tPr +
+                ", mstOutlet=" + mstOutlet +
+                ", mstSupplier=" + mstSupplier +
+                ", poNo='" + poNo + '\'' +
+                ", notes='" + notes + '\'' +
+                ", grandTotal=" + grandTotal +
+                ", status='" + status + '\'' +
+                ", createdBy='" + createdBy + '\'' +
+                ", createdOn=" + createdOn +
+                ", modifiedBy='" + modifiedBy + '\'' +
+                ", modifiedOn=" + modifiedOn +
+                '}';
+    }
 }

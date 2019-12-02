@@ -26,16 +26,14 @@ public class MstEmployee {
     @Column(name = "have_account", nullable = false)
     private Boolean haveAccount;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "created_by", referencedColumnName = "id")
-//    private MstUser createdBy;
+    @Column(name="created_by")
+    private String createdBy;
 
     @Column(name = "created_on")
     private Date createdOn;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "modified_by", referencedColumnName = "id")
-//    private MstUser modifiedBy;
+    @Column(name="modifiedBy")
+    private String modifiedBy;
 
     @Column(name = "modified_on")
     private Date modifiedOn;
@@ -91,13 +89,13 @@ public class MstEmployee {
         this.haveAccount = haveAccount;
     }
 
-//    public MstUser getCreatedBy() {
-//        return createdBy;
-//    }
+    public String getCreatedBy() {
+        return createdBy;
+    }
 
-//    public void setCreatedBy(MstUser createdBy) {
-//        this.createdBy = createdBy;
-//    }
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
 
     public Date getCreatedOn() {
         return createdOn;
@@ -107,13 +105,13 @@ public class MstEmployee {
         this.createdOn = createdOn;
     }
 
-//    public MstUser getModifiedBy() {
-//        return modifiedBy;
-//    }
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
 
-//    public void setModifiedBy(MstUser modifiedBy) {
-//        this.modifiedBy = modifiedBy;
-//    }
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
 
     public Date getModifiedOn() {
         return modifiedOn;
@@ -131,20 +129,20 @@ public class MstEmployee {
         this.active = active;
     }
 
-//    @Override
-//    publiString toString() {
-////        return "MstEmployee{" +
-////                "id=" + id +
-////                ", firstName='" + firstName + '\'' +
-////                ", lastName='" + lastName + '\'' +
-////                ", email='" + email + '\'' +
-////                ", title='" + title + '\'' +
-////                ", haveAccount=" + haveAccount +
-////                ", createdBy=" + createdBy +
-////                ", createdOn=" + createdOn +
-////                ", modifiedBy=" + modifiedBy +
-////                ", modifiedOn=" + modifiedOn +
-////                ", active=" + active +
-////                '}';
-////    }c
+    @Override
+    public String toString() {
+        return "MstEmployee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", title='" + title + '\'' +
+                ", haveAccount=" + haveAccount +
+                ", createdBy='" + createdBy + '\'' +
+                ", createdOn=" + createdOn +
+                ", modifiedBy='" + modifiedBy + '\'' +
+                ", modifiedOn=" + modifiedOn +
+                ", active=" + active +
+                '}';
+    }
 }

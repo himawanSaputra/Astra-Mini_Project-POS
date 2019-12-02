@@ -11,19 +11,17 @@ public class MstCategory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "name", length = 255)
+    @Column(name = "name", length = 255, nullable = false)
     private String name;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "created_by", referencedColumnName = "id")
-//    private MstUser createdBy;
+    @Column(name="created_by")
+    private String createdBy;
 
     @Column(name = "created_on")
     private Date createdOn;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "modified_by", referencedColumnName = "id")
-//    private MstUser modifiedBy;
+    @Column(name="modifiedBy")
+    private String modifiedBy;
 
     @Column(name = "modified_on")
     private Date modifiedOn;
@@ -47,13 +45,13 @@ public class MstCategory {
         this.name = name;
     }
 
-//    public MstUser getCreatedBy() {
-//        return createdBy;
-//    }
+    public String getCreatedBy() {
+        return createdBy;
+    }
 
-//    public void setCreatedBy(MstUser createdBy) {
-//        this.createdBy = createdBy;
-//    }
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
 
     public Date getCreatedOn() {
         return createdOn;
@@ -63,13 +61,13 @@ public class MstCategory {
         this.createdOn = createdOn;
     }
 
-//    public MstUser getModifiedBy() {
-//        return modifiedBy;
-//    }
+    public String getModifiedBy() {
+        return modifiedBy;
+    }
 
-//    public void setModifiedBy(MstUser modifiedBy) {
-//        this.modifiedBy = modifiedBy;
-//    }
+    public void setModifiedBy(String modifiedBy) {
+        this.modifiedBy = modifiedBy;
+    }
 
     public Date getModifiedOn() {
         return modifiedOn;
@@ -87,17 +85,17 @@ public class MstCategory {
         this.active = active;
     }
 
-//    @Override
-//    public String toString() {
-//        return "MstCategory{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", createdBy=" + createdBy +
-//                ", createdOn=" + createdOn +
-//                ", modifiedBy=" + modifiedBy +
-//                ", modifiedOn=" + modifiedOn +
-//                ", active=" + active +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "MstCategory{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", createdBy='" + createdBy + '\'' +
+                ", createdOn=" + createdOn +
+                ", modifiedBy='" + modifiedBy + '\'' +
+                ", modifiedOn=" + modifiedOn +
+                ", active=" + active +
+                '}';
+    }
 }
 

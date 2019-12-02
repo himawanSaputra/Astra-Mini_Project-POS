@@ -18,9 +18,8 @@ public class TPoHistory {
     @Column(name = "status", length = 20, nullable = false)
     private String status;
 
-//    @ManyToOne(targetEntity = MstUser.class, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "created_by", referencedColumnName = "id")
-//    private MstUser createdBy;
+    @Column(name="created_by")
+    private String createdBy;
 
     @Column(name = "created_on")
     private Date createdOn;
@@ -49,13 +48,13 @@ public class TPoHistory {
         this.status = status;
     }
 
-//    public MstUser getCreatedBy() {
-//        return createdBy;
-//    }
-//
-//    public void setCreatedBy(MstUser createdBy) {
-//        this.createdBy = createdBy;
-//    }
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+    }
 
     public Date getCreatedOn() {
         return createdOn;
@@ -65,14 +64,14 @@ public class TPoHistory {
         this.createdOn = createdOn;
     }
 
-//    @Override
-//    public String toString() {
-//        return "TPoHistory{" +
-//                "id=" + id +
-//                ", tPo=" + tPo +
-//                ", status='" + status + '\'' +
-//                ", createdBy=" + createdBy +
-//                ", createdOn=" + createdOn +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "TPoHistory{" +
+                "id=" + id +
+                ", tPo=" + tPo +
+                ", status='" + status + '\'' +
+                ", createdBy='" + createdBy + '\'' +
+                ", createdOn=" + createdOn +
+                '}';
+    }
 }
