@@ -148,7 +148,7 @@
             </div>
             <div class="modal-body">
                 <div clas="row">
-                    <input type="text" onkeyup="searchTransferItem()"/>
+                    <input type="text" onkeyup="searchTransferItem()" placeholder="Item Name - Vaiant Name"/>
                 </div>
                 <div clas="row">
                     <table class="table table-bordered">

@@ -148,7 +148,7 @@
             </div>
             <div class="modal-body">
                 <div clas="row">
-                    <input type="text" onkeyup="searchTransferItem()"/>
+                    <input id="input_search_" type="text" placeholder="Item Name - Variant Name"/>
                 </div>
                 <div clas="row">
                     <table class="table table-bordered">

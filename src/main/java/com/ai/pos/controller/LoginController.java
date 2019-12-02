@@ -4,6 +4,7 @@ import com.ai.pos.model.EmployeeOutlet;
 import com.ai.pos.model.MstOutlet;
 import com.ai.pos.model.MstUser;
 import com.ai.pos.service.EmployeeOutlet_Service;
+import com.ai.pos.service.Outlet_Service;
 import com.ai.pos.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +29,9 @@ public class LoginController {
 
     @Autowired
     EmployeeOutlet_Service employeeOutlet_service;
+
+    @Autowired
+    Outlet_Service outlet_service;
 
     @RequestMapping(value = "/")
     public String index(HttpSession session, Model m){
@@ -114,6 +118,7 @@ public class LoginController {
                                @ModelAttribute("outlet") MstOutlet mstOutlet,
                                Model m){
         //SAVE IN SESSION THE CHOSEN OUTLET
+        mstOutlet = this.outlet_service.getMstOutlet(mstOutlet.getId());
         session.setAttribute("outlet", mstOutlet);
         return "redirect:/home";
     }
