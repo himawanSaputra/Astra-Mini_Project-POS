@@ -65,6 +65,18 @@ public class EmployeeOutlet_DaoImpl implements EmployeeOutlet_Dao{
     }
 
     @Override
+    public List<EmployeeOutlet> getEmployeeOutletByEmployeeId(int id) {
+        Session session = this.sessionFactory.getCurrentSession();
+        CriteriaBuilder cb = session.getCriteriaBuilder();
+        CriteriaQuery<EmployeeOutlet> query = cb.createQuery(EmployeeOutlet.class);
+        Root<EmployeeOutlet> root = query.from(EmployeeOutlet.class);
+        query.select(root)
+                .where(cb.equal(root.get("mstEmployee"), id));
+        Query q = session.createQuery(query);
+        return q.getResultList();
+    }
+
+    @Override
     public List<EmployeeOutlet> employeeOutlet() {
         Session session = sessionFactory.getCurrentSession();
         return session.createCriteria(EmployeeOutlet.class).list();
