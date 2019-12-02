@@ -41,6 +41,11 @@ public class EmployeeOutlet_ServiceImpl implements EmployeeOutlet_Service {
     }
 
     @Override
+    public List<EmployeeOutlet> getEmployeeOutletByEmployeeId(int id) {
+        return this.employeeOutlet_dao.getEmployeeOutletByEmployeeId(id);
+    }
+
+    @Override
     @Transactional
     public List<EmployeeOutlet> listEmployeeOutlet() {
         return this.employeeOutlet_dao.employeeOutlet();

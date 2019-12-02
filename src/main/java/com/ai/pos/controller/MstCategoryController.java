@@ -27,7 +27,9 @@ public class MstCategoryController {
         List<MstCategory> list = mstCategoryService.getAllCategory();
         mv.addAttribute("allCategory",list);
         mv.addAttribute("category",new MstCategory());
-        return "category/indexCategory";
+        mv.addAttribute("content_page_url", "category/indexCategory.jsp");
+        mv.addAttribute("page_title", "Category");
+        return "home";
     }
 
     @RequestMapping(value = "/saveCategory", method = RequestMethod.POST)

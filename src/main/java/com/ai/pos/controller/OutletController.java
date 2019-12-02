@@ -72,7 +72,9 @@ public class OutletController {
         model.addAttribute("regionList",regions);
         model.addAttribute("districtList",disctricts);
 
-        return "outlet";
+        model.addAttribute("content_page_url", "outlet.jsp");
+        model.addAttribute("page_title", "Outlet");
+        return "home";
     }
 
     // save outlet

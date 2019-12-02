@@ -8,6 +8,8 @@ public interface MstItemDao {
     public void save(MstItem mstItem);
     public void update(MstItem mstItem);
     public void delete(MstItem mstItem);
+
     public MstItem getItem(int id);
     public List<MstItem> getAllItem();
+    public List<MstItem> getByItemVariantName(String name);
 }

@@ -38,4 +38,9 @@ public class MstItemServiceImpl implements MstItemService {
     public List<MstItem> getAllItem(){
         return mstItemDao.getAllItem();
     }
+
+    @Override
+    public List<MstItem> getByItemVariantName(String name) {
+        return this.mstItemDao.getByItemVariantName(name);
+    }
 }

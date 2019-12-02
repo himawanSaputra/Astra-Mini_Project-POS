@@ -103,9 +103,16 @@
     <!-- Add support for reading web resource: css, js, images, etc -->
     <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 
-    <bean id="userDAO" class="com.ai.pos.dao.UserDAO"/>
-
-    <bean id="userService" class="com.ai.pos.service.UserService">
-        <property name="userDAO" ref="userDAO"/>
-    </bean>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- ALL ROUTES THAT STARTS WITH '/' WILL BE INTERCEPTED (CSS, JS, JSP, URL, etc.), MUST BE EXCLUDED MANUALLY-->
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/"/>
+            <mvc:exclude-mapping path="/resources/**"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/forgot_password"/>
+            <mvc:exclude-mapping path="/reset_password"/>
+            <bean class="com.ai.pos.interceptor.LoginInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

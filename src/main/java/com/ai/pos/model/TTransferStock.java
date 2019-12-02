@@ -1,7 +1,7 @@
 package com.ai.pos.model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
 
 @Entity
 @Table(name = "pos_t_transfer_stock")
@@ -11,13 +11,13 @@ public class TTransferStock {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.EAGER)
     @JoinColumn(name="from_outlet", referencedColumnName = "id", nullable = false)
-    private  MstOutlet fromMstOutlet;
+    private MstOutlet fromMstOutlet;
 
-    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.EAGER)
     @JoinColumn(name="to_outlet", referencedColumnName = "id", nullable = false)
-    private  MstOutlet toMstOutlet;
+    private MstOutlet toMstOutlet;
 
     @Column(name = "notes")
     private String notes;
@@ -36,6 +36,12 @@ public class TTransferStock {
 
     @Column(name = "modified_on")
     private Date modifiedOn;
+
+    @OneToMany(mappedBy = "transferId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<TTransferStockDetail> tTransferStockDetailList = new HashSet<>();
+
+    @OneToMany(mappedBy = "tTransferStock", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<TTransferStockHistory> tTransferStockHistoryList = new HashSet<>();
 
     public Integer getId() {
         return id;
@@ -107,6 +113,22 @@ public class TTransferStock {
 
     public void setModifiedOn(Date modifiedOn) {
         this.modifiedOn = modifiedOn;
+    }
+
+    public Set<TTransferStockDetail> gettTransferStockDetailList() {
+        return tTransferStockDetailList;
+    }
+
+    public void settTransferStockDetailList(Set<TTransferStockDetail> tTransferStockDetailList) {
+        this.tTransferStockDetailList = tTransferStockDetailList;
+    }
+
+    public Set<TTransferStockHistory> gettTransferStockHistoryList() {
+        return tTransferStockHistoryList;
+    }
+
+    public void settTransferStockHistoryList(Set<TTransferStockHistory> tTransferStockHistoryList) {
+        this.tTransferStockHistoryList = tTransferStockHistoryList;
     }
 
     @Override

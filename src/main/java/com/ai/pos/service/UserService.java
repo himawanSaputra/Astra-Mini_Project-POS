@@ -1,50 +1,17 @@
 package com.ai.pos.service;
 
-import com.ai.pos.dao.UserDAO;
 import com.ai.pos.model.MstUser;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-@Service
-public class UserService implements com.ai.pos.service.Service<MstUser> {
+public interface UserService {
+    MstUser get(Integer id);
+    MstUser getByUsernamePassword(String username, String password);
+    List<MstUser> getAll();
 
-    @Autowired
-    UserDAO userDAO;
+    void insert(MstUser object);
+    void update(MstUser object);
+    void delete(MstUser object);
 
-    public void setUserDAO(UserDAO userDAO){
-        this.userDAO = userDAO;
-    }
-
-    @Override
-    public MstUser get(Integer id) {
-        return this.userDAO.get(id);
-    }
-
-    public MstUser getByUsernamePassword(String username, String password){
-        return this.userDAO.getByUsernamePassword(username, password);
-    }
-
-    @Override
-    public List<MstUser> getAll() {
-        return this.userDAO.getAll();
-    }
-
-    @Override
-    public void insert(MstUser object){
-        this.userDAO.insert(object);
-    }
-
-    @Override
-    public void update(MstUser object) {
-        this.userDAO.update(object);
-    }
-
-    @Override
-    public void delete(MstUser object) {
-        this.userDAO.delete(object);
-    }
-
+    boolean resetPassword(String email, String password);
 }
