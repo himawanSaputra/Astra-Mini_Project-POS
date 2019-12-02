@@ -6,21 +6,34 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="// supplier feature update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/POController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/RestSupplierController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/test/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/list-po.jsp" afterDir="false" />
+    <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/DistrictDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/IDistrictCustomDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/IRegionCustomDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/ProvinceDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/RegionDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/DistrictService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/IDistrictService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/IRegionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/ProvinceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/RegionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/RestSupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/RestSupplierController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/SupplierController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/SupplierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/SupplierDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstDistrict.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstDistrict.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstProvince.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstProvince.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstRegion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/SupplierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/SupplierService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/list-suppliers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/list-suppliers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/supplier-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/supplier-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstDistrict.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstDistrict.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstRegion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstDistrict.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstDistrict.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstRegion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstRegion.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,9 +59,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="Interface" />
         <option value="jsf" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -96,6 +109,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ai.pos.dao" />
+      <recent name="com.ai.pos.service" />
       <recent name="com.ai.pos.model" />
     </key>
   </component>
@@ -111,7 +126,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.2">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.561">
     <configuration name="Tomcat 7.0.561" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.561" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -259,10 +274,6 @@
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Tomcat Server.Tomcat 7.0.561" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.2" />
-    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -276,7 +287,8 @@
       <updated>1574217592190</updated>
       <workItem from="1574217595079" duration="8723000" />
       <workItem from="1574306404780" duration="23445000" />
-      <workItem from="1574598625523" duration="63040000" />
+      <workItem from="1574598625523" duration="116013000" />
+      <workItem from="1575260616291" duration="3994000" />
     </task>
     <task id="LOCAL-00001" summary="//">
       <created>1574309925236</created>
@@ -292,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574603125249</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="// supplier feature update popup">
+      <created>1574822580979</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574822580979</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +333,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="//" />
     <MESSAGE value="// supplier feature update" />
-    <option name="LAST_COMMIT_MESSAGE" value="// supplier feature update" />
+    <MESSAGE value="// supplier feature update popup" />
+    <option name="LAST_COMMIT_MESSAGE" value="// supplier feature update popup" />
   </component>
 </project>

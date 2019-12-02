@@ -1,5 +1,7 @@
 package com.ai.pos.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -24,30 +26,33 @@ public class MstSupplier {
     @Column(name = "email", nullable = true)
     private String email;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "province_id")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private MstProvince mstProvince;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "region_id")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private MstRegion mstRegion;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "district_id")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private MstDistrict mstDistrict;
 
     @Column(name = "postal_code", length = 50, nullable = true)
     private String postalCode;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name="created_by")
     private MstUser createdBy;
 
     @Column(name = "created_on", nullable = true)
     private Date createdOn;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="modified_by", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name="modified_by")
     private MstUser modifiedBy;
 
     @Column(name = "modified_on", nullable = true)
@@ -178,9 +183,9 @@ public class MstSupplier {
                 ", address='" + address + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
-//                ", mstProvince=" + mstProvince +
-//                ", mstRegion=" + mstRegion +
-//                ", mstDistrict=" + mstDistrict +
+                ", mstProvince=" + mstProvince +
+                ", mstRegion=" + mstRegion +
+                ", mstDistrict=" + mstDistrict +
                 ", postalCode='" + postalCode + '\'' +
                 ", createdBy=" + createdBy +
                 ", createdOn=" + createdOn +

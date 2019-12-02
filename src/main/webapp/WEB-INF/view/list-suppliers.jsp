@@ -28,7 +28,7 @@
 <body>
 
 
-<div id="exampleModalHolder"></div>
+<%--<div id="exampleModalHolder"></div>--%>
 
 <!-- Modal-->
 <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
@@ -41,12 +41,11 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form:form action="saveSupplier" modelAttribute="supplierForm" method="POST">
 
                 <div class="modal-body">
+                    <form:form action="saveSupplier" modelAttribute="supplierForm" method="POST">
                     <form:hidden path="id" id="id"/>
                     <div class="container">
-                        <form>
 
                             <div class="form-group">
                                 <label for="name" class="col-form-label">Supplier Name</label>
@@ -66,29 +65,32 @@
 
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-
                                     <label for="province" class="col-form-label">Province</label>
-                                    <select id="province" name="source" class="form-control" >
-                                        <option value="rss">Province</option>
-                                        <option value="other">OTHER LINK</option>
-                                    </select>
+                                    <form:select path="mstProvince.id" id="province" class="form-control custom-select">
+                                        <form:option value="0" label="-- Choose --" disabled="true"/>
+                                        <form:options items="${provinces}"  itemValue="id" itemLabel="name"/>
+                                    </form:select>
                                 </div>
 
 
                                 <div class="form-group col-md-4">
                                     <label for="region" class="col-form-label">Region</label>
-                                    <select id="region" name="source" class="form-control">
-                                        <option value="rss">Region</option>
-                                        <option value="other">OTHER LINK</option>
-                                    </select>
+                                    <form:select path="mstRegion.id" id="region" name="source" class="form-control">
+                                        <form:option value="0" label = "-- Choose -- " disabled="true" />
+<%--                                        <c:if test="${provinces}">--%>
+<%--                                            --%>
+<%--                                            --%>
+<%--                                        </c:if>--%>
+
+                                    </form:select>
                                 </div>
 
                                 <div class="form-group col-md-4">
                                     <label for="district" class="col-form-label">District</label>
-                                    <select id="district" name="source" class="form-control">
-                                        <option value="rss">District</option>
-                                        <option value="other">OTHER LINK</option>
-                                    </select>
+                                    <form:select path="mstDistrict.id" id="district" name="source" class="form-control">
+                                        <form:option value="0" label="-- Choose --" disabled="true"/>
+
+                                    </form:select>
                                 </div>
                             </div>
 
@@ -96,7 +98,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="postalCode" class="col-form-label">Postal Code</label>
-                                    <form:input  path="postalCode" id="postalCode" placeholder="Postal Code"
+                                    <form:input path="postalCode" id="postalCode" placeholder="Postal Code"
                                                 class="form-control"/>
 
                                 </div>
@@ -111,7 +113,6 @@
                                 <label for="email" class="col-form-label">Email</label>
                                 <form:input path="email" id="email" placeholder="Email" class="form-control"/>
                             </div>
-                        </form>
 
 
                     </div>
@@ -120,7 +121,8 @@
                 <div class="modal-footer">
                     <input type="button" value="cancel" align="right" class="btn btn-secondary"
                            onclick="window.location.href='list';return false;"/>
-                    <input type="submit" value="save" class="btn btn-primary"/>
+
+                    <input type="submit" id="formSubmit" value="save"  class="btn btn-primary"/>
                 </div>
             </form:form>
         </div>
@@ -148,9 +150,9 @@
         <div class="col-sm-8">
             <form:form action="search" method="GET">
                 <div class="input-group mb-3">
-                    <input type="text" name="theSearchName" class="form-control" placeholder="Search by name"/>
+                    <input type="text" id="theSearchName" name="theSearchName" class="form-control" placeholder="Search by name"/>
                     <div class="input-group-append">
-                        <button type="submit" value="Search" class="btn btn-primary">Search</button>
+                        <button type="submit" id="theSearchButton" value="Search" class="btn btn-primary">Search</button>
                     </div>
                 </div>
             </form:form>
@@ -199,9 +201,9 @@
         <c:forEach var="tempSupplier" items="${suppliers}">
 
             <!-- construct an "update" link with customer id -->
-            <c:url var="updateLink" value="/rest/supplier/get/">
-                <c:param name="supplierId" value="${tempSupplier.id}"/>
-            </c:url>
+            <%--            <c:url var="updateLink" value="/rest/supplier/get/">--%>
+            <%--                <c:param name="supplierId" value="${tempSupplier.id}"/>--%>
+            <%--            </c:url>--%>
 
             <tr>
                 <td>${tempSupplier.name}</td>
@@ -209,7 +211,7 @@
                 <td>${tempSupplier.email}</td>
                 <td>
                     <!-- display the update button -->
-                    <button type="button" id="tesBtn" onclick="toLink(${tempSupplier.id})" class="btn btn-info">Edit
+                    <button type="button" id="tesBtn" class="btn btn-info" onclick="toLink(${tempSupplier.id})">Edit
                     </button>
 
                 </td>
@@ -226,6 +228,11 @@
 
 <script>
     function toLink(id) {
+
+        let province = $('#province');
+        let region = $('#region');
+        let district1 = $('#district');
+
         console.log("toLink " + id);
         $.ajax({
             url: "${pageContext.request.contextPath}/rest/supplier/get/" + id,
@@ -235,26 +242,165 @@
 
                 console.log(data);
                 console.log(data.address);
-                asd = JSON.stringify($(self).attr('address'))
+                asd = JSON.stringify($(self).attr('address'));
                 console.log('this is data name ' + $(this).attr('name'));
                 console.log('this is data address ' + asd);
+                // console.log("provinceId "+data.mstProvince.id);
+                // console.log("regionId "+data.mstRegion.id);
+                // console.log("districtId "+data.mstDistrict.id);
 
-                $('#exampleModalHolder').html(data);
-                $('#exampleModal').modal('show')
-
-
+                // $('#exampleModalHolder').html(data);
+                $('#exampleModal').modal('show');
                 $(".modal-body #id").val(data.id);
                 $(".modal-body #name").val(data.name);
                 $(".modal-body #address").val(data.address);
+
+                if(data.mstProvince != null){
+                    province.prop('selectedIndex', data.mstProvince.id);
+                }else{
+                    province.prop('selectedIndex', 0);
+                    region.empty();
+                    district1.empty();
+
+                }
+
+                if(data.mstRegion != null){
+
+                    region.empty();
+                    region.append('<option selected="true" disabled>--Choose--</option>');
+
+                    $.ajax({
+                        url: "${pageContext.request.contextPath}/rest/region/getFromProvince/"+data.mstProvince.id,
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function(dataRegion){
+
+                            dataRegion.forEach(function (arrayItem) {
+                                var x = arrayItem.name ;
+                                console.log(x);
+                                region.append($('<option></option>').attr('value', arrayItem.id).text(arrayItem.name));
+                                <%--region.append($('<form:options >').attr({'value':"id", ' label':"name"}));--%>
+<%--                                <form:options items="${provinces}"  itemValue="id" itemLabel="name"/>--%>
+
+                            });
+
+                            var regionId = data.mstRegion.id;
+                            region.prop('selectedIndex',regionId);
+
+
+                        }
+                    });
+
+                }
+
+                if(data.mstDistrict != null){
+
+                    district1.empty();
+                    district1.append('<option selected="true" disabled>--Choose--</option>');
+                    district1.prop('selectedIndex', 0);
+
+
+                    $.ajax({
+                        url: "${pageContext.request.contextPath}/rest/district/getFromRegion/"+data.mstRegion.id,
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function(dataDistrict){
+
+                            dataDistrict.forEach(function (arrayItem) {
+                                var x = arrayItem.name ;
+                                console.log(x);
+
+                                district1.append($('<option></option>').attr('value', arrayItem.id).text(arrayItem.name));
+
+                            });
+
+
+                            var district = data.mstDistrict.id;
+                            district1.prop('selectedIndex',district);
+                        }
+
+                    })
+                }
                 $(".modal-body #email").val(data.email);
                 $(".modal-body #phone").val(data.phone);
                 $(".modal-body #postalCode").val(data.postalCode);
+
+
 
             }
         });
 
 
+
+
     }
+
+
+    $("#province").on('change', function(){
+        var id = this.value;
+        console.log(id);
+
+        let district = $('#district');
+        let region = $('#region');
+
+        region.empty();
+        region.append('<option selected="true" disabled>--Choose--</option>');
+        region.prop('selectedIndex', 0);
+
+        if(this.value == 0){
+            region.empty();
+            district.empty();
+            district.prop('selectedIndex', 0);
+        }
+        $.ajax({
+            url: "${pageContext.request.contextPath}/rest/region/getFromProvince/"+id,
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function(data){
+
+                data.forEach(function (arrayItem) {
+                    var x = arrayItem.name ;
+                    console.log(x);
+                    region.append($('<option></option>').attr('value', arrayItem.id).text(arrayItem.name));
+
+                });
+            }
+        });
+    });
+
+    $("#region").on('change', function(){
+        var id = this.value;
+        console.log("region id " + id);
+
+        let district = $('#district');
+        district.empty();
+
+        district.append('<option selected="true" disabled>--Choose--</option>');
+        district.prop('selectedIndex', 0);
+        $.ajax({
+            url: "${pageContext.request.contextPath}/rest/district/getFromRegion/"+id,
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function(data){
+                data.forEach(function (arrayItem) {
+                    var x = arrayItem.name ;
+                    console.log(x);
+                    district.append($('<option></option>').attr('value', arrayItem.id).text(arrayItem.name));
+
+                });
+            }
+        })
+    });
+
+    $("#formSubmit").on('click', function(){
+       console.log('click form');
+    });
+
+
+
+
+
+
 
 </script>
 </body>

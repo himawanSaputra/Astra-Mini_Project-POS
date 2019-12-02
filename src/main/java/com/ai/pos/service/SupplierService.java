@@ -49,7 +49,7 @@ public class SupplierService implements Service<MstSupplier> {
     @Override
     @Transactional
     public List<MstSupplier> searchSuppliers(String theSearchName) {
-        return mstSupplierDAO.searchSuppliers(theSearchName);
+        return mstSupplierDAO.search(theSearchName);
     }
 
 

@@ -2,6 +2,7 @@ package com.ai.pos.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "pos_mst_user")
@@ -39,4 +40,28 @@ public class MstUser {
 
     @Column(name = "active", nullable = false)
     private Boolean active;
+
+    @OneToMany( mappedBy = "createdBy", cascade = CascadeType.ALL)
+    private List<MstSupplier> mstSupplierCreatedList;
+
+    @OneToMany( mappedBy = "createdBy", cascade = CascadeType.ALL)
+    private List<MstProvince> mstProvinceCreatedList;
+
+    @OneToMany( mappedBy = "createdBy", cascade = CascadeType.ALL)
+    private List<MstRegion> mstRegionCreatedList;
+
+    @OneToMany( mappedBy = "createdBy", cascade = CascadeType.ALL)
+    private List<MstDistrict> mstDistrictCreatedList;
+
+    @OneToMany( mappedBy = "modifiedBy", cascade = CascadeType.ALL)
+    private List<MstSupplier> mstSupplierModifiedList;
+
+    @OneToMany( mappedBy = "modifiedBy", cascade = CascadeType.ALL)
+    private List<MstProvince> mstProvinceModifiedList;
+
+    @OneToMany( mappedBy = "modifiedBy", cascade = CascadeType.ALL)
+    private List<MstRegion> mstRegionModifiedList;
+
+    @OneToMany( mappedBy = "modifiedBy", cascade = CascadeType.ALL)
+    private List<MstDistrict> mstDistrictModifiedList;
 }

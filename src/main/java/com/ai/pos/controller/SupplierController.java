@@ -1,6 +1,9 @@
 package com.ai.pos.controller;
 
 
+import com.ai.pos.model.MstDistrict;
+import com.ai.pos.model.MstProvince;
+import com.ai.pos.model.MstRegion;
 import com.ai.pos.model.MstSupplier;
 import com.ai.pos.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +15,9 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/supplier")
@@ -23,12 +28,37 @@ public class SupplierController {
     @Autowired
     private Service<MstSupplier> supplierService;
 
+    @Autowired
+    private Service<MstProvince> provinceService;
+
+    @Autowired
+    private Service<MstDistrict> districtService;
+
+    @Autowired
+    private Service<MstRegion> regionService;
+
     @GetMapping("/list")
     public String listSuppliers(Model theModel){
 
         List<MstSupplier> suppliers = supplierService.getAll();
         theModel.addAttribute("supplierForm", new MstSupplier());
         theModel.addAttribute("suppliers", suppliers);
+
+        List<MstProvince> provinces = provinceService.getAll();
+//        Map<Integer, String> putList = new HashMap<>();
+//        for(MstProvince province:provinces){
+//            putList.put(province.getId(), province.getName());
+//        }
+//        provinces.stream().forEach(province -> System.out.println(province.getName()));
+        theModel.addAttribute("provinces", provinces);
+
+//        List<MstDistrict> districts = districtService.getAll();
+//        theModel.addAttribute("districts", districts);
+//
+//        List<MstRegion> regions = regionService.getAll();
+//        theModel.addAttribute("regions", regions);
+
+
         return "list-suppliers";
     }
 
@@ -41,6 +71,7 @@ public class SupplierController {
 
     @PostMapping("/saveSupplier")
     public String saveSupplier(@ModelAttribute("supplierForm") MstSupplier theSupplier, Model theModel){
+        System.out.println("here");
         if(theSupplier ==null){
             System.out.println(theSupplier);
             theModel.addAttribute(new MstSupplier());
@@ -101,11 +132,17 @@ public class SupplierController {
 
     @GetMapping("/search")
     public String searchByName(@RequestParam("theSearchName") String theSearchName, Model theModel){
+
         List<MstSupplier> suppliers = supplierService.searchSuppliers(theSearchName);
         theModel.addAttribute("supplierForm", new MstSupplier());
         theModel.addAttribute("suppliers", suppliers);
+
+        List<MstProvince> provinces = provinceService.getAll();
+        theModel.addAttribute("provinces", provinces);
         return "list-suppliers";
     }
+
+
 
 
 }

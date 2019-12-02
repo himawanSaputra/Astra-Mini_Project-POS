@@ -18,16 +18,40 @@ public class SupplierDAO implements DAO<MstSupplier> {
     SessionFactory sessionFactory;
 
     @Override
+    @Transactional
     public MstSupplier get(Integer id) {
         Session session = sessionFactory.getCurrentSession();
-        MstSupplier theSupplier = session.get(MstSupplier.class, id);
-        return theSupplier;
+//        MstSupplier theSupplier = session.get(MstSupplier.class, id);
+//        return theSupplier;
+        try {
+
+//            MstSupplier theSupplier = session.get(MstSupplier.class, id);
+            Query<MstSupplier> theQuery = null;
+            if (id != null) {
+                theQuery = session.createSQLQuery("SELECT * FROM pos_mst_supplier msup " +
+                        "left join pos_mst_province mpro on (msup.province_id = mpro.id) " +
+                        "left join pos_mst_district mdis on (msup.district_id = mdis.id) " +
+                        "left join pos_mst_region mreg on (msup.region_id = mreg.id) " +
+                        "where msup.id =  :theId").addEntity(MstSupplier.class);
+                theQuery.setParameter("theId", id);
+            }
+            MstSupplier theSupplier = theQuery.getSingleResult();
+            return theSupplier;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
+
 
     @Override
     public List<MstSupplier> getAll() {
         Session session = sessionFactory.getCurrentSession();
-        List<MstSupplier> suppliers = session.createSQLQuery("select * from pos_mst_supplier").addEntity(MstSupplier.class).list();
+//        List<MstSupplier> suppliers = session.createCriteria(MstSupplier.class).list();
+        List<MstSupplier> suppliers = session.createSQLQuery("SELECT * FROM pos_mst_supplier msup  \n" +
+                "left join pos_mst_province mpro on (msup.province_id = mpro.id)\n" +
+                "left join pos_mst_district mdis on (msup.district_id = mdis.id)\n" +
+                "left join pos_mst_region mreg on (msup.region_id = mreg.id)").addEntity(MstSupplier.class).list();
         return suppliers;
     }
 
@@ -51,15 +75,15 @@ public class SupplierDAO implements DAO<MstSupplier> {
     }
 
     @Override
-    public List<MstSupplier> searchSuppliers(String theSearchName) {
+    public List<MstSupplier> search(String theSearchName) {
         Session session = sessionFactory.getCurrentSession();
         Query theQuery = null;
-        if(theSearchName!=null & theSearchName.trim().length() >0){
+        if (theSearchName != null & theSearchName.trim().length() > 0) {
             theQuery =
                     session.createSQLQuery("select * from pos_mst_supplier where lower(name) like :theName")
                             .addEntity(MstSupplier.class);
-            theQuery.setParameter("theName","%" +theSearchName.toLowerCase() +"%");
-        }else{
+            theQuery.setParameter("theName", "%" + theSearchName.toLowerCase() + "%");
+        } else {
             theQuery = session.createSQLQuery("select * from pos_mst_supplier").addEntity(MstSupplier.class);
         }
 
