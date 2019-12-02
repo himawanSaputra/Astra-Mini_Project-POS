@@ -35,7 +35,7 @@
         <form:form action="employee" name="employeeForm" method="post" modelAttribute="employee" >
             <div class="row">
                 <div class="col">
-                    <form:input type="hidden" class="form-control"  id="id" path="id"/>
+                    <form:input type="hidden" class="form-control"  id="idmstuser" path="id"/>
                 </div>
                 <div class="col">
                     <form:input type="text" class="form-control" placeholder="First name"  path="firstName" id="firstname"/>
@@ -64,20 +64,20 @@
                 </div>
             </div>
 
-            <div id="hide-user" class="hide-field row" style="margin-top: 25px ; display: none"  >
-                <div class="col">
-                    <form:select path="mstUser.mstRole" class="form-control select2" id="role" style="width: 100%;"  >
-                        <form:option value="0" label="-SELECT ROLE-"/>
-                        <form:options items="${roleList}"/>
-                    </form:select>
-                </div>
-                <div class="col">
-                    <form:input for="disabledTextInput" type="text" class="form-control" placeholder="User Name" path="mstUser.username" id="username"/>
-                </div>
-                <div class="col">
-                    <form:input for="disabledTextInput" type="text" class="form-control" placeholder="Password" path="mstUser.password" id="password"/>
-                </div>
-            </div>
+<%--            <div id="hide-user" class="hide-field row" style="margin-top: 25px ; display: none"  >--%>
+<%--                <div class="col">--%>
+<%--                    <form:select path="mstUser.mstRole" class="form-control select2" id="role" style="width: 100%;"  >--%>
+<%--                        <form:option value="0" label="-SELECT ROLE-"/>--%>
+<%--                        <form:options items="${roleList}"/>--%>
+<%--                    </form:select>--%>
+<%--                </div>--%>
+<%--                <div class="col">--%>
+<%--                    <form:input for="disabledTextInput" type="text" class="form-control" placeholder="User Name" path="mstUser.username" id="username"/>--%>
+<%--                </div>--%>
+<%--                <div class="col">--%>
+<%--                    <form:input for="disabledTextInput" type="text" class="form-control" placeholder="Password" path="mstUser.password" id="password"/>--%>
+<%--                </div>--%>
+<%--            </div>--%>
 
             <div class="row" style="margin-top: 25px">
 <%--                <div class="col">--%>

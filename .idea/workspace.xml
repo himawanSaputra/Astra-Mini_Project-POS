@@ -8,14 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="Add Dao Willi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/OutletController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/new.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/Employee_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/Employee_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/new.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/Employee_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/Employee_Controller.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

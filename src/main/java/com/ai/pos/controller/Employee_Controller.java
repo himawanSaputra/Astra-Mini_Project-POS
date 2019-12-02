@@ -65,10 +65,10 @@ public class Employee_Controller {
 
     //employee
     @RequestMapping(value= "/employee", method = RequestMethod.POST)
-    public String add(@ModelAttribute("add_employee") MstEmployee mstEmployee, MstUser mstUser){
+    public String add(@ModelAttribute("add_employee") MstEmployee mstEmployee){
         mstEmployee.setActive(true);
         this.employee_service.addEmployee(mstEmployee);
-        this.userService.insert(mstUser);
+//        this.userService.insert(mstUser);
         return "redirect:/employee";
 
 
