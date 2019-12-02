@@ -6,14 +6,63 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="">
+    <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="Add Dao Willi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstCategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/Employee_Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/Employee_Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/Employee_DaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/Employee_DaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/OutletDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/OutletDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/OutletDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/OutletDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstDistrict.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstDistrict.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstOutlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstOutlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstRegion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Employee_Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Employee_Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Employee_ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Employee_ServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Outlet_Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Outlet_Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Outlet_ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Outlet_ServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Role_ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Role_ServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/new.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/application-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/Employee_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/Employee_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/CustomerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/CustomerDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/EmployeeOutlet_Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/EmployeeOutlet_Dao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/EmployeeOutlet_DaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/EmployeeOutlet_DaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/Employee_Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/Employee_Dao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/Employee_DaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/Employee_DaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/OutletDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/OutletDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/OutletDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/OutletDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/Role_DaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/Role_DaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/EmployeeOutlet_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/EmployeeOutlet_ServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Employee_Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Employee_Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Employee_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Employee_ServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Outlet_Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Outlet_Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Outlet_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Outlet_ServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Role_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Role_ServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/Employee_Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/Employee_Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/CustomerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/CustomerDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/EmployeeOutlet_Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/EmployeeOutlet_Dao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/EmployeeOutlet_DaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/EmployeeOutlet_DaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/Employee_Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/Employee_Dao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/Employee_DaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/Employee_DaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/OutletDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/OutletDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/OutletDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/OutletDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/Role_DaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/Role_DaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstEmployee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/EmployeeOutlet_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/EmployeeOutlet_ServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_ServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Outlet_Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Outlet_Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Outlet_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Outlet_ServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Role_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Role_ServiceImpl.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,9 +88,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="jsf" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="jsf" />
       </list>
     </option>
   </component>
@@ -78,6 +127,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -269,6 +319,13 @@
       <workItem from="1574306404780" duration="23445000" />
       <workItem from="1574598625523" duration="1632000" />
       <workItem from="1574648224136" duration="7900000" />
+      <workItem from="1574821865641" duration="10205000" />
+      <workItem from="1574839660602" duration="9422000" />
+      <workItem from="1574909698969" duration="13399000" />
+      <workItem from="1574995944580" duration="15112000" />
+      <workItem from="1575037517564" duration="8229000" />
+      <workItem from="1575216008668" duration="62000" />
+      <workItem from="1575253086998" duration="10802000" />
     </task>
     <task id="LOCAL-00001" summary="//">
       <created>1574309925236</created>
@@ -298,6 +355,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="//" />
-    <option name="LAST_COMMIT_MESSAGE" value="//" />
+    <MESSAGE value="view employee, update new model, jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="view employee, update new model, jsp" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

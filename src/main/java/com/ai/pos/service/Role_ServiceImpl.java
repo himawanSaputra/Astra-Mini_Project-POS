@@ -14,7 +14,7 @@ import java.util.List;
 public class Role_ServiceImpl implements Role_Service {
 
     @Autowired
-    private Role_Dao role_dao;
+    Role_Dao role_dao;
 
     public void setRole_dao(Role_Dao role_dao) {
         this.role_dao = role_dao;

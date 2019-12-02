@@ -10,4 +10,5 @@ public interface OutletDao {
     public void deleteOutlet(int id);
     public MstOutlet findOne(int id);
     public List<MstOutlet> listMstOutlet();
+    public void saveOrUpdateOutlet(MstOutlet mstOutlet);
 }

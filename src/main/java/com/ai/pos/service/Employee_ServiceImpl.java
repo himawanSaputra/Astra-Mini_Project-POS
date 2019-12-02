@@ -14,7 +14,7 @@ import java.util.List;
 public class Employee_ServiceImpl implements Employee_Service {
 
     @Autowired
-    private Employee_Dao employee_dao;
+    Employee_Dao employee_dao;
 
     @Override
     @Transactional
@@ -40,16 +40,10 @@ public class Employee_ServiceImpl implements Employee_Service {
         return this.employee_dao.findOne(id);
     }
 
-//    @Override
-//    @Transactional
-//    public List<MstUser> listMstEmployee() {
-//        return this.employee_dao.listMstEmployee();
-//    }
-
     @Override
+    @Transactional
     public List<MstEmployee> listMstEmployes() {
         return this.employee_dao.listMstEmployes();
     }
-
 
 }

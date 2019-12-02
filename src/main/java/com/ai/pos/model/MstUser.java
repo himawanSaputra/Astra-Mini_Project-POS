@@ -10,12 +10,6 @@ public class MstUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-//
-//    @Column(name = "employee_id")
-//    private int employeeId;
-//
-//    @Column(name = "role_id")
-//    private int roleId;
 
     @Column(name = "username", length = 50, nullable = false)
     private String username;
@@ -54,22 +48,6 @@ public class MstUser {
     public void setId(int id) {
         this.id = id;
     }
-
-//    public int getEmployeeId() {
-//        return employeeId;
-//    }
-//
-//    public void setEmployeeId(int employeeId) {
-//        this.employeeId = employeeId;
-//    }
-//
-//    public int getRoleId() {
-//        return roleId;
-//    }
-//
-//    public void setRoleId(int roleId) {
-//        this.roleId = roleId;
-//    }
 
     public String getUsername() {
         return username;
