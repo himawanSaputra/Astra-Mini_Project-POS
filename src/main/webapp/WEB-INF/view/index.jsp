@@ -13,9 +13,9 @@
     <title>Point of Sales - Login</title>
 </head>
 <body>
-<div class="container h-100">
+<div class="container">
     <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-md-4 card p-4">
+        <div class="col-md-4 card p-4 shadow p-3 mb-5 bg-white rounded">
             <div class="row mb-4">
                 <div class="col">
                     <h3 align="center">Point Of Sales</h3>

@@ -3,6 +3,7 @@ package com.ai.pos.controller;
 import com.ai.pos.model.MstOutlet;
 import com.ai.pos.model.MstUser;
 import com.ai.pos.model.TTransferStock;
+import com.ai.pos.service.Outlet_Service;
 import com.ai.pos.service.TransferStockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,9 @@ public class TransferStockController {
     @Autowired
     private TransferStockService transferStockService;
 
+    @Autowired
+    private Outlet_Service outlet_service;
+
     @RequestMapping(value = "/transfer_stock")
     public String index(HttpSession session,
                         Model m){
@@ -30,8 +34,13 @@ public class TransferStockController {
         MstOutlet outlet = (MstOutlet) session.getAttribute("outlet");
         List<TTransferStock> transferStockList = this.transferStockService.getByFromOutletId(outlet.getId());
 
+        //GET ALL OUTLET DATA
+        List<MstOutlet> outlets = this.outlet_service.listMstOutlet();
+
+        m.addAttribute("all_outlets", outlets);
         m.addAttribute("transfer_stock_list", transferStockList);
         m.addAttribute("content_page_url", "transfer_stock_index.jsp");
+        m.addAttribute("page_title", "Transfer Stock");
         return "home";
     }
 
@@ -41,6 +50,7 @@ public class TransferStockController {
         TTransferStock transferStock = this.transferStockService.get(id);
         m.addAttribute("transfer_stock", transferStock);
         m.addAttribute("content_page_url", "transfer_stock_detail.jsp");
+        m.addAttribute("page_title", "Transfer Stock");
         return "home";
     }
 

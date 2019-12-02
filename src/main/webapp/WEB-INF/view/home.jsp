@@ -12,7 +12,7 @@
     <!------ Include the above in your HEAD tag ---------->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 </head>
-<body class="home">
+<body class="home m-0 p-0">
     <div class="container-fluid display-table">
         <div class="row display-table-row">
             <div class="col-md-3 col-sm-2 hidden-xs display-table-cell v-align box" id="navigation">
@@ -29,7 +29,7 @@
                         </li>
                         <li class="sidebar-menu">
                             <a data-toggle="collapse" href="#mstCollapse" role="button" aria-expanded="false" aria-controls="mstCollapse">
-                                <i class="fa fa-tasks" aria-hidden="true"></i>
+                                <i class="fa fa-database" aria-hidden="true"></i>
                                 <span class="hidden-xs hidden-sm">Master Data</span>
                             </a>
                             <div class="collapse" id="mstCollapse">
@@ -63,7 +63,7 @@
                         </li>
                         <li class="sidebar-menu">
                             <a data-toggle="collapse" href="#txCollapse" role="button" aria-expanded="false" aria-controls="txCollapse">
-                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                <i class="fa fa-exchange" aria-hidden="true"></i>
                                 <span class="hidden-xs hidden-sm">Transaction</span>
                             </a>
                             <div class="collapse" id="txCollapse">
@@ -96,20 +96,22 @@
             </div>
             <div class="col-md-9 col-sm-10 display-table-cell v-align">
                 <div class="row">
-                    <header class="align-middle">
+                    <header>
                         <div class="col-md-12">
-                            <h1 class="float-left">Dashboard</h1>
-                            <div class="float-right align-items-center">
-                                <ul class="list-inline header-top pull-right align-items-center">
-                                    <li>
-                                        <h4 align="center" class="mb-0">
-                                            Hello, ${sessionScope.user.username}
-                                        </h4>
-                                    </li>
-                                    <li>
-                                        <a class="btn btn-danger" href="<c:url value="/logout"/>">Logout</a>
-                                    </li>
-                                </ul>
+                            <div class="row h-100 p-0 m-0 align-middle">
+                                <div class="col-8 h-100 align-middle p-0 m-0">
+                                    <h1 class="m-0 p-0">${page_title}</h1>
+                                </div>
+                                <div class="col-3 align-middle text-right m-0 p-0">
+                                    <h4 align="right">
+                                        Hello, ${sessionScope.user.username}
+                                    </h4>
+                                </div>
+                                <div class="col-1 align-middle text-right m-0 p-0">
+                                    <button class="btn btn-danger" onclick="location.href='<c:url value="/logout"/>'">
+                                        Logout
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </header>

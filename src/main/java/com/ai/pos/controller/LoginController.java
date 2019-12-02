@@ -122,6 +122,7 @@ public class LoginController {
     public String home(HttpSession session,
                        Model m){
         m.addAttribute("content_page_url", "/dashboard");
+        m.addAttribute("page_title", "Dashboard");
         return "home";
     }
 
@@ -141,7 +142,7 @@ public class LoginController {
             return "admin_dashboard";
         }
 
-        return "admin_dashboard";
+        return "empty_dashboard";
     }
 
 }

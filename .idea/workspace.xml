@@ -7,47 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/TransferStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/TransferStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TTransferStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TTransferStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TTransferStockDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TTransferStockDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TTransferStockHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TTransferStockHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/transfer_stock_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/transfer_stock_detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/application-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/application-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/choose_outlet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/choose_outlet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/forgot_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/forgot_password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/transfer_stock_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/transfer_stock_index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/TransferStockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/TransferStockController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TTransferStock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TTransferStock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TTransferStockDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TTransferStockDetail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TTransferStockHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TTransferStockHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/PointOfSales.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/Employee_Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/choose_outlet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/choose_outlet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/forgot_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/forgot_password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/transfer_stock_index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/transfer_stock_index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/TransferStockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/TransferStockController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/CustomerDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/CustomerDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstCategoryDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstCategoryDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/OutletDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/OutletDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TTransferStock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TTransferStock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TTransferStockDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TTransferStockDetail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TTransferStockHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TTransferStockHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_Service.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_ServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstCategoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstCategoryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Outlet_Service.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Outlet_ServiceImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,9 +55,9 @@
         <option value="jsf" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -269,7 +245,9 @@
       <workItem from="1574909754600" duration="19682000" />
       <workItem from="1574995572834" duration="11564000" />
       <workItem from="1575101184625" duration="3560000" />
-      <workItem from="1575104799701" duration="3270000" />
+      <workItem from="1575104799701" duration="5850000" />
+      <workItem from="1575162942746" duration="6569000" />
+      <workItem from="1575185679548" duration="8263000" />
     </task>
     <task id="LOCAL-00001" summary="//">
       <created>1574309925236</created>
@@ -331,54 +309,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="152" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1575100822402" />
-    <state width="1024" height="275" key="GridCell.Tab.0.bottom" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.0.bottom" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.0.center" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.0.center" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.0.left" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.0.left" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.0.right" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.0.right" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.1.bottom" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.1.bottom" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.1.center" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.1.center" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.1.left" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.1.left" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.1.right" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.1.right" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.2.bottom" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.2.bottom" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.2.center" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.2.center" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.2.left" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.2.left" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
-    <state width="1024" height="275" key="GridCell.Tab.2.right" timestamp="1575113106704">
+    <state width="1024" height="275" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
+    <state width="1024" height="275" key="GridCell.Tab.2.right" timestamp="1575194652866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1575113106704" />
+    <state width="1024" height="275" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1575194652866" />
     <state width="1024" height="365" key="GridCell.Tab.3.bottom" timestamp="1575100947125">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -403,10 +381,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1575100934033" />
-    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1575104799497">
+    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1575252441620">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1575104799497" />
+    <state x="465" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1575252441620" />
     <state x="425" y="200" key="run.anything.popup" timestamp="1575111736704">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -417,7 +395,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/controller/TransferStockController.java</url>
-          <line>40</line>
+          <line>49</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

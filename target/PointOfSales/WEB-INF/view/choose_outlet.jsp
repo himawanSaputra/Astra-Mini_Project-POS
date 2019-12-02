@@ -15,7 +15,7 @@
 <body>
 <div class="container h-100">
     <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-md-4 card p-4">
+        <div class="col-md-4 card p-4 shadow p-3 mb-5 bg-white rounded">
             <div class="row mb-4">
                 <div class="col">
                     <h4 align="center">Choose Outlet</h4>
@@ -25,7 +25,7 @@
             <div class="row h-100 justify-content-center">
                 <form:form method="post" action="/login_choose_outlet" modelAttribute="outlet">
                     <div class="dropdown form-group">
-                        <form:select cssClass="btn btn-outline-primary dropdown-toggle" path="id">
+                        <form:select cssClass="browser-default custom-select" path="id" >
                             <div class="dropdown-menu">
                                 <form:option disabled="true" cssClass="dropdown-item" value="0" label="CHOOSE OUTLET"/>
                                 <form:options cssClass="dropdown-item" items="${outlet_map}"/>
