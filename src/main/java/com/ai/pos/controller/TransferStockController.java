@@ -1,17 +1,16 @@
 package com.ai.pos.controller;
 
+import com.ai.pos.model.MstItem;
 import com.ai.pos.model.MstOutlet;
 import com.ai.pos.model.MstUser;
 import com.ai.pos.model.TTransferStock;
+import com.ai.pos.service.MstItemService;
 import com.ai.pos.service.Outlet_Service;
 import com.ai.pos.service.TransferStockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -26,6 +25,9 @@ public class TransferStockController {
 
     @Autowired
     private Outlet_Service outlet_service;
+
+    @Autowired
+    private MstItemService mstItemService;
 
     @RequestMapping(value = "/transfer_stock")
     public String index(HttpSession session,
@@ -60,5 +62,14 @@ public class TransferStockController {
                                     @ModelAttribute("status") int status,
                                     Model m){
         return "redirect:/transfer_stock";
+    }
+
+    @RequestMapping(value = "/search_transfer_item", method = RequestMethod.GET)
+    public @ResponseBody
+    List<MstItem> searchTransferItem(
+            @RequestParam("term") String name){
+        System.out.println(name);
+        List<MstItem> lit = mstItemService.getByItemVariantName(name);
+        return this.mstItemService.getByItemVariantName(name);
     }
 }

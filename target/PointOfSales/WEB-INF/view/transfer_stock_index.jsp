@@ -148,7 +148,7 @@
             </div>
             <div class="modal-body">
                 <div clas="row">
-                    <input type="text" onkeyup="searchTransferItem()" placeholder="Item Name - Vaiant Name"/>
+                    <input id="input_search_transfer_item" type="text" placeholder="Item Name - Variant Name"/>
                 </div>
                 <div clas="row">
                     <table class="table table-bordered">
@@ -176,7 +176,27 @@
 </html>
 
 <script>
-    function searchItem(search_word) {
-
-    }
+    $(document).ready(function() {
+        $('#input_search_transfer_item').autocomplete({
+            <%--serviceUrl: '${pageContext.request.contextPath}/search_transfer_item',--%>
+            <%--paramName: "name",--%>
+            <%--delimiter: "-",--%>
+            <%--transformResult: function(response) {--%>
+            <%--    return {--%>
+            <%--        //must convert json to javascript object before process--%>
+            <%--        suggestions: $.map($.parseJSON(response), function(item) {--%>
+            <%--            return { value: item.name, data: item.id };--%>
+            <%--        })--%>
+            <%--    };--%>
+            <%--}--%>
+            source: function (request, response) {
+                $.getJSON("${pageContext.request.contextPath}/search_transfer_item", {
+                    term: request.term,
+                    success: function (data) {
+                        
+                    }
+                }, response);
+            }
+        });
+    });
 </script>
