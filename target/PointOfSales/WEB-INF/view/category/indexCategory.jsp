@@ -12,13 +12,13 @@
 <html>
 <head>
     <%--    <link rel="stylesheet" href=<c:url value="/resources/bootstrap/css/bootstrap-min.css" />>--%>
-    <script src="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />"></script>
-    <title>Category</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<%--    <script src="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />"></script>--%>
+<%--    <title>Category</title>--%>
+<%--    <meta charset="utf-8">--%>
+<%--    <meta name="viewport" content="width=device-width, initial-scale=1">--%>
+<%--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">--%>
+<%--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--%>
+<%--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>--%>
 </head>
 <body>
 
@@ -41,7 +41,6 @@
                     Create
                 </button>
             </div>
-            <!-- Modal -->
 
         </div>
     </div>
@@ -73,8 +72,8 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Category</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
                 <form:form method="post" action="/saveCategory" modelAttribute="category"
@@ -95,8 +94,8 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Category</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
                 <form:form method="post" action="/editCategory" modelAttribute="category"

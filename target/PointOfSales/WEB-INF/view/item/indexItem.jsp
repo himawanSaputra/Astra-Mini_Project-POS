@@ -72,11 +72,11 @@
             <tbody>
             <c:forEach var="item" items="${allItem}">
                 <tr>
-                    <td>${item.name}</td>
-                    <td>${item.category_id.name}</td>
+                    <td>${item.mstItemVariant.mstItem.name}</td>
+                    <td>${item.mstItemVariant.mstItem.category_id.name}</td>
                     <td>${item.mstItemVariant.price}</td>
-                    <td>${item.mstItemVariant.price}</td>
-                    <td>${item.mstItemVariant.itemInventory.alertAtQty}</td>
+                    <td>${item.mstItemVariant.sku}</td>
+                    <td>${item.alertAtQty}</td>
                     <td><a data-toggle="modal" data-target="#editItem">Edit</a></td>
                 </tr>
             </c:forEach>
