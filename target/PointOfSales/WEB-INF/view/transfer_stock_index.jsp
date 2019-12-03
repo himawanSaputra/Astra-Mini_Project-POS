@@ -149,6 +149,9 @@
             <div class="modal-body">
                 <div clas="row">
                     <input id="input_search_transfer_item" type="text" placeholder="Item Name - Variant Name"/>
+                    <div id="transfer_item_search_container">
+
+                    </div>
                 </div>
                 <div clas="row">
                     <table class="table table-bordered">
@@ -157,7 +160,6 @@
                             <th scope="col">Item</th>
                             <th scope="col">In Stock</th>
                             <th scope="col">Trans. Qty.</th>
-                            <th scope="col">#</th>
                         </tr>
                         </thead>
                         <tbody id="add_transfer_item_tbody">
@@ -177,26 +179,25 @@
 
 <script>
     $(document).ready(function() {
-        $('#input_search_transfer_item').autocomplete({
-            <%--serviceUrl: '${pageContext.request.contextPath}/search_transfer_item',--%>
-            <%--paramName: "name",--%>
-            <%--delimiter: "-",--%>
-            <%--transformResult: function(response) {--%>
-            <%--    return {--%>
-            <%--        //must convert json to javascript object before process--%>
-            <%--        suggestions: $.map($.parseJSON(response), function(item) {--%>
-            <%--            return { value: item.name, data: item.id };--%>
-            <%--        })--%>
-            <%--    };--%>
-            <%--}--%>
-            source: function (request, response) {
-                $.getJSON("${pageContext.request.contextPath}/search_transfer_item", {
-                    term: request.term,
-                    success: function (data) {
+        $('#input_search_transfer_item').change(function () {
+            $.ajax({
+                url: '${pageContext.request.contextPath}/search_transfer_item',
+                data: {'term' : $('#input_search_transfer_item').val()},
+                success: function (result) {
+                    //EMPTY THE DIV THAT CONTAINS THE SEARCH RESULTS
+                    $('#transfer_item_search_container').empty();
 
+                    if(result == null){
+                        return;
                     }
-                }, response);
-            }
+
+                    //ADD THE SEARCH RESULTS TO THE DIV CONTAINER
+                    $.each(result, function (key, value) {
+                        console.log(key);
+                        console.log(value);
+                    })
+                }
+            });
         });
     });
 </script>
