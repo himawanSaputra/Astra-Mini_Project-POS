@@ -148,7 +148,7 @@ public class MstItemVariant {
     public String toString() {
         return "MstItemVariant{" +
                 "id=" + id +
-                ", itemInventory=" + itemInventory +
+//                ", itemInventory=" + itemInventory +
                 ", tAdjustmentDetails=" + tAdjustmentDetails +
                 ", mstItem=" + mstItem +
                 ", name='" + name + '\'' +

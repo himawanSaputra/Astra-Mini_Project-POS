@@ -22,7 +22,7 @@
                 <div class="modal-header">
                     <h1 class="modal-title">Input Outlet</h1>
                 </div>
-                <div class="modal-body" size="100%">
+                <div class="modal-body">
                     <form:form method="post" name="outletForm" action="outlet" modelAttribute="outlet">
                         <form:input type="hidden" name="id" value="" path="id" id="id"/>
                         <form:input type="hidden" name="active" value="" path="active" id="active"/>
@@ -76,49 +76,21 @@
 
     <h2>Outlets</h2>
     <div>
-<<<<<<< HEAD
-        <hr>
-        <div class="row">
-<%--                    <form:form modelAttribute="outlets">--%>
-            <div class="form-group col-sm-13" align="left">
-                <input class="form-control" type="search" placeholder="Search"/>
-            </div>
-            <div class="form-group col-sm-8" align="right">
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#createOutlet">
-                    Create
-                </button>
-<%--                    </form:form>--%>
-=======
+
     <hr>
         <div class="container">
-<<<<<<< HEAD
-            <div class="row">
 
-<%--                    <form:form modelAttribute="outlets">--%>
-                            <div class="form-group col-sm-3" align="left">
-                                <input class="form-control" type="search" placeholder="Search"/>
-                            </div>
-                            <div class="form-group col-sm-9" align="right">
-                                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#createOutlet">
-                                    Create
-                                </button>
-                            </div>
-                            <!-- Modal -->
-<%--                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">Create</button>--%>
-<%--                        <input class="form-control .col-sm-4" type="search" placeholder="Search"/>--%>
-<%--                    </form:form>--%>
-=======
             <div class="row col-md">
-                <div class="form-group ">
-                    <form:form modelAttribute="outlets">
-                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">Create</button>
-
-                    </form:form>
->>>>>>> d4972385dd4dd3e61ef0d6d5730e71eec0a22c5d
+                <div>
+                    <input class="form-group col-sm-10 " align="left" type="text" placeholder="Search" id="myInput"/>
                 </div>
-
-                <input class="form-control .col-sm-4" type="text" placeholder="Search" id="myInput"/>
->>>>>>> 68da62ca97ae447b1647b3557dbf3f74a32ed819
+                <div class="form-group col-sm-9" align="right">
+<%--                    <form:form modelAttribute="outlets">--%>
+                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">
+                            Create
+                        </button>
+<%--                    </form:form>--%>
+                </div>
             </div>
 
             <div>
