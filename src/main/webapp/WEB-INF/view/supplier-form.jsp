@@ -30,6 +30,7 @@
 </div>
 
 
+
 <form:form action="saveSupplier" modelAttribute="theSupplier" method="POST">
     <form:hidden path="id"/>
     <table >
@@ -77,12 +78,12 @@
             </td>
 
             <td>
-                    <%--                            <input type="text" onfocus="this.value=''" value="Phone"/>--%>
+                    <%--<input type="text" onfocus="this.value=''" value="Phone"/>--%>
                 <form:input path="phone" placeholder="Phone" class="form-control"/>
             </td>
 
             <td>
-                    <%--                            <input type="text" onfocus="this.value=''" value="Email"/>--%>
+                    <%--<input type="text" onfocus="this.value=''" value="Email"/>--%>
                 <form:input path="email" placeholder="Email" class="form-control"/>
             </td>
         </tr>

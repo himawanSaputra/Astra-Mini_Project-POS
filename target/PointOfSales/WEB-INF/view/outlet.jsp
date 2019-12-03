@@ -49,7 +49,7 @@
                                 </form:select>
 
                                 <form:select path="districtId.id"  class="form-control select2" id="disctrict">
-                                    <form:option value="0" label="- Select District-" disabled="true"/>
+                                    <form:option  value="0" label="- Select District-" disabled="true"/>
                                     <form:options items="${districtList}" />
                                 </form:select>
 
@@ -151,27 +151,27 @@
                         $('#active').val(data.active);
                         $('#outletname').val(data.name);
                         $('#address').val(data.address);
-                        // $('#province').val(data.province);
-                        // $('#region').val(data.region);
-                        // $('#district').val(data.district);
+                        $('#province').val(data.province);
+                        $('#region').val(data.region);
+                        $('#district').val(data.district);
                         $('#postalcode').val(data.postalCode);
                         $('#phone').val(data.phone);
                         $('#email').val(data.email);
 
-                        if(data.mstProvince != null){
-                            province.props('selected', data.mstProvince.id)
-                        } else {
-                            province.props('selected', 0)
-                            region.empty();
-                            district.empty();
-                        }
-
-                        if (data.mstRegion != null){
-                            region.props('selected', data.mstRegion.id)
-                        }else{
-                            region.props('selected', 0)
-                            district.empty();
-                        }
+                        // if(data.mstProvince != null){
+                        //     province.props('selected', data.mstProvince.id)
+                        // } else {
+                        //     province.props('selected', 0)
+                        //     region.empty();
+                        //     district.empty();
+                        // }
+                        //
+                        // if (data.mstRegion != null){
+                        //     region.props('selected', data.mstRegion.id)
+                        // }else{
+                        //     region.props('selected', 0)
+                        //     district.empty();
+                        // }
                     },
                     error: function (error) {
                         alert(error);
