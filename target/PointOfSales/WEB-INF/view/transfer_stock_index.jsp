@@ -193,8 +193,7 @@
 
                     //ADD THE SEARCH RESULTS TO THE DIV CONTAINER
                     $.each(result, function (key, value) {
-                        console.log(key);
-                        console.log(value);
+
                     })
                 }
             });
