@@ -1,13 +1,7 @@
 package com.ai.pos.controller;
 
-import com.ai.pos.model.MstEmployee;
-import com.ai.pos.model.MstOutlet;
-import com.ai.pos.model.MstRole;
-import com.ai.pos.model.MstUser;
-import com.ai.pos.service.Employee_Service;
-import com.ai.pos.service.Outlet_Service;
-import com.ai.pos.service.Role_Service;
-import com.ai.pos.service.UserService;
+import com.ai.pos.model.*;
+import com.ai.pos.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,6 +29,9 @@ public class Employee_Controller {
     @Autowired
     UserService userService;
 
+    @Autowired
+    EmployeeOutlet_Service employeeOutlet_service;
+
     //get all data
     @RequestMapping(value = "/employee", method = RequestMethod.GET)
     public String listMstEmployee(@ModelAttribute MstRole mstRole, Model model) {
@@ -59,6 +56,7 @@ public class Employee_Controller {
 
         model.addAttribute("roleList", role);
         model.addAttribute("outletList", outlet);
+        model.addAttribute("all_outlets", outletList);
         model.addAttribute("employee",  new MstEmployee());
 
         model.addAttribute("content_page_url", "new.jsp");
@@ -66,14 +64,49 @@ public class Employee_Controller {
         return "home";
     }
 
-    //employee
     @RequestMapping(value= "/add_employee", method = RequestMethod.POST)
-    public String add(@ModelAttribute("add_employee") MstEmployee mstEmployee){
+    public String add(
+            @ModelAttribute("employee") MstEmployee mstEmployee,
+            @RequestParam(required = false, value = "selected_outlet") int[] outletIds){
+        /**
+         * SAVE THE EMPLOYEE FIRST, THEN THE ID OF THIS EMPLOYEE ARE GENERATED
+         */
         mstEmployee.setActive(true);
         this.employee_service.addEmployee(mstEmployee);
-//        this.userService.insert(mstUser);
+
+        //IF EMPLOYEE IS CREATED ALONG THE USER
+        if(mstEmployee.getMstUser() != null) {
+            /**
+             * SET THE NECESSARY FIELDS OF USER (INCLUDING THE EMPLOYEE ITSELF) THEN SAVE THE USER
+             */
+            mstEmployee.getMstUser().setActive(true);
+            mstEmployee.getMstUser().setMstEmployee(mstEmployee);
+            this.userService.insert(mstEmployee.getMstUser());
+        }
+
+        //IF THE EMPLOYEE IS ASSIGNED TO OUTLET(s)
+        if(outletIds != null && outletIds.length != 0){
+            /**
+             * SAVE THE OUTLET EMPLOYEE
+             */
+            for(int i = 0; i < outletIds.length; i++){
+                MstOutlet curAssignedOutlet = this.outlet_service.getMstOutlet(outletIds[i]);
+                EmployeeOutlet newEmployeeOutlet = new EmployeeOutlet();
+                newEmployeeOutlet.setMstEmployee(mstEmployee);
+                newEmployeeOutlet.setMstOutlet(curAssignedOutlet);
+                this.employeeOutlet_service.addEmployeeOutlet(newEmployeeOutlet);
+            }
+        }
         return "redirect:/employee";
-
-
     }
+
+    @RequestMapping(value= "/remove_employee/{id}", method = RequestMethod.POST)
+    public String remove(
+            @PathVariable("id") int id){
+        MstEmployee employee = this.employee_service.getMstEmployeeById(id);
+        this.employee_service.deleteEmployee(employee);
+        return "redirect:/employee";
+    }
+
+
 }

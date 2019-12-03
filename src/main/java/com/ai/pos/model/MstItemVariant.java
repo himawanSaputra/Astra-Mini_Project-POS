@@ -14,8 +14,8 @@ public class MstItemVariant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToMany(mappedBy = "mstItemVariant")
-    private List<ItemInventory> itemInventory;
+    @OneToMany(mappedBy = "mstItemVariant", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<ItemInventory> itemInventorySet = new HashSet<>();
 
     @OneToMany(mappedBy = "mstItemVariant", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<TAdjustmentDetail> tAdjustmentDetails = new HashSet<>();
@@ -56,12 +56,12 @@ public class MstItemVariant {
         this.id = id;
     }
 
-    public List<ItemInventory> getItemInventory() {
-        return itemInventory;
+    public Set<ItemInventory> getItemInventorySet() {
+        return itemInventorySet;
     }
 
-    public void setItemInventory(List<ItemInventory> itemInventory) {
-        this.itemInventory = itemInventory;
+    public void setItemInventorySet(Set<ItemInventory> itemInventorySet) {
+        this.itemInventorySet = itemInventorySet;
     }
 
     public MstItem getMstItem() {
