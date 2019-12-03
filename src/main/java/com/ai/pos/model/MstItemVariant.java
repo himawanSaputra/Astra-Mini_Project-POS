@@ -2,7 +2,9 @@ package com.ai.pos.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "pos_mst_item_variant")
@@ -12,8 +14,11 @@ public class MstItemVariant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToMany(mappedBy = "mstItemVariant")
-    private List<ItemInventory> itemInventory;
+    @OneToMany(mappedBy = "mstItemVariant", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<ItemInventory> itemInventorySet = new HashSet<>();
+
+    @OneToMany(mappedBy = "mstItemVariant", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<TAdjustmentDetail> tAdjustmentDetails = new HashSet<>();
 
     @ManyToOne(targetEntity = MstItem.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "item_id", referencedColumnName = "id", nullable = false)
@@ -51,12 +56,12 @@ public class MstItemVariant {
         this.id = id;
     }
 
-    public List<ItemInventory> getItemInventory() {
-        return itemInventory;
+    public Set<ItemInventory> getItemInventorySet() {
+        return itemInventorySet;
     }
 
-    public void setItemInventory(List<ItemInventory> itemInventory) {
-        this.itemInventory = itemInventory;
+    public void setItemInventorySet(Set<ItemInventory> itemInventorySet) {
+        this.itemInventorySet = itemInventorySet;
     }
 
     public MstItem getMstItem() {
@@ -131,10 +136,20 @@ public class MstItemVariant {
         this.active = active;
     }
 
+    public Set<TAdjustmentDetail> gettAdjustmentDetails() {
+        return tAdjustmentDetails;
+    }
+
+    public void settAdjustmentDetails(Set<TAdjustmentDetail> tAdjustmentDetails) {
+        this.tAdjustmentDetails = tAdjustmentDetails;
+    }
+
     @Override
     public String toString() {
         return "MstItemVariant{" +
                 "id=" + id +
+//                ", itemInventory=" + itemInventory +
+                ", tAdjustmentDetails=" + tAdjustmentDetails +
                 ", mstItem=" + mstItem +
                 ", name='" + name + '\'' +
                 ", sku='" + sku + '\'' +

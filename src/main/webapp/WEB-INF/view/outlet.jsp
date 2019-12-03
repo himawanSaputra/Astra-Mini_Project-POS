@@ -6,13 +6,13 @@
 <head>
 
     <meta charset="utf-8">
+    <title>Outlets</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 
 <div class="container">
 <%--    modal--%>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="form-inline row" style="display: inline-block; text-align: center; justify-content: center">
 
-                                <form:select path="provinceId.id"  class="form-control select2" id="province"  >
+                                <form:select path="provinceId.id"  class="form-control select2" id="province" >
                                     <form:option value="0" label="- Select Province-" disabled="true"/>
                                     <form:options items="${provinceList}" />
                                 </form:select>
@@ -53,16 +53,15 @@
                                     <form:options items="${districtList}" />
                                 </form:select>
 
-
                         </div>
                         <div class="form-inline row " style="display: inline-block; text-align: center; justify-content: center">
-                            <div class="col-sm">
+                            <div class="form-group col-sm" align="left">
                                 <form:input placeholder="Postal Code" type="postalcode" class="form-control input-lg" name="postalcode" path="postalCode" id="postalcode"/>
                             </div>
-                            <div class="col-sm">
+                            <div class="form-group col-sm" align="center">
                                 <form:input placeholder="Phone" type="phone" class="form-control input-lg" name="phone" path="phone" id="phone"/>
                             </div>
-                            <div class="col">
+                            <div class="form-group col-sm" align="right">
                                 <form:input placeholder="Email" type="email" class="form-control input-lg" name="email" path="email" id="email"/>
                             </div>
                         </div>
@@ -75,23 +74,23 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-
-
-
-
     <h2>Outlets</h2>
     <div>
+
     <hr>
         <div class="container">
+
             <div class="row col-md">
-                <div class="form-group ">
-                    <form:form modelAttribute="outlets">
-                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">Create</button>
-
-                    </form:form>
+                <div>
+                    <input class="form-group col-sm-10 " align="left" type="text" placeholder="Search" id="myInput"/>
                 </div>
-
-                <input class="form-control .col-sm-4" type="text" placeholder="Search" id="myInput"/>
+                <div class="form-group col-sm-9" align="right">
+<%--                    <form:form modelAttribute="outlets">--%>
+                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">
+                            Create
+                        </button>
+<%--                    </form:form>--%>
+                </div>
             </div>
 
             <div>

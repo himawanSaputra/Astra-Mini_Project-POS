@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="PointOfSales:war exploded" />
+      <artifact name="Astra-Mini_Project-POS:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="Add Dao Willi">
+    <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstCategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/category/indexCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/category/indexCategory.jsp" afterDir="false" />
@@ -24,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/supplier-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/supplier-form.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" afterDir="false" />
+
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,18 +47,7 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="point_of_sales@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="point_of_sales@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="point_of_sales@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="point_of_sales: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="MySQL - point_of_sales@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
     </expand>
     <select />
@@ -64,10 +55,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="jsf" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -104,21 +95,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="astra-mini_project-pos" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/resources" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Mini project/PO/Astra-Mini_Project-POS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -126,19 +107,11 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Himawan\Workspace\AI - Mini Project - Point of Sales\Astra-Mini_Project-POS\src\main\webapp\WEB-INF\view" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ai.pos.controller" />
-      <recent name="com.ai.pos.interceptor" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Himawan\Workspace\AI - Mini Project - Point of Sales\Astra-Mini_Project-POS\src\main\webapp\resources" />
-      <recent name="D:\Himawan\Workspace\AI - Mini Project - Point of Sales\Astra-Mini_Project-POS\src\main\webapp\WEB-INF\view\item" />
-      <recent name="D:\Himawan\Workspace\AI - Mini Project - Point of Sales\Astra-Mini_Project-POS\src\main\java\com\ai\pos\model" />
-      <recent name="D:\Himawan\Workspace\AI - Mini Project - Point of Sales\Astra-Mini_Project-POS\src\main\java\com\ai\pos\service" />
-      <recent name="D:\Himawan\Workspace\AI - Mini Project - Point of Sales\Astra-Mini_Project-POS\src\main\java\com\ai\pos\dao" />
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\resources" />
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\service" />
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\model" />
+      <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,10 +201,9 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.29" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.29" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8086/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="PointOfSales:war exploded">
+        <artifact name="Astra-Mini_Project-POS:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -239,8 +211,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_Astra-Mini_Project-POS" />
-        <option name="HTTP_PORT" value="8086" />
-        <option name="JNDI_PORT" value="1096" />
+        <option name="HTTP_PORT" value="8081" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -299,6 +270,7 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="PointOfSales:war exploded" />
+          <artifact name="Astra-Mini_Project-POS:war exploded" />
         </option>
       </method>
     </configuration>
@@ -306,6 +278,30 @@
       <item itemvalue="Tomcat Server.Tomcat 7.0.561" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.29" />
     </list>
+  </component>
+
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.14652318" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -331,7 +327,9 @@
       <workItem from="1575274427203" duration="18000" />
       <workItem from="1575274452901" duration="272000" />
       <workItem from="1575275251825" duration="7232000" />
+
       <workItem from="1575341194678" duration="16966000" />
+
     </task>
     <task id="LOCAL-00001" summary="//">
       <created>1574309925236</created>
@@ -365,111 +363,129 @@
     <option name="LAST_COMMIT_MESSAGE" value="view employee, update new model, jsp" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="70" key="#Assign_Data_Sources" timestamp="1575276026472">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="361" y="71" key="#Assign_Data_Sources" timestamp="1575354929921">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="70" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1575276026472" />
+    <state x="361" y="71" key="#Assign_Data_Sources/0.0.1536.834@0.0.1536.834" timestamp="1575354929921" />
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575348949782">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1575348949782" />
+    <state x="538" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1575358360669">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="538" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1575358360669" />
     <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1575278287033">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1575278287033" />
-    <state width="1024" height="275" key="GridCell.Tab.0.bottom" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1030" height="217" key="GridCell.Tab.0.bottom" timestamp="1575364261187">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1575364261187" />
     <state width="1024" height="275" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.0.center" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1575359399210" />
+    <state width="1030" height="217" key="GridCell.Tab.0.center" timestamp="1575364261186">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1575364261186" />
     <state width="1024" height="275" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.0.left" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1575359399210" />
+    <state width="1030" height="217" key="GridCell.Tab.0.left" timestamp="1575364261186">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1575364261186" />
     <state width="1024" height="275" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.0.right" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1575359399209" />
+    <state width="1030" height="217" key="GridCell.Tab.0.right" timestamp="1575364261186">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1575364261186" />
     <state width="1024" height="275" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.1.bottom" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1575359399210" />
+    <state width="1030" height="217" key="GridCell.Tab.1.bottom" timestamp="1575364261187">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1575364261187" />
     <state width="1024" height="275" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.1.center" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1575359399211" />
+    <state width="1030" height="217" key="GridCell.Tab.1.center" timestamp="1575364261187">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1575364261187" />
     <state width="1024" height="275" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.1.left" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1575359399211" />
+    <state width="1030" height="217" key="GridCell.Tab.1.left" timestamp="1575364261187">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1575364261187" />
     <state width="1024" height="275" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.1.right" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1575359399210" />
+    <state width="1030" height="217" key="GridCell.Tab.1.right" timestamp="1575364261187">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1575364261187" />
     <state width="1024" height="275" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.2.bottom" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1575359399211" />
+    <state width="1030" height="217" key="GridCell.Tab.2.bottom" timestamp="1575364261187">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.2.bottom/0.0.1280.689@0.0.1280.689" timestamp="1575364261187" />
     <state width="1024" height="275" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.2.center" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1575359399211" />
+    <state width="1030" height="217" key="GridCell.Tab.2.center" timestamp="1575364261187">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.2.center/0.0.1280.689@0.0.1280.689" timestamp="1575364261187" />
     <state width="1024" height="275" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.2.left" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1575359399211" />
+    <state width="1030" height="217" key="GridCell.Tab.2.left" timestamp="1575364261187">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.2.left/0.0.1280.689@0.0.1280.689" timestamp="1575364261187" />
     <state width="1024" height="275" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
-    <state width="1024" height="275" key="GridCell.Tab.2.right" timestamp="1575282378025">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1240" height="106" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1575359399211" />
+    <state width="1030" height="217" key="GridCell.Tab.2.right" timestamp="1575364261187">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
+    <state width="1030" height="217" key="GridCell.Tab.2.right/0.0.1280.689@0.0.1280.689" timestamp="1575364261187" />
     <state width="1024" height="275" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1575282378025" />
+    <state width="1240" height="106" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1575359399211" />
     <state width="1024" height="275" key="GridCell.Tab.3.bottom" timestamp="1575278443562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575278443562" />
-    <state width="1024" height="275" key="GridCell.Tab.3.center" timestamp="1575278443561">
+    <state width="1024" height="268" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575359244405" />
+    <state width="1024" height="268" key="GridCell.Tab.3.center" timestamp="1575359244405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1575278443561" />
-    <state width="1024" height="275" key="GridCell.Tab.3.left" timestamp="1575278443561">
+    <state width="1024" height="268" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1575359244405" />
+    <state width="1024" height="268" key="GridCell.Tab.3.left" timestamp="1575359244405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1575278443561" />
-    <state width="1024" height="275" key="GridCell.Tab.3.right" timestamp="1575278443561">
+    <state width="1024" height="268" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1575359244405" />
+    <state width="1024" height="268" key="GridCell.Tab.3.right" timestamp="1575359244405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="275" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1575278443561" />
-    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1575274426303">
+    <state width="1024" height="268" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1575359244405" />
+    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1575339786178">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1575274426303" />
+    <state x="425" y="189" key="run.anything.popup" timestamp="1575361364092">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1575361364092" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/dao/EmployeeOutlet_DaoImpl.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/controller/TransferStockController.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
-        <watch expression="list.get(0)" />
-        <watch expression="list.get(0)" />
-        <watch expression="mstRole.createdBy" />
-        <watch expression="((java.util.ArrayList)((LinkedHashMap.Entry)((org.springframework.validation.support.BindingAwareModelMap)model).entrySet().toArray()[2]).getValue()).get(3)" language="JAVA" custom="java.util.LinkedHashMap.Entry,org.springframework.validation.support.BindingAwareModelMap,java.util.ArrayList" />
-        <watch expression="roleList" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
