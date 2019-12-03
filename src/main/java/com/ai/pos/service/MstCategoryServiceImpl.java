@@ -36,5 +36,10 @@ public class MstCategoryServiceImpl implements MstCategoryService{
         return mstCategoryDao.getAllCategory();
     }
 
+    @Override
+    public void saveOrUpdate(MstCategory mstCategory) {
+        this.mstCategoryDao.saveOrUpdate(mstCategory);
+    }
+
 
 }
