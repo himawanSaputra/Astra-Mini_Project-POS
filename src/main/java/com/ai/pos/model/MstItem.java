@@ -2,7 +2,9 @@ package com.ai.pos.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "pos_mst_item")
@@ -15,8 +17,8 @@ public class MstItem {
     @Column(name = "name", length = 255)
     private String name;
 
-    @OneToMany(mappedBy = "mstItem")
-    private List <MstItemVariant> mstItemVariant;
+    @OneToMany(mappedBy = "mstItem", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<MstItemVariant> mstItemVariantSet = new HashSet<>();
 
     @ManyToOne(targetEntity = MstCategory.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
@@ -53,12 +55,20 @@ public class MstItem {
         this.name = name;
     }
 
-    public List<MstItemVariant> getMstItemVariant() {
-        return mstItemVariant;
+    public Set<MstItemVariant> getMstItemVariantSet() {
+        return mstItemVariantSet;
     }
 
-    public void setMstItemVariant(List<MstItemVariant> mstItemVariant) {
-        this.mstItemVariant = mstItemVariant;
+    public void setMstItemVariantSet(Set<MstItemVariant> mstItemVariantSet) {
+        this.mstItemVariantSet = mstItemVariantSet;
+    }
+
+    public MstCategory getMstCategory() {
+        return mstCategory;
+    }
+
+    public void setMstCategory(MstCategory mstCategory) {
+        this.mstCategory = mstCategory;
     }
 
     public MstCategory getCategory_id() {

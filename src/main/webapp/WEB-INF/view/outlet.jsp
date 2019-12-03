@@ -76,6 +76,7 @@
 
     <h2>Outlets</h2>
     <div>
+<<<<<<< HEAD
         <hr>
         <div class="row">
 <%--                    <form:form modelAttribute="outlets">--%>
@@ -87,6 +88,21 @@
                     Create
                 </button>
 <%--                    </form:form>--%>
+=======
+    <hr>
+        <div class="container">
+
+            <div class="row col-md">
+                <div class="form-group ">
+                    <form:form modelAttribute="outlets">
+                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">Create</button>
+
+                    </form:form>
+
+                </div>
+
+                <input class="form-control .col-sm-4" type="text" placeholder="Search" id="myInput"/>
+>>>>>>> 68da62ca97ae447b1647b3557dbf3f74a32ed819
             </div>
 
             <div>
@@ -101,9 +117,9 @@
                         <th scope="col">#</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="myTable">
                     <c:forEach var="outlet" items="${outlets}">
-                        <tr>
+                        <tr >
                             <td style="display: none">${outlet.id}</td>
                             <td>${outlet.name}</td>
                             <td>${outlet.address}</td>
@@ -120,6 +136,17 @@
 
 </div>
 </body>
+
+<script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
 <script>
    function toLink(id) {
        console.log("toLink"+id);

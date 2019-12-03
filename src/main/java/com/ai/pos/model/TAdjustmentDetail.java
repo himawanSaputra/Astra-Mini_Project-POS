@@ -15,7 +15,7 @@ public class TAdjustmentDetail {
     @JoinColumn(name = "adjustment_id", referencedColumnName = "id", nullable = false)
     private TAdjustment tAdjustment;
 
-    @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "variant_id", referencedColumnName = "id", nullable = false)
     private MstItemVariant mstItemVariant;
 

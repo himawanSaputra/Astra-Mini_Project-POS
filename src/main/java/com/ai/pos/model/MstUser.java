@@ -21,7 +21,6 @@ public class MstUser {
     @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false)
     private MstRole mstRole;
 
-    //get data objek
     @OneToOne(targetEntity = MstEmployee.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "employee_id", referencedColumnName = "id",nullable = false)
     private MstEmployee mstEmployee;
