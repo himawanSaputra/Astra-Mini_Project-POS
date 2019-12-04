@@ -2,30 +2,25 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Astra-Mini_Project-POS:war exploded" />
+      <artifact name="PointOfSales:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstCategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/category/indexCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/category/indexCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/list-suppliers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/list-suppliers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/new.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/outlet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/outlet.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/supplier-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/supplier-form.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/META-INF/PointOfSales.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/MstCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/MstCategoryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/OutletController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/category/indexCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/category/indexCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/list-suppliers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/list-suppliers.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/new.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/outlet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/outlet.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/supplier-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/supplier-form.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" afterDir="false" />
-
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +99,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -201,9 +196,10 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.29" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.29" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Astra-Mini_Project-POS:war exploded">
+        <artifact name="PointOfSales:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -279,30 +275,6 @@
       <item itemvalue="Tomcat Server.Tomcat 9.0.29" />
     </list>
   </component>
-
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.14652318" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -327,9 +299,9 @@
       <workItem from="1575274427203" duration="18000" />
       <workItem from="1575274452901" duration="272000" />
       <workItem from="1575275251825" duration="7232000" />
-
       <workItem from="1575341194678" duration="16966000" />
-
+      <workItem from="1575366015259" duration="8195000" />
+      <workItem from="1575426391242" duration="13080000" />
     </task>
     <task id="LOCAL-00001" summary="//">
       <created>1574309925236</created>

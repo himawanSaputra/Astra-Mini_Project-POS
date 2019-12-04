@@ -38,18 +38,18 @@
                         </div>
                         <div class="form-inline row" style="display: inline-block; text-align: center; justify-content: center">
 
-                                <form:select path="provinceId.id"  class="form-control select2" id="province" >
-                                    <form:option value="0" label="- Select Province-" disabled="true"/>
+                                <form:select path="provinceId.id"  class="form-control select2" id="provinceId" >
+                                    <form:option value="0" label="- Select Province-" />
                                     <form:options items="${provinceList}" />
                                 </form:select>
 
-                                <form:select path="regionId.id"  class="form-control select2" id="region">
-                                    <form:option value="0" label="- Select Region-" disabled="true"/>
+                                <form:select path="regionId.id"  class="form-control select2" id="regionId">
+                                    <form:option value="0" label="- Select Region-" />
                                     <form:options items="${regionList}"/>
                                 </form:select>
 
-                                <form:select path="districtId.id"  class="form-control select2" id="disctrict">
-                                    <form:option  value="0" label="- Select District-" disabled="true"/>
+                                <form:select path="districtId.id"  class="form-control select2" id="disctrictId">
+                                    <form:option  value="0" label="- Select District-"/>
                                     <form:options items="${districtList}" />
                                 </form:select>
 
@@ -150,9 +150,9 @@
                         $('#active').val(data.active);
                         $('#outletname').val(data.name);
                         $('#address').val(data.address);
-                        $('#province').val(data.province);
-                        $('#region').val(data.region);
-                        $('#district').val(data.district);
+                        $('#provinceId').val(data.provinceId);
+                        $('#regionId').val(data.regionId);
+                        $('#districtId').val(data.districtId);
                         $('#postalcode').val(data.postalCode);
                         $('#phone').val(data.phone);
                         $('#email').val(data.email);
