@@ -44,7 +44,6 @@ public class MstEmployee {
     @Column(name = "active", nullable = false)
     private Boolean active;
 
-
     public Integer getId() {
         return id;
     }

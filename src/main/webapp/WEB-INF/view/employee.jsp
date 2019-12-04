@@ -11,7 +11,7 @@
 --%>
 <html>
 <head>
-    <title>Title</title>
+    <title>Employee</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -24,6 +24,11 @@
             <h3 >
                 ADD EMPLOYEE
             </h3>
+            <c:if test="${error != null}">
+                <div class="alert alert-danger" role="alert">
+                    ${error}
+                </div>
+            </c:if>
         </div>
 
         <div>
@@ -31,13 +36,16 @@
                 <div class="row">
                     <form:hidden class="form-control"  id="idmstuser" path="id"/>
                     <div class="col-3">
-                        <form:input type="text" class="form-control" placeholder="First name"  path="firstName" id="firstname"/>
+                        <form:input type="text" class="form-control" placeholder="First name"
+                                    path="firstName" id="firstname" required="required"/>
                     </div>
                     <div class="col-3">
-                        <form:input type="text" class="form-control" placeholder="Last name" path="lastName" id="lastname"/>
+                        <form:input type="text" class="form-control" placeholder="Last name"
+                                    path="lastName" id="lastname" required="required"/>
                     </div>
                     <div class="col-3">
-                        <form:input type="text" class="form-control" placeholder="Email" path="email" id="email"/>
+                        <form:input type="text" class="form-control" placeholder="Email"
+                                    path="email" id="email" required="required"/>
                     </div>
                     <form:hidden class="form-control"  id="active" path="active"/>
                     <div class="col-3">
@@ -64,27 +72,29 @@
 
                 <div id="hide-user" class="row mt-5" style="display: none;">
                     <div class="col-4">
-                        <form:select path="mstUser.mstRole.id" class="form-control" id="role" style="width: 100%;">
+                        <form:select path="mstUser.mstRole.id" class="form-control" id="role" style="width: 100%;" required="required">
                             <form:option value="0" label="-SELECT ROLE-"/>
                             <form:options items="${roleList}"/>
                         </form:select>
                     </div>
                     <div class="col-4">
-                        <form:input for="disabledTextInput" type="text" class="form-control" placeholder="User Name" path="mstUser.username" id="username"/>
+                        <form:input for="disabledTextInput" type="text" class="form-control" placeholder="User Name"
+                                    path="mstUser.username" id="username"/>
                     </div>
                     <div class="col-4">
-                        <form:input for="disabledTextInput" type="text" class="form-control" placeholder="Password" path="mstUser.password" id="password"/>
+                        <form:input for="disabledTextInput" type="text" class="form-control" placeholder="Password"
+                                    path="mstUser.password" id="password"/>
                     </div>
                 </div>
 
                 <div class="row mt-5">
                     <div class="col 12 text-right">
-                        <button class="btn btn-secondary">Cancel</button>
+                        <button class="btn btn-secondary" onclick="location.href='<c:url value="/employee"/>'">Cancel</button>
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>
                 </div>
 
-                <div id="selected_outlet" hidden>
+                <div id="selected_outlet">
 
                 </div>
             </form:form>
@@ -110,7 +120,9 @@
                 </thead>
                 <tbody>
                 <c:forEach var="cur_employee" items="${employees}">
-                    <c:if test="${cur_employee.active == true}">
+
+                    <c:if test="${cur_employee.active}">
+
                         <tr>
                             <td>${cur_employee.firstName}</td>
                             <td>${cur_employee.email}</td>
@@ -118,11 +130,11 @@
                             <td>${cur_employee.mstUser.mstRole.description} </td>
                             <td>${cur_employee.mstUser.mstRole.name} </td>
                             <td>
-                                <a href="#">Edit</a>
+
+                                <a href="<c:url value='/edit_employee/${cur_employee.id}'/>">Edit</a>
                                 <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
                             </td>
                         </tr>
-
                     </c:if>
                 </c:forEach>
                 </tbody>
@@ -170,8 +182,12 @@
         var checkBox = document.getElementById("haveaccount");
         var text = document.getElementById("hide-user");
         if (checkBox.checked == true){
+            $('#username').prop('required', true);
+            $('#password').prop('required', true);
             text.style.display = "block";
         } else {
+            $('#username').prop('required', false);
+            $('#password').prop('required', false);
             text.style.display = "none";
         }
     }
