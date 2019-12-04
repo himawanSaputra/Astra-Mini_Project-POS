@@ -110,7 +110,11 @@
                 </thead>
                 <tbody>
                 <c:forEach var="cur_employee" items="${employees}">
+<<<<<<< HEAD
+                    <c:if test="${cur_employee.active == true}">
+=======
                     <c:if test="${cur_employee.active}">
+>>>>>>> 0ad4898ee9d7ad1a0778e76866971b1fb54f35ce
                         <tr>
                             <td>${cur_employee.firstName}</td>
                             <td>${cur_employee.email}</td>
@@ -122,6 +126,10 @@
                                 <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
                             </td>
                         </tr>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0ad4898ee9d7ad1a0778e76866971b1fb54f35ce
                     </c:if>
                 </c:forEach>
                 </tbody>

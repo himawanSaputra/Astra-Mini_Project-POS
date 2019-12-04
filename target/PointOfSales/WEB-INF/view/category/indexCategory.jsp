@@ -63,13 +63,15 @@
             </thead>
             <tbody id="myTable">
             <c:forEach var="category" items="${allCategory}">
-
-                <tr>
-                    <td style="display: none"> ${category.id}</td>
-                    <td> ${category.name}</td>
-                    <td> ${category.active}</td>
-                    <td><button id="edit-data" data-toggle="modal"  onclick="toLink(${category.id})" data-target="#editCategory">Edit</button></td>
-                </tr>
+                <c:if test="${category.active==true}">
+                    <tr>
+                        <td  style="display: none"> ${category.id}</td>
+                        <td > ${category.name}</td>
+                        <td>10</td>
+                        <td style="display: none"> ${category.active}</td>
+                        <td><button id="edit-data" data-toggle="modal"  onclick="toLink(${category.id})" data-target="#editCategory">Edit</button></td>
+                    </tr>
+                </c:if>
 
             </c:forEach>
             </tbody>
@@ -109,19 +111,21 @@
             </div>
             <div class="modal-body">
                 <form:form method="post" action="/editCategory" modelAttribute="category" class="form-horizontal">
-
-
-                    <form:input class="form-control" type="text" path="name" id="nameCategory" placeholder="Category Name"/>
+                    <form:input class="form-control" type="text" path="name" id="name" placeholder="Category Name"/>
                     <form:input path="active" cssStyle="display: none" id="active" />
                     <form:input path="id" cssStyle="display: none" id="id" />
                     <div class="modal-footer">
-<%--                    <form:input value="0" path="active"></form:input>--%>
-                        <button type="button" class="btn btn-danger" >X
-                        </button>
+<%--                        <button type="button" class="btn btn-danger"  >X</button>--%>
                         <button type="reset" class="btn btn-primary">Cancel</button>
                         <button type="submit" class="btn btn-primary"  value="Save">Save </button>
                     </div>
+                </form:form>
 
+                <form:form method="post" action="/removeStatusCategory" modelAttribute="category" class="form-horizontal" >
+                    <form:hidden path="id" id="idCategory"/>
+                    <form:hidden path="active" id="activeCategory"/>
+                    <form:hidden path="name" id="nameCategory"/>
+                    <button  type="submit" class="btn btn-danger">X</button>
                 </form:form>
             </div>
         </div>
@@ -152,7 +156,11 @@
                 console.log(asd);
                 $('#id').val(data.id);
                 $('#active').val(data.active);
+                $('#name').val(data.name);
+                $('#idCategory').val(data.id);
+                $('#activeCategory').val(data.active);
                 $('#nameCategory').val(data.name);
+
             },
             error: function (error) {
                 alert(error);

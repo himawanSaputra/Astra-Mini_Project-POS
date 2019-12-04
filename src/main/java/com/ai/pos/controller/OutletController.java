@@ -88,6 +88,11 @@ public class OutletController {
         mstOutlet.setActive(true);
         this.outlet_service.saveOrUpdateOutlet(mstOutlet);
         return "redirect:/outlet";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b63fe3309260b522f39e12bba3718ed471433961
     }
 
     @RequestMapping(value = "/edit_outlet/{id}", method = RequestMethod.GET)
