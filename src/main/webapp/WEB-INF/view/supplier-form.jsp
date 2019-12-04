@@ -37,7 +37,7 @@
                 <td colspan="2"><form:input path="name" placeholder="Supplier Name" class="form-control"/></td>
             </tr>
 
-
+            <form:option value="0" label="-- Choose --" disabled="true"/>
             <tr>
                     <%--            <td><label>Address : </label></td>--%>
                 <td colspan="2"><form:input path="address" placeholder="Address" class="form-control"/></td>

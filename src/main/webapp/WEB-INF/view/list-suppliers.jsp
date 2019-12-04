@@ -90,6 +90,7 @@
                                     <form:select path="mstDistrict.id" id="district" name="source" class="form-control">
                                         <form:option value="0" label="-- Choose --" disabled="true"/>
 
+
                                     </form:select>
                                 </div>
                             </div>
@@ -344,6 +345,7 @@
         let region = $('#region');
 
         region.empty();
+        district.empty();
         region.append('<option selected="true" disabled>--Choose--</option>');
         region.prop('selectedIndex', 0);
 

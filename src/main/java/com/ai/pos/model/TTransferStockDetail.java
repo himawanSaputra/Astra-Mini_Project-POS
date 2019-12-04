@@ -10,17 +10,17 @@ public class TTransferStockDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @ManyToOne(targetEntity = TTransferStock.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "transfer_id", referencedColumnName = "id", nullable = false)
-    private TTransferStock transferId;
+//
+//    @ManyToOne(targetEntity = TTransferStock.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "transfer_id", referencedColumnName = "id", nullable = false)
+//    private TTransferStock transferId;
 
     @Column(name = "instock")
     private int instock;
 
-    @OneToMany(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "variant_id", referencedColumnName = "id", nullable = false)
-    private MstItemVariant variantId;
+//    @OneToMany(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "variant_id", referencedColumnName = "id", nullable = false)
+//    private MstItemVariant variantId;
 
     @Column(name = "transfer_qty", nullable = false)
     private int transferQty;
@@ -45,13 +45,13 @@ public class TTransferStockDetail {
         this.id = id;
     }
 
-    public TTransferStock getTransferId() {
-        return transferId;
-    }
-
-    public void setTransferId(TTransferStock transferId) {
-        this.transferId = transferId;
-    }
+//    public TTransferStock getTransferId() {
+//        return transferId;
+//    }
+//
+//    public void setTransferId(TTransferStock transferId) {
+//        this.transferId = transferId;
+//    }
 
     public int getInstock() {
         return instock;
@@ -61,13 +61,13 @@ public class TTransferStockDetail {
         this.instock = instock;
     }
 
-    public MstItemVariant getVariantId() {
-        return variantId;
-    }
-
-    public void setVariantId(MstItemVariant variantId) {
-        this.variantId = variantId;
-    }
+//    public MstItemVariant getVariantId() {
+//        return variantId;
+//    }
+//
+//    public void setVariantId(MstItemVariant variantId) {
+//        this.variantId = variantId;
+//    }
 
     public int getTransferQty() {
         return transferQty;
@@ -113,9 +113,9 @@ public class TTransferStockDetail {
     public String toString() {
         return "TTransferStockDetail{" +
                 "id=" + id +
-                ", transferId=" + transferId +
+//                ", transferId=" + transferId +
                 ", instock=" + instock +
-                ", variantId=" + variantId +
+//                ", variantId=" + variantId +
                 ", transferQty=" + transferQty +
                 ", createdBy='" + createdBy + '\'' +
                 ", createdOn=" + createdOn +

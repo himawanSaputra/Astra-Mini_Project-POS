@@ -1,8 +1,6 @@
 package com.ai.pos.dao;
 
 import com.ai.pos.model.MstDistrict;
-import com.ai.pos.model.MstSupplier;
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
