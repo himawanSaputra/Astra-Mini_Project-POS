@@ -72,11 +72,19 @@
             <tbody>
             <c:forEach var="item" items="${allItem}">
                 <tr>
+<<<<<<< HEAD
                     <td>${item.name}</td>
-                    <td>${item.category_id.name}</td>
+<%--                    <td>${item.category_id.name}</td>--%>
+<%--                    <td>${item.mstItemVariant.price}</td>--%>
+<%--                    <td>${item.mstItemVariant.price}</td>--%>
+<%--                    <td>${item.mstItemVariant.itemInventory.alertAtQty}</td>--%>
+=======
+                    <td>${item.mstItemVariant.mstItem.name}</td>
+                    <td>${item.mstItemVariant.mstItem.category_id.name}</td>
                     <td>${item.mstItemVariant.price}</td>
-                    <td>${item.mstItemVariant.price}</td>
-                    <td>${item.mstItemVariant.itemInventory.alertAtQty}</td>
+                    <td>${item.mstItemVariant.sku}</td>
+                    <td>${item.alertAtQty}</td>
+>>>>>>> 68da62ca97ae447b1647b3557dbf3f74a32ed819
                     <td><a data-toggle="modal" data-target="#editItem">Edit</a></td>
                 </tr>
             </c:forEach>

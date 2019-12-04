@@ -83,7 +83,7 @@ public class OutletController {
     public String addOutlet(@ModelAttribute("add_outlet") MstOutlet mstOutlet){
         mstOutlet.setActive(true);
         this.outlet_service.saveOrUpdateOutlet(mstOutlet);
-        return "redirect:/outlet";
+        return "redirect:/item/outlet";
 
 
     }

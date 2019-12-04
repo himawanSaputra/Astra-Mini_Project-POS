@@ -12,13 +12,19 @@
 <html>
 <head>
     <%--    <link rel="stylesheet" href=<c:url value="/resources/bootstrap/css/bootstrap-min.css" />>--%>
-    <script src="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />"></script>
+<%--    <script src="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />"></script>--%>
+
     <title>Category</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<%--    <title>Category</title>--%>
+<%--    <meta charset="utf-8">--%>
+<%--    <meta name="viewport" content="width=device-width, initial-scale=1">--%>
+
+<%--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">--%>
+<%--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--%>
+<%--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>--%>
 </head>
 <body>
 
@@ -41,7 +47,6 @@
                     Create
                 </button>
             </div>
-            <!-- Modal -->
 
         </div>
     </div>
@@ -58,12 +63,14 @@
             </thead>
             <tbody id="myTable">
             <c:forEach var="category" items="${allCategory}">
+
                 <tr>
-                    <td style="display: none">${category.id}</td>
-                    <td>${category.name}</td>
-                    <td>${category.active}</td>
-                    <td><a data-toggle="modal"  onclick="toLink(${category.id})" data-target="#editCategory">View</a></td>
+                    <td style="display: none"> ${category.id}</td>
+                    <td> ${category.name}</td>
+                    <td> ${category.active}</td>
+                    <td><button id="edit-data" data-toggle="modal"  onclick="toLink(${category.id})" data-target="#editCategory">Edit</button></td>
                 </tr>
+
             </c:forEach>
             </tbody>
         </table>
@@ -75,8 +82,8 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Category</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
                 <form:form method="post" action="/saveCategory" modelAttribute="category"
@@ -97,20 +104,24 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Category</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
                 <form:form method="post" action="/editCategory" modelAttribute="category" class="form-horizontal">
-                    <form:input class="form-control" type="text" path="name" placeholder="Category Name"/>
-                    <form:input path="active" cssStyle="display: none" />
-                    <form:input path="id" cssStyle="display: none" />
+
+
+                    <form:input class="form-control" type="text" path="name" id="nameCategory" placeholder="Category Name"/>
+                    <form:input path="active" cssStyle="display: none" id="active" />
+                    <form:input path="id" cssStyle="display: none" id="id" />
                     <div class="modal-footer">
 <%--                    <form:input value="0" path="active"></form:input>--%>
-                        <form:button type="button" method="post" path="active" class="btn btn-danger" >X</form:button>
+                        <button type="button" class="btn btn-danger" >X
+                        </button>
                         <button type="reset" class="btn btn-primary">Cancel</button>
                         <button type="submit" class="btn btn-primary"  value="Save">Save </button>
                     </div>
+
                 </form:form>
             </div>
         </div>
@@ -129,7 +140,6 @@
 </script>
 
 <script>
-
     function toLink(id) {
         console.log("toLink"+id);
 
@@ -142,13 +152,12 @@
                 console.log(asd);
                 $('#id').val(data.id);
                 $('#active').val(data.active);
-                $('#name').val(data.name);
+                $('#nameCategory').val(data.name);
             },
             error: function (error) {
                 alert(error);
             }
         })
     }
-
 </script>
 </html>

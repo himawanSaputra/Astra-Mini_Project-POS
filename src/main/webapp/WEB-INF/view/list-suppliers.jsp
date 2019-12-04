@@ -5,6 +5,7 @@
   Time: 2:58 PM
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
@@ -30,16 +31,19 @@
 </div>
 
 <div id="container">
+
+
+
+
+
     <div id="content" style="margin-right: 50px; margin-left: 50px" >
+
 
         <div align="right">
             <!-- put new Button: Add Button -->
             <input type="button" value="Create"
-                   onClick="window.location.href='supplierForm';return false;"
-                   class="btn btn-primary"
-            />
+                   onClick="window.location.href='supplierForm';return false;"class="btn btn-primary"/>
         </div>
-
         <br/>
 
         <%--        <form:form action="search" method="GET">--%>
@@ -76,6 +80,8 @@
                     <td>${tempSupplier.phone}</td>
                     <td>${tempSupplier.email}</td>
                     <td>
+
+
                         <!-- display the update link -->
                         <a href="${updateLink}">Edit</a>
                     </td>
