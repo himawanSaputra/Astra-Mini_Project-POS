@@ -1,9 +1,6 @@
 package com.ai.pos.controller;
 
-import com.ai.pos.model.MstDistrict;
-import com.ai.pos.model.MstOutlet;
-import com.ai.pos.model.MstProvince;
-import com.ai.pos.model.MstRegion;
+import com.ai.pos.model.*;
 import com.ai.pos.service.Customer_Service;
 import com.ai.pos.service.Location_Service;
 import com.ai.pos.service.Outlet_Service;
@@ -41,8 +38,8 @@ public class OutletController {
     @Autowired
     Location_Service location_service;
 
-    @RequestMapping(value = "/outlet",  method = RequestMethod.GET)
-    public String getAllCategory(@ModelAttribute MstOutlet mstOutlet, Model model){
+    @RequestMapping(value = "/outlet")
+    public String getAllCategory(Model model){
         List<MstOutlet> list = outlet_service.listMstOutlet();
         model.addAttribute("outlets", list );
 
@@ -67,7 +64,15 @@ public class OutletController {
             disctricts.put(curDisctrict.getId(), curDisctrict.getName());
         }
 
-        model.addAttribute("outlet",new MstOutlet());
+        MstOutlet mstOutlet = new MstOutlet();
+        mstOutlet.setProvinceId(new MstProvince());
+        mstOutlet.getProvinceId().setId(0);
+        mstOutlet.setRegionId(new MstRegion());
+        mstOutlet.getProvinceId().setId(0);
+        mstOutlet.setDistrictId(new MstDistrict());
+        mstOutlet.getDistrictId().setId(0);
+
+        model.addAttribute("outlet", mstOutlet);
         model.addAttribute("provinceList",provinces);
         model.addAttribute("regionList",regions);
         model.addAttribute("districtList",disctricts);
@@ -78,21 +83,23 @@ public class OutletController {
     }
 
     // save outlet
-    @RequestMapping(value= "/outlet", method = RequestMethod.POST)
-    @ResponseStatus(value= HttpStatus.OK)
+    @RequestMapping(value= "/add_outlet", method = RequestMethod.POST)
     public String addOutlet(@ModelAttribute("add_outlet") MstOutlet mstOutlet){
         mstOutlet.setActive(true);
         this.outlet_service.saveOrUpdateOutlet(mstOutlet);
-        return "redirect:/item/outlet";
-
-
+        return "redirect:/outlet";
     }
 
-//
-//    @RequestMapping(value = "/saveOutlet", method = RequestMethod.POST)
-//    public String saveOutlet (@ModelAttribute("outlet") MstOutlet mstOutlet){
-//        mstOutlet.setActive(true);
-//        outlet_service.addOutlet(mstOutlet);
-//        return "redirect:/outlet";
-//    }
+    @RequestMapping(value = "/edit_outlet/{id}", method = RequestMethod.GET)
+    public @ResponseBody
+    MstOutlet editOutlet(
+            @PathVariable("id") int id){
+        MstOutlet mstOutlet;
+        if(id>0){
+            mstOutlet = outlet_service.getMstOutlet(id);
+        } else {
+            mstOutlet = new MstOutlet();
+        }
+        return mstOutlet;
+    }
 }
