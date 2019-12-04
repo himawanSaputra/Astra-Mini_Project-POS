@@ -103,10 +103,10 @@
                     <header>
                         <div class="col-md-12">
                             <div class="row h-100 p-0 m-0 align-middle">
-                                <div class="col-8 h-100 align-middle p-0 m-0">
+                                <div class="col-6 h-100 align-middle p-0 m-0">
                                     <h1 class="m-0 p-0">${page_title}</h1>
                                 </div>
-                                <div class="col-3 align-middle text-right m-0 p-0">
+                                <div class="col-5 align-middle text-right m-0 p-0">
                                     <h4 align="right">
                                         Hello, ${sessionScope.user.username}
                                     </h4>

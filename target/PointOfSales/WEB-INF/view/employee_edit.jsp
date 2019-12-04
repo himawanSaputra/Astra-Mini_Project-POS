@@ -1,17 +1,16 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: agrhimaw6897
+  Date: 12/3/2019
+  Time: 3:44 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-
-  Created by IntelliJ IDEA.
-  User: liamra
-  Date: 11/25/2019
-  Time: 3:34 PM
-  To change this template use File | Settings | File Templates.
---%>
 <html>
 <head>
-    <title>Title</title>
+    <title>Edit Employee</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -22,22 +21,30 @@
     <div class="col-12">
         <div class="mb-5">
             <h3 >
-                ADD EMPLOYEE
+                EDIT EMPLOYEE
             </h3>
+            <c:if test="${error != null}">
+                <div class="alert alert-danger" role="alert">
+                        ${error}
+                </div>
+            </c:if>
         </div>
 
         <div>
-            <form:form action="/add_employee" name="employeeForm" method="post" modelAttribute="employee" >
+            <form:form action="/edit_employee" name="employeeForm" method="post" modelAttribute="employee" >
                 <div class="row">
                     <form:hidden class="form-control"  id="idmstuser" path="id"/>
                     <div class="col-3">
-                        <form:input type="text" class="form-control" placeholder="First name"  path="firstName" id="firstname"/>
+                        <form:input type="text" class="form-control" placeholder="First name"
+                                    path="firstName" id="firstname" required="required"/>
                     </div>
                     <div class="col-3">
-                        <form:input type="text" class="form-control" placeholder="Last name" path="lastName" id="lastname"/>
+                        <form:input type="text" class="form-control" placeholder="Last name"
+                                    path="lastName" id="lastname" required="required"/>
                     </div>
                     <div class="col-3">
-                        <form:input type="text" class="form-control" placeholder="Email" path="email" id="email"/>
+                        <form:input type="text" class="form-control" placeholder="Email"
+                                    path="email" id="email" required="required"/>
                     </div>
                     <form:hidden class="form-control"  id="active" path="active"/>
                     <div class="col-3">
@@ -62,70 +69,37 @@
                     </div>
                 </div>
 
-                <div id="hide-user" class="row mt-5" style="display: none;">
+                <div id="hide-user" class="row mt-5" <c:if test="${!employee.haveAccount}">style="display: none"</c:if>>
+                    <form:hidden path="mstUser.id"/>
                     <div class="col-4">
-                        <form:select path="mstUser.mstRole.id" class="form-control" id="role" style="width: 100%;">
+                        <form:select path="mstUser.mstRole.id" class="form-control" id="role" style="width: 100%;" required="required">
                             <form:option value="0" label="-SELECT ROLE-"/>
-                            <form:options items="${roleList}"/>
+                            <form:options items="${roles_map}"/>
                         </form:select>
                     </div>
                     <div class="col-4">
-                        <form:input for="disabledTextInput" type="text" class="form-control" placeholder="User Name" path="mstUser.username" id="username"/>
+                        <form:input for="disabledTextInput" type="text" class="form-control" placeholder="User Name"
+                                    path="mstUser.username" id="username"/>
                     </div>
                     <div class="col-4">
-                        <form:input for="disabledTextInput" type="text" class="form-control" placeholder="Password" path="mstUser.password" id="password"/>
+                        <form:input for="disabledTextInput" type="text" class="form-control" placeholder="Password"
+                                    path="mstUser.password" id="password"/>
                     </div>
                 </div>
 
                 <div class="row mt-5">
                     <div class="col 12 text-right">
-                        <button class="btn btn-secondary">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn btn-secondary" name="cancel">Cancel</button>
+                        <button type="submit" class="btn btn-primary" name="save">Save</button>
                     </div>
                 </div>
 
                 <div id="selected_outlet" hidden>
-
+                    <c:forEach var="cur_selected_outlet" items="${employee_outlet_list}">
+                        <input name="selected_outlet" value="${cur_selected_outlet.mstOutlet.id}">
+                    </c:forEach>
                 </div>
             </form:form>
-        </div>
-
-        <div style="margin-top: 50px">
-            <h4>
-                Staff List
-            </h4>
-        </div>
-
-        <div>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Have Account?</th>
-                    <th scope="col">Outlet Accsess</th>
-                    <th scope="col">Role</th>
-                    <th scope="col">#</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="cur_employee" items="${employees}">
-                    <c:if test="${cur_employee.active}">
-                        <tr>
-                            <td>${cur_employee.firstName}</td>
-                            <td>${cur_employee.email}</td>
-                            <td>${cur_employee.haveAccount}</td>
-                            <td>${cur_employee.mstUser.mstRole.description} </td>
-                            <td>${cur_employee.mstUser.mstRole.name} </td>
-                            <td>
-                                <a href="#">Edit</a>
-                                <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
-                            </td>
-                        </tr>
-                    </c:if>
-                </c:forEach>
-                </tbody>
-            </table>
         </div>
     </div>
 </div>
@@ -141,7 +115,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <c:forEach var="outlet" items="${all_outlets}">
+                <c:forEach var="outlet" items="${outlets_list}">
                     <div class="row">
                         <div class="col-10 offset-1 custom-control custom-checkbox">
                             <input type="checkbox"
@@ -160,7 +134,6 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>
 
@@ -169,11 +142,28 @@
         var checkBox = document.getElementById("haveaccount");
         var text = document.getElementById("hide-user");
         if (checkBox.checked == true){
+            $('#username').prop('required', true);
+            $('#password').prop('required', true);
             text.style.display = "block";
         } else {
+            $('#username').prop('required', false);
+            $('#password').prop('required', false);
             text.style.display = "none";
         }
     }
+
+    $(document).ready(function(){
+        var selectedOutlets = [];
+        <c:forEach var="cur_selected_outlet" items="${employee_outlet_list}">
+            selectedOutlets.push(${cur_selected_outlet.mstOutlet.id});
+        </c:forEach>
+
+        $(".checkbox_outlet").each(function(index){
+            if($.inArray(parseInt($(this).val()), selectedOutlets) !== -1){
+                $(this).prop('checked', true);
+            }
+        });
+    });
 
     function assignOutlets(){
         $('#selected_outlet').empty();
@@ -184,7 +174,6 @@
                 );
             }
         });
-
-
     }
 </script>
+
