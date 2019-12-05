@@ -61,7 +61,7 @@
             <!-- Export -->
             <div class="col-sm-1">
                 <div align="right">
-                    <button type="button" class="btn btn-secondary">Export</button>
+                    <button type="button" class="btn btn-primary">Export</button>
                 </div>
             </div>
 

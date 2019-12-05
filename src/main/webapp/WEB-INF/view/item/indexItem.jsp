@@ -24,12 +24,12 @@
                 <input class="form-control" id="myInput" type="search" placeholder="Search"/>
             </div>
             <div class="form-group col-sm-8" align="right">
-                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#createCategory">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createCategory">
                     Export
                 </button>
             </div>
             <div class="form-group col-sm-1" align="right">
-                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#create-editItem">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-editItem">
                     Create
                 </button>
             </div>

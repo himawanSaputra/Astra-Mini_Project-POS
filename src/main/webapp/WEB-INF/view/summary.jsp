@@ -38,11 +38,10 @@
                 <input class="form-control" type="search" placeholder="Search">
             </div>
             <div class="form-group col-sm-2" align="right">
-                <button type="button" class="btn btn-info btn-sm" data-toogle="modal" data-target="#createSummary">
+                <button type="button" class="btn btn-primary" data-toogle="modal" data-target="#createSummary">
                     Export
                 </button>
             </div>
-
         </div>
     </div>
 
@@ -95,7 +94,7 @@
                 <tr>
                     <td>${adjusment.id}</td>
                 </tr>
-            </c:forEach>b
+            </c:forEach>
             <c:forEach var="inventory" items="${inventory}">
                 <tr>
                     <td>${inventory.ending_qty}</td>
@@ -104,7 +103,6 @@
             </tbody>
         </table>
     </div>
-
 </div>
 
 </body>

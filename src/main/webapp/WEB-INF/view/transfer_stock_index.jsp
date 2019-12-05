@@ -38,8 +38,8 @@
     </div>
     <div class="row justify-content-center align-items-center">
         <div class="col-12 p-0 mt-3">
-            <table class="table table-bordered">
-                <thead class="thead-dark">
+            <table class="table">
+                <thead>
                 <tr>
                     <th scope="col">Transfer Date</th>
                     <th scope="col">From Outlet</th>

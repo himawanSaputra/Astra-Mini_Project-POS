@@ -106,7 +106,7 @@
                                         <li><a href="#" class="pr-5 text-center bg-secondary">Sales Order</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Summary</a></li>
+                                        <li><a href="<c:url value="/summary"/>" class="pr-5 text-center bg-secondary">Summary</a></li>
                                     </c:if>
                                 </ul>
                             </div>
