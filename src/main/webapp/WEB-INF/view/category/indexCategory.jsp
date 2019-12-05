@@ -20,9 +20,11 @@
                 <input id="myInput" class="form-control" type="search" placeholder="Search"/>
             </div>
             <div class="form-group col-sm-9" align="right">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createCategory">
-                    Create
-                </button>
+                <c:if test="${sessionScope.user.mstRole.id == 1}">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createCategory">
+                        Create
+                    </button>
+                </c:if>
             </div>
         </div>
 
@@ -45,7 +47,13 @@
                                 <td>${category.name}</td>
                                 <td>10</td>
                                 <td style="display: none"> ${category.active}</td>
-                                <td><a href="#" id="edit-data" data-toggle="modal" onclick="toLink(${category.id})" data-target="#editCategory">Edit</a></td>
+                                <td>
+                                    <c:if test="${sessionScope.user.mstRole.id == 1}">
+                                        <a href="#" id="edit-data" data-toggle="modal" onclick="toLink(${category.id})" data-target="#editCategory">
+                                            Edit
+                                        </a>
+                                    </c:if>
+                                </td>
                             </tr>
                         </c:if>
                     </c:forEach>

@@ -26,109 +26,6 @@
 
 </head>
 <body>
-
-
-<%--<div id="exampleModalHolder"></div>--%>
-
-<!-- Modal-->
-<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
-     th:fragment="">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Supplier Form</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-                <div class="modal-body">
-                    <form:form action="saveSupplier" modelAttribute="supplierForm" method="POST">
-                    <form:hidden path="id" id="id"/>
-                    <div class="container">
-
-                            <div class="form-group">
-                                <label for="name" class="col-form-label">Supplier Name</label>
-                                <td colspan="2" id="nameTd"><form:input path="name" id="name"
-                                                                        placeholder="Supplier Name"
-                                                                        class="form-control"/></td>
-                            </div>
-
-
-                            <div class="form-group">
-                                    <%--                            <td><label>Address : </label></td>--%>
-                                <label for="address" class="col-form-label">Address</label>
-                                <td colspan="2"><form:input path="address" id="address" placeholder="Address"
-                                                            class="form-control"/></td>
-                            </div>
-
-
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="province" class="col-form-label">Province</label>
-                                    <form:select path="mstProvince.id" id="province" class="form-control custom-select">
-                                        <form:option value="0" label="-- Choose --" disabled="true"/>
-                                        <form:options items="${provinces}"  itemValue="id" itemLabel="name"/>
-                                    </form:select>
-                                </div>
-
-
-                                <div class="form-group col-md-4">
-                                    <label for="region" class="col-form-label">Region</label>
-                                    <form:select path="mstRegion.id" id="region" name="source" class="form-control">
-                                        <form:option value="0" label = "-- Choose -- " disabled="true" />
-<%--                                        <c:if test="${provinces}">--%>
-<%--                                            --%>
-<%--                                            --%>
-<%--                                        </c:if>--%>
-
-                                    </form:select>
-                                </div>
-
-                                <div class="form-group col-md-4">
-                                    <label for="district" class="col-form-label">District</label>
-                                    <form:select path="mstDistrict.id" id="district" name="source" class="form-control">
-                                        <form:option value="0" label="-- Choose --" disabled="true"/>
-
-
-                                    </form:select>
-                                </div>
-                            </div>
-
-
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="postalCode" class="col-form-label">Postal Code</label>
-                                    <form:input path="postalCode" id="postalCode" placeholder="Postal Code"
-                                                class="form-control"/>
-
-                                </div>
-
-                                <div class="form-group col-md-8">
-                                    <label for="phone" class="col-form-label">Phone</label>
-                                    <form:input path="phone" id="phone" placeholder="Phone" class="form-control"/>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email" class="col-form-label">Email</label>
-                                <form:input path="email" id="email" placeholder="Email" class="form-control"/>
-                            </div>
-
-
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <input type="button" value="cancel" align="right" class="btn btn-secondary"
-                           onclick="window.location.href='list';return false;"/>
-
-                    <input type="submit" id="formSubmit" value="save"  class="btn btn-primary"/>
-                </div>
-            </form:form>
-        </div>
-    </div>
-</div>
 <div class="row">
     <div class="col-12">
 
@@ -149,14 +46,14 @@
 
             <!-- Search button -->
             <div class="col-sm-8">
-                <form:form action="search" method="GET">
+<%--                <form:form action="search" method="GET">--%>
                     <div class="input-group mb-3">
                         <input type="text" id="theSearchName" name="theSearchName" class="form-control" placeholder="Search by name"/>
-                        <div class="input-group-append">
-                            <button type="submit" id="theSearchButton" value="Search" class="btn btn-primary">Search</button>
-                        </div>
+<%--                        <div class="input-group-append">--%>
+<%--                            <button type="submit" id="theSearchButton" value="Search" class="btn btn-primary">Search</button>--%>
+<%--                        </div>--%>
                     </div>
-                </form:form>
+<%--                </form:form>--%>
             </div>
 
 
@@ -171,11 +68,13 @@
             <!-- Create -->
             <div class="col-sm-1">
                 <div align="right">
-                    <button type="button"
-                            onclick="toLink(0)"
-                            class="btn btn-primary"
-                    >Create
-                    </button>
+                    <c:if test="${sessionScope.user.mstRole.id == 1}">
+                        <button type="button"
+                                onclick="toLink(0)"
+                                class="btn btn-primary">
+                            Create
+                        </button>
+                    </c:if>
                 </div>
 
             </div>
@@ -183,7 +82,6 @@
 
 
         <br/>
-
 
         <!-- add out html table -->
         <table class="table">
@@ -197,30 +95,19 @@
             </thead>
 
 
-            <tbody>
-            <!-- loop over and print out customers -->
+            <tbody id="myTable">
+            <!-- loop over and print out suppliers -->
             <c:forEach var="tempSupplier" items="${suppliers}">
-
-                <!-- construct an "update" link with customer id -->
-                <%--            <c:url var="updateLink" value="/rest/supplier/get/">--%>
-                <%--                <c:param name="supplierId" value="${tempSupplier.id}"/>--%>
-                <%--            </c:url>--%>
-
                 <tr>
                     <td>${tempSupplier.name}</td>
                     <td>${tempSupplier.phone}</td>
                     <td>${tempSupplier.email}</td>
                     <td>
-                        <!-- display the update button -->
-                        <button type="button" id="tesBtn" class="btn btn-info" onclick="toLink(${tempSupplier.id})">Edit
-                        </button>
-
-                    </td>
-                    <td>
-
+                        <c:if test="${sessionScope.user.mstRole.id == 1}">
+                            <a href="#" id="tesBtn" onclick="toLink(${tempSupplier.id})">Edit</a>
+                        </c:if>
                     </td>
                 </tr>
-
             </c:forEach>
             </tbody>
 
@@ -228,9 +115,112 @@
     </div>
 </div>
 
-<script>
-    function toLink(id) {
+<!-- Modal-->
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     th:fragment="">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Supplier Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
 
+            <div class="modal-body">
+                <form:form action="saveSupplier" modelAttribute="supplierForm" method="POST">
+                <form:hidden path="id" id="id"/>
+                <div class="container">
+
+                    <div class="form-group">
+                        <label for="name" class="col-form-label">Supplier Name</label>
+                        <td colspan="2" id="nameTd"><form:input path="name" id="name"
+                                                                placeholder="Supplier Name"
+                                                                class="form-control"/></td>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="address" class="col-form-label">Address</label>
+                        <td colspan="2"><form:input path="address" id="address" placeholder="Address"
+                                                    class="form-control"/></td>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="province" class="col-form-label">Province</label>
+                            <form:select path="mstProvince.id" id="province" class="form-control custom-select">
+                                <form:option value="0" label="-- Choose --" disabled="true"/>
+                                <form:options items="${provinces}"  itemValue="id" itemLabel="name"/>
+                            </form:select>
+                        </div>
+
+
+                        <div class="form-group col-md-4">
+                            <label for="region" class="col-form-label">Region</label>
+                            <form:select path="mstRegion.id" id="region" name="source" class="form-control">
+                                <form:option value="0" label = "-- Choose -- " disabled="true" />
+
+                            </form:select>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="district" class="col-form-label">District</label>
+                            <form:select path="mstDistrict.id" id="district" name="source" class="form-control">
+                                <form:option value="0" label="-- Choose --" disabled="true"/>
+
+
+                            </form:select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="postalCode" class="col-form-label">Postal Code</label>
+                            <form:input path="postalCode" id="postalCode" placeholder="Postal Code"
+                                        class="form-control"/>
+
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="phone" class="col-form-label">Phone</label>
+                            <form:input path="phone" id="phone" placeholder="Phone" class="form-control"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-form-label">Email</label>
+                        <form:input path="email" id="email" placeholder="Email" class="form-control"/>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <input type="button" value="Cancel" align="right" class="btn btn-secondary"
+                       onclick="window.location.href='list';return false;"/>
+
+                <input type="submit" id="formSubmit" value="Save"  class="btn btn-primary"/>
+            </div>
+            </form:form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#theSearchName").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+    function toLink(id) {
         let province = $('#province');
         let region = $('#region');
         let district1 = $('#district');
@@ -394,17 +384,6 @@
             }
         })
     });
-
-    $("#formSubmit").on('click', function(){
-       console.log('click form');
-    });
-
-
-
-
-
-
-
 </script>
 </body>
 

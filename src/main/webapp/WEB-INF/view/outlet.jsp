@@ -41,7 +41,11 @@
                             <td>${cur_outlet.address}</td>
                             <td>${cur_outlet.phone}</td>
                             <td>${cur_outlet.email}</td>
-                            <td><a data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#createOutlet">Edit</a></td>
+                            <td>
+                                <a data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#createOutlet">
+                                    Edit
+                                </a>
+                            </td>
                         </tr>
                     </c:forEach>
                     </tbody>
