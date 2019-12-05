@@ -136,7 +136,11 @@
                             <td>${cur_employee.firstName}</td>
                             <td>${cur_employee.email}</td>
                             <td>${cur_employee.haveAccount}</td>
-                            <td>${cur_employee.mstUser.mstRole.description} </td>
+                            <td>
+                                <c:if test="${!cur_employee.employeeOutlet.isEmpty()}">
+                                ${cur_employee.employeeOutlet.get(0).mstOutlet.name}
+                                </c:if>
+                            </td>
                             <td>${cur_employee.mstUser.mstRole.name} </td>
                             <td>
                                 <c:if test="${sessionScope.user.mstRole.id == 1}">
