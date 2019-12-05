@@ -115,7 +115,7 @@
                         <hr style="border-bottom: 0.5px dashed #ccc;background: #999; margin-top: -2px">
                         <div class="row" style="margin-left: 15px; margin-right: 15px">
                             <h5>Target Waktu Item Ready</h5>
-                            <input class="form-control" type="text" name="datepicker" value="" placeholder="Date"/>
+                            <input class="form-control" type="date"  value="" placeholder="Date"/>
                         </div>
                         <div class="row" style="margin-left: 15px; margin-right: 15px">
                             <h5>Notes</h5>
@@ -204,10 +204,5 @@
     });
 </script>
 
-<script>
-    $(function() {
 
-        $('#datepicker').datepicker('show');
-    });
-</script>
 </html>

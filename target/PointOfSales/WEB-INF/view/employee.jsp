@@ -139,16 +139,10 @@
                             <td>${cur_employee.mstUser.mstRole.description} </td>
                             <td>${cur_employee.mstUser.mstRole.name} </td>
                             <td>
-<<<<<<< HEAD
-
-                                <a href="<c:url value='/edit_employee/${cur_employee.id}'/>">Edit</a>
-                                <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
-=======
                                 <c:if test="${sessionScope.user.mstRole.id == 1}">
                                     <a href="<c:url value='/edit_employee/${cur_employee.id}'/>">Edit</a>
                                     <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
                                 </c:if>
->>>>>>> 034ec466ebf0e2f2c2b00ac63f74afce00efd2a9
                             </td>
                         </tr>
                     </c:if>

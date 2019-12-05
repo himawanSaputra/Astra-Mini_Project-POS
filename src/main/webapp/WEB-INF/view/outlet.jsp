@@ -12,63 +12,7 @@
 
 <div class="container">
 <%--    modal--%>
-    <div id="createOutlet" class="modal fade">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title">Input Outlet</h1>
-                </div>
-                <div class="modal-body">
-                    <form:form method="post" name="outletForm" action="outlet" modelAttribute="outlet">
-                        <form:input type="hidden" name="id" value="" path="id" id="id"/>
-                        <form:input type="hidden" name="active" value="" path="active" id="active"/>
-                        <div class="form-group">
-                            <div>
-                                <form:input placeholder="Outlet Name" type="outletname" class="form-control input-lg" name="outletname" path="name" id="outletname"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <form:input placeholder="Address" type="address" class="form-control input-lg" name="address" path="address" id="address"/>
-                            </div>
-                        </div>
-                        <div class="form-inline row" style="display: inline-block; text-align: center; justify-content: center">
 
-                                <form:select path="provinceId.id"  class="form-control select2" id="province" >
-                                    <form:option value="0" label="- Select Province-" disabled="true"/>
-                                    <form:options items="${provinceList}" />
-                                </form:select>
-
-                                <form:select path="regionId.id"  class="form-control select2" id="region">
-                                    <form:option value="0" label="- Select Region-" disabled="true"/>
-                                    <form:options items="${regionList}"/>
-                                </form:select>
-
-                                <form:select path="districtId.id"  class="form-control select2" id="disctrict">
-                                    <form:option value="0" label="- Select District-" disabled="true"/>
-                                    <form:options items="${districtList}" />
-                                </form:select>
-
-                        </div>
-                        <div class="form-inline row " style="display: inline-block; text-align: center; justify-content: center">
-                            <div class="form-group col-sm" align="left">
-                                <form:input placeholder="Postal Code" type="postalcode" class="form-control input-lg" name="postalcode" path="postalCode" id="postalcode"/>
-                            </div>
-                            <div class="form-group col-sm" align="center">
-                                <form:input placeholder="Phone" type="phone" class="form-control input-lg" name="phone" path="phone" id="phone"/>
-                            </div>
-                            <div class="form-group col-sm" align="right">
-                                <form:input placeholder="Email" type="email" class="form-control input-lg" name="email" path="email" id="email"/>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Save</button>
-                        </div>
-                    </form:form>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
     <h2>Outlets</h2>
     <div>
@@ -110,9 +54,9 @@
                             <td>${cur_outlet.phone}</td>
                             <td>${cur_outlet.email}</td>
                             <td>
-                                <a data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#createOutlet">
+                                <button class="btn btn-outline-primary" data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#createOutlet">
                                     Edit
-                                </a>
+                                </button>
                             </td>
                         </tr>
                     </c:forEach>

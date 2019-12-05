@@ -24,12 +24,12 @@
                 <input class="form-control" id="myInput" type="search" placeholder="Search"/>
             </div>
             <div class="form-group col-sm-8" align="right">
-                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#createCategory">
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#createCategory">
                     Export
                 </button>
             </div>
             <div class="form-group col-sm-1" align="right">
-                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#create-editItem">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-editItem">
                     Create
                 </button>
             </div>
@@ -53,14 +53,14 @@
             <tbody id="myTable">
             <c:forEach var="item" items="${items}">
                 <tr>
-<<<<<<< HEAD
-                    <td>${item.mstItemVariant.mstItem.name}</td>
-                    <td>${item.mstItemVariant.mstItem.category_id.name}</td>
-                    <td>${item.mstItemVariant.price}</td>
-                    <td>${item.mstItemVariant.sku}</td>
-                    <td>${item.alertAtQty}</td>
-                    <td><a data-toggle="modal" data-target="#editItem">Edit</a></td>
-=======
+<%--<<<<<<< HEAD--%>
+<%--                    <td>${item.mstItemVariant.mstItem.name}</td>--%>
+<%--                    <td>${item.mstItemVariant.mstItem.category_id.name}</td>--%>
+<%--                    <td>${item.mstItemVariant.price}</td>--%>
+<%--                    <td>${item.mstItemVariant.sku}</td>--%>
+<%--                    <td>${item.alertAtQty}</td>--%>
+<%--                    <td><a data-toggle="modal" data-target="#editItem">Edit</a></td>--%>
+<%--=======--%>
 
                     <td>${item.mstItemVariant.mstItem.name}</td>
                     <td>${item.mstItemVariant.mstItem.category_id.name}</td>
@@ -75,9 +75,9 @@
                     <c:if test="${item.endingQty > item.alertAtQty}">
                         <td>Normal</td>
                     </c:if></td>
-                    <td><a data-toggle="modal" data-target="#create-editItem">Edit</a></td>
+                    <td><button data-toggle="modal" class="btn btn-primary" data-target="#create-editItem">Edit</button></td>
 
->>>>>>> 0f100f4690022d50412a45bbf7d3fef4381f3364
+
                 </tr>
             </c:forEach>
             </tbody>
@@ -105,12 +105,12 @@
 <%--                <form:hidden name="sku" value="" path="mstItemVariant.sku" id="sku"/>--%>
 <%--                <form:hidden name="beginStock" value="" path="beginning" id="beginStock"/>--%>
 <%--                <form:hidden name="alertQty" value="" path="alertAtQty" id="alertQty"/>--%>
-                <div class="row">
+                <div class="row" style="margin-top: 15px; margin-bottom: 15px">
                     <div class="col-12">
                         <form:input class="form-control" name="itemName" path="mstItemVariant.mstItem.name" type="input" placeholder="Item Name"/>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 15px; margin-bottom: 15px">
                     <div class="col-12">
                         <form:select path="mstItemVariant.mstItem.mstCategory.id" class="form-control select2" id="category"  >
                             <form:option value="0" label="-Select Category-"/>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" style="margin-top: 15px; margin-bottom: 15px">
                     <div class="col-1" align="left">
                         <h5>VARIANT</h5>
                     </div>
@@ -167,9 +167,9 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Back</button>
-                <button type="reset" class="btn btn-secondary" >Cancel</button>
-                <button type="submit" class="btn btn-secondary" >Save</button>
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Back</button>
+                <button type="reset" class="btn btn-outline-warning" >Cancel</button>
+                <button type="submit" class="btn btn-primary" >Save</button>
             </div>
             </form:form>
         </div>
