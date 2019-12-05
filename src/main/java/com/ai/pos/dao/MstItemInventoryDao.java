@@ -4,7 +4,7 @@ import com.ai.pos.model.ItemInventory;
 
 import java.util.List;
 
-public interface ItemInventoryDao {
+public interface MstItemInventoryDao {
     public void save(ItemInventory itemInventory);
     public void update(ItemInventory itemInventory);
     public void delete(ItemInventory itemInventory);

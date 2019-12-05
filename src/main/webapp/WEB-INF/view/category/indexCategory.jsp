@@ -25,13 +25,6 @@
 <div class="container">
 
     <div>
-        <h3>
-            Category
-        </h3>
-    </div>
-
-    <div>
-        <hr>
         <div class="row">
             <div class="form-group col-sm-3" align="left">
                 <input id="myInput" class="form-control" type="search" placeholder="Search"/>
@@ -41,7 +34,6 @@
                     Create
                 </button>
             </div>
-
         </div>
     </div>
 
@@ -82,8 +74,8 @@
                            class="form-horizontal">
                     <form:input class="form-control" type="input" path="name" placeholder="Category Name"/>
                     <div class="modal-footer">
-                    <button type="reset"  class="btn btn-primary">Cancel</button>
-                    <input type="submit" class="btn btn-primary" value="Save"/>
+                        <button type="reset" class="btn btn-primary" >Cancel</button>
+                        <button type="submit" class="btn btn-primary"  >Save</button>
                     </div>
                 </form:form>
             </div>

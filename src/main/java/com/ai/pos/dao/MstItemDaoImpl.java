@@ -1,6 +1,8 @@
 package com.ai.pos.dao;
 
+import com.ai.pos.model.MstCategory;
 import com.ai.pos.model.MstItem;
+import com.ai.pos.model.MstItemVariant;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,4 +66,5 @@ public class MstItemDaoImpl implements MstItemDao {
         List<MstItem> items = q.getResultList();
         return items;
     }
+
 }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class ItemInventoryDaoImpl implements ItemInventoryDao {
+public class MstItemInventoryDaoImpl implements MstItemInventoryDao {
 
     @Autowired
     private SessionFactory sessionFactory;

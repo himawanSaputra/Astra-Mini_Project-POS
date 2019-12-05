@@ -83,30 +83,14 @@
     <div>
     <hr>
         <div class="container">
-<<<<<<< HEAD
-            <div class="row">
 
-<%--                    <form:form modelAttribute="outlets">--%>
-                            <div class="form-group col-sm-3" align="left">
-                                <input class="form-control" type="search" placeholder="Search"/>
-                            </div>
-                            <div class="form-group col-sm-9" align="right">
-                                <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#createOutlet">
-                                    Create
-                                </button>
-                            </div>
-                            <!-- Modal -->
-<%--                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">Create</button>--%>
-<%--                        <input class="form-control .col-sm-4" type="search" placeholder="Search"/>--%>
-<%--                    </form:form>--%>
-=======
             <div class="row col-md">
                 <div class="form-group ">
                     <form:form modelAttribute="outlets">
                         <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">Create</button>
 
                     </form:form>
->>>>>>> d4972385dd4dd3e61ef0d6d5730e71eec0a22c5d
+
                 </div>
 
                 <input class="form-control .col-sm-4" type="text" placeholder="Search" id="myInput"/>

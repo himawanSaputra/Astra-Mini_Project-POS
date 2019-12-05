@@ -1,6 +1,6 @@
 package com.ai.pos.service;
 
-import com.ai.pos.dao.ItemInventoryDao;
+import com.ai.pos.dao.MstItemInventoryDao;
 import com.ai.pos.model.ItemInventory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,10 +10,10 @@ import java.util.List;
 
 @Service
 @Transactional
-public class ItemInventoryServiceImpl implements ItemInventoryService {
+public class MstItemInventoryServiceImpl implements MstItemInventoryService {
 
     @Autowired
-    private ItemInventoryDao itemInventoryDao;
+    private MstItemInventoryDao itemInventoryDao;
 
     @Override
     public void save(ItemInventory itemInventory) {
