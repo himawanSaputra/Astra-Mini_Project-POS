@@ -110,17 +110,27 @@
                 </thead>
                 <tbody>
                 <c:forEach var="cur_employee" items="${employees}">
-                    <tr>
-                        <td>${cur_employee.firstName}</td>
-                        <td>${cur_employee.email}</td>
-                        <td>${cur_employee.haveAccount}</td>
-                        <td>${cur_employee.mstUser.mstRole.description} </td>
-                        <td>${cur_employee.mstUser.mstRole.name} </td>
-                        <td>
-                            <a href="#">Edit</a>
-                            <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
-                        </td>
-                    </tr>
+<<<<<<< HEAD
+                    <c:if test="${cur_employee.active == true}">
+=======
+                    <c:if test="${cur_employee.active}">
+>>>>>>> 0ad4898ee9d7ad1a0778e76866971b1fb54f35ce
+                        <tr>
+                            <td>${cur_employee.firstName}</td>
+                            <td>${cur_employee.email}</td>
+                            <td>${cur_employee.haveAccount}</td>
+                            <td>${cur_employee.mstUser.mstRole.description} </td>
+                            <td>${cur_employee.mstUser.mstRole.name} </td>
+                            <td>
+                                <a href="#">Edit</a>
+                                <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
+                            </td>
+                        </tr>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0ad4898ee9d7ad1a0778e76866971b1fb54f35ce
+                    </c:if>
                 </c:forEach>
                 </tbody>
             </table>

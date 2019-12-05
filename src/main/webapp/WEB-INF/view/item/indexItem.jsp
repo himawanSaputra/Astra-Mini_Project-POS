@@ -66,6 +66,7 @@
             <tbody id="myTable">
             <c:forEach var="item" items="${items}">
                 <tr>
+
                     <td>${item.mstItemVariant.mstItem.name}</td>
                     <td>${item.mstItemVariant.mstItem.category_id.name}</td>
                     <td>
@@ -80,6 +81,7 @@
                         <td>Normal</td>
                     </c:if></td>
                     <td><a data-toggle="modal" data-target="#create-editItem">Edit</a></td>
+
                 </tr>
             </c:forEach>
             </tbody>
