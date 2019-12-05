@@ -11,7 +11,7 @@ public class TPrHistory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "pr_id", referencedColumnName = "id")
     private TPr tPr;
 

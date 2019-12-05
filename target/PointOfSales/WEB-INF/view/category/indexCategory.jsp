@@ -164,11 +164,19 @@
             method: 'GET',
             dataType: 'json',
             success: function (data) {
+<<<<<<< HEAD
+                // asd = JSON.stringify(data);
+                // console.log(asd);
+                $('#id').val(data.id);
+                $('#active').val(data.active);
+                $('#name').val(data.name);
+=======
                 asd = JSON.stringify(data);
                 console.log(asd);
                 $('#idEdit').val(data.id);
                 $('#activeEdit').val(data.active);
                 $('#nameEdit').val(data.name);
+>>>>>>> 034ec466ebf0e2f2c2b00ac63f74afce00efd2a9
                 $('#idCategory').val(data.id);
                 $('#activeCategory').val(data.active);
                 $('#nameCategory').val(data.name);

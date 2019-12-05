@@ -12,11 +12,11 @@ public class TPrDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "pr_id", referencedColumnName = "id", nullable = false)
     private TPr tPr;
 
-    @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "variant_id", referencedColumnName = "id", nullable = false)
     private MstItemVariant mstItemVariant;
 

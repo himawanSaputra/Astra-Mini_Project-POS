@@ -145,6 +145,7 @@
             method: 'GET',
             dataType: 'json',
             success: function (data) {
+
                 asd = JSON.stringify(data);
                 console.log(asd);
                 $('#idEdit').val(data.id);

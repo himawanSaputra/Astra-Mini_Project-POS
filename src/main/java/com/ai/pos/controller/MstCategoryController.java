@@ -27,7 +27,7 @@ public class MstCategoryController {
         List<MstCategory> list = mstCategoryService.getAllCategory();
         mv.addAttribute("allCategory",list);
         mv.addAttribute("category",new MstCategory());
-        mv.addAttribute("category2",new MstCategory());
+//        mv.addAttribute("category2",new MstCategory());
         mv.addAttribute("content_page_url", "category/indexCategory.jsp");
         mv.addAttribute("page_title", "Category");
         return "home";
@@ -39,6 +39,7 @@ public class MstCategoryController {
         mstCategoryService.save(mstCategory);
         return "redirect:/category";
     }
+
 
 //    @RequestMapping(value="/edit/{id}")
 //    public ModelAndView addView(@PathVariable int id) {
@@ -54,19 +55,10 @@ public class MstCategoryController {
 
     @RequestMapping(value = "/removeStatusCategory", method = RequestMethod.POST)
     public String removeStatusCategory(@ModelAttribute("category") MstCategory mstCategory){
-//        MstCategory category = mstCategoryService.getCategory(mstCategory.getId());
         mstCategory.setActive(false);
         this.mstCategoryService.saveOrUpdate(mstCategory);
         return "redirect:/category";
     }
-
-//    @RequestMapping(value = "/updateCategory", method = RequestMethod.POST)
-//    public String updateCategory(@ModelAttribute("category") MstCategory mstCategory, Model model){
-//        mstCategoryService.saveOrUpdate(mstCategory);
-////        model.addAttribute("updateCategory",  new MstCategory());
-//        return "redirect:/category";
-//    }
-
 
     @RequestMapping(value="/update/{id}" , method = RequestMethod.GET)
     public @ResponseBody
@@ -76,6 +68,13 @@ public class MstCategoryController {
         return category;
     }
 
+//    @RequestMapping(value = "/updateCategory", method = RequestMethod.POST)
+//    public String updateCategory(@ModelAttribute("category") MstCategory mstCategory, Model model){
+//        mstCategoryService.saveOrUpdate(mstCategory);
+//        model.addAttribute("updateCategory",  new MstCategory());
+//        return "redirect:/category";
+//    }
+
 //    @RequestMapping(value = "/remove_category/{id}", method = RequestMethod.POST)
 //    public String removeCategory(@PathVariable int id){
 //        MstCategory category = this.mstCategoryService.getCategory(id);
@@ -84,5 +83,10 @@ public class MstCategoryController {
 //        return "redirect:/category";
 //    }
 
+//    @RequestMapping(value="/edit/{id}")
+//    public ModelAndView addView(@PathVariable int id) {
+//        MstCategory mstCategory = mstCategoryService.getCategory(id);
+//        return new ModelAndView("category/indexCategory", "category", mstCategory );
+//    }
 
 }

@@ -11,7 +11,7 @@ public class TPr{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "outlet_id", referencedColumnName = "id", nullable = false)
     private MstOutlet outletId;
 
