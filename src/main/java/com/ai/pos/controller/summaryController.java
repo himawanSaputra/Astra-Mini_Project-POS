@@ -3,8 +3,8 @@ package com.ai.pos.controller;
 import com.ai.pos.model.ItemInventory;
 import com.ai.pos.model.MstCategory;
 import com.ai.pos.model.MstItem;
-import com.ai.pos.service.ItemInventoryService;
 import com.ai.pos.service.MstCategoryService;
+import com.ai.pos.service.MstItemInventoryService;
 import com.ai.pos.service.TransferStockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +22,7 @@ import java.util.List;
 public class summaryController {
 
     @Autowired
-    ItemInventoryService itemInventoryService;
+    MstItemInventoryService mstItemInventoryService;
 
     @Autowired
     MstCategoryService mstCategoryService;
