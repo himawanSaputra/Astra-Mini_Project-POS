@@ -40,6 +40,13 @@ public class MstCategoryController {
         return "redirect:/category";
     }
 
+
+//    @RequestMapping(value="/edit/{id}")
+//    public ModelAndView addView(@PathVariable int id) {
+//        MstCategory mstCategory = mstCategoryService.getCategory(id);
+//        return new ModelAndView("category/indexCategory", "category", mstCategory );
+//    }
+
     @RequestMapping(value = "/editCategory", method = RequestMethod.POST)
     public String editCategory(@ModelAttribute("category") MstCategory mstCategory){
         this.mstCategoryService.saveOrUpdate(mstCategory);
