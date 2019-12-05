@@ -41,6 +41,11 @@ public class Employee_ServiceImpl implements Employee_Service {
     }
 
     @Override
+    public MstEmployee getEmloyeeByEmail(String email) {
+        return this.employee_dao.getEmployeeByEmail(email);
+    }
+
+    @Override
     @Transactional
     public List<MstEmployee> listMstEmployes() {
         return this.employee_dao.listMstEmployes();

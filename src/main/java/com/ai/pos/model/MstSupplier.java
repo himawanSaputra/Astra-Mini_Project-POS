@@ -24,15 +24,15 @@ public class MstSupplier {
     @Column(name = "email", nullable = true)
     private String email;
 
-    @ManyToOne(targetEntity = MstProvince.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstProvince.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "province_id", referencedColumnName = "id", nullable = false)
     private MstProvince mstProvince;
 
-    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "region_id", referencedColumnName = "id", nullable = false)
     private MstRegion mstRegion;
 
-    @ManyToOne(targetEntity = MstDistrict.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstDistrict.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "district_id", referencedColumnName = "id", nullable = false)
 
     private MstDistrict mstDistrict;

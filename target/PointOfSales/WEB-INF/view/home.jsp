@@ -2,19 +2,35 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
+    <title>Point Of Sales</title>
     <link rel="stylesheet" href="<c:url value="/resources/css/home.css" />">
-    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap-min.css" />">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<%--    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap-min.css" />">--%>
+<%--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">--%>
+<%--    <link rel="stylesheet"--%>
+<%--          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"--%>
+<%--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"--%>
+<%--          crossorigin="anonymous">--%>
 <%--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--%>
     <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
           rel = "stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />">
+<%--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>--%>
+<%--    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />">--%>
 
-    <!------ Include the above in your HEAD tag ---------->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body class="home m-0 p-0">
     <div class="container-fluid display-table">
@@ -100,13 +116,13 @@
             </div>
             <div class="col-md-9 col-sm-10 display-table-cell v-align">
                 <div class="row">
-                    <header>
+                    <header class="border-bottom">
                         <div class="col-md-12">
                             <div class="row h-100 p-0 m-0 align-middle">
-                                <div class="col-8 h-100 align-middle p-0 m-0">
+                                <div class="col-6 h-100 align-middle p-0 m-0">
                                     <h1 class="m-0 p-0">${page_title}</h1>
                                 </div>
-                                <div class="col-3 align-middle text-right m-0 p-0">
+                                <div class="col-5 align-middle text-right m-0 p-0">
                                     <h4 align="right">
                                         Hello, ${sessionScope.user.username}
                                     </h4>
