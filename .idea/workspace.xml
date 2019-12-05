@@ -7,145 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/RestSupplierController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/DistrictDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/IDistrictCustomDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/IRegionCustomDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/MstItemVariantDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/MstItemVariantDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/ProvinceDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/RegionDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/DistrictService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/IDistrictService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/IRegionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemVariantService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemVariantServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/ProvinceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/RegionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/employee.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/META-INF/PointOfSales.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/RestSupplierController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/DistrictDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/IDistrictCustomDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/IRegionCustomDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/MstItemInventoryDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/MstItemVariantDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/MstItemVariantDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/ProvinceDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/RegionDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/DistrictService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/IDistrictService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/IRegionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/MstItemInventoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/MstItemVariantService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/MstItemVariantServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/ProvinceService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/RegionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/employee.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/employee_edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/PointOfSales.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/RestSupplierController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/DistrictDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/IDistrictCustomDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/IRegionCustomDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemInventoryDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemVariantDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemVariantDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/ProvinceDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/RegionDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/DistrictService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/IDistrictService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/IRegionService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemInventoryServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemVariantService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemVariantServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/ProvinceService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/RegionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/SupplierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/categoryRestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/outletrestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/ItemInventoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/MstItemInventoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/ItemInventoryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/MstItemInventoryDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/MstItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/MstItemDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/MstItemDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/MstItemDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/SupplierDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/dao/SupplierDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/MstSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Employee_Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Employee_Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Employee_ServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Employee_ServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/ItemInventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemInventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/ItemInventoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemInventoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/MstItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/SupplierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/service/SupplierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employee.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/category/indexCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/category/indexCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/employee.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/employee_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/employee_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/item/indexItem.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/item/indexItem.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/list-suppliers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/list-suppliers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/employee_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/outlet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/outlet.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/supplier-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/supplier-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/MstCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/MstCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/MstItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/MstItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/OutletController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/SupplierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/SupplierController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/categoryRestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/outletrestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/ItemInventoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/MstItemInventoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/ItemInventoryDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/MstItemDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/MstItemDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/SupplierDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/dao/SupplierDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/MstSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Employee_Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Employee_Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Employee_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Employee_ServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/ItemInventoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/MstItemInventoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/ItemInventoryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/MstItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/MstItemServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/SupplierService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/service/SupplierService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/jsp/employee.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/category/indexCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/category/indexCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/employee.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/employee_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/employee_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/item/indexItem.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/item/indexItem.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/list-suppliers.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/list-suppliers.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/outlet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/outlet.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/supplier-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/supplier-form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/SupplierController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/SupplierController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/categoryRestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/outletrestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/ItemInventoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemInventoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/ItemInventoryDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/SupplierDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/SupplierDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_ServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/ItemInventoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemInventoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/ItemInventoryServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/SupplierService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/service/SupplierService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/summaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/summaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/Employee_Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstItemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/SupplierController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/summaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/MstItemDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/dao/SupplierDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/MstSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Employee_ServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/MstItemServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/service/SupplierService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
