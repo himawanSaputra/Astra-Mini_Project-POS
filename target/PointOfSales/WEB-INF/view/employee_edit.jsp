@@ -69,7 +69,7 @@
                     </div>
                 </div>
 
-                <div id="hide-user" class="row mt-5" <c:if test="${!employee.haveAccount}">style="display: none"</c:if>>
+                <div id="hide-user" class="row mt-5">
                     <form:hidden path="mstUser.id"/>
                     <div class="col-4">
                         <form:select path="mstUser.mstRole.id" class="form-control" id="role" style="width: 100%;" required="required">
@@ -138,17 +138,20 @@
 </html>
 
 <script>
+    $(document).ready(function(){
+        myFunction();
+    });
+
     function myFunction() {
         var checkBox = document.getElementById("haveaccount");
-        var text = document.getElementById("hide-user");
         if (checkBox.checked == true){
             $('#username').prop('required', true);
             $('#password').prop('required', true);
-            text.style.display = "block";
+            $('#hide-user').show();
         } else {
             $('#username').prop('required', false);
             $('#password').prop('required', false);
-            text.style.display = "none";
+            $('#hide-user').hide();
         }
     }
 

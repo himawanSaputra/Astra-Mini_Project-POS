@@ -74,7 +74,7 @@
                         </div>
                     </div>
 
-                    <div id="hide-user" class="row mt-5" style="display: none;">
+                    <div id="hide-user" class="row mt-5">
                         <div class="col-4">
                             <form:select path="mstUser.mstRole.id" class="form-control" id="role" style="width: 100%;" required="required">
                                 <form:option value="0" label="-SELECT ROLE-"/>
@@ -93,12 +93,12 @@
 
                     <div class="row mt-5">
                         <div class="col 12 text-right">
-                            <button class="btn btn-secondary" onclick="location.href='<c:url value="/employee"/>'">Cancel</button>
+                            <button type="reset" class="btn btn-secondary">Cancel</button>
                             <button type="submit" class="btn btn-primary">Save</button>
                         </div>
                     </div>
 
-                    <div id="selected_outlet">
+                    <div id="selected_outlet" hidden>
 
                     </div>
                 </form:form>
@@ -188,17 +188,20 @@
 </html>
 
 <script>
+    $(document).ready(function(){
+        $('#hide-user').hide();
+    });
+
     function myFunction() {
         var checkBox = document.getElementById("haveaccount");
-        var text = document.getElementById("hide-user");
         if (checkBox.checked == true){
             $('#username').prop('required', true);
             $('#password').prop('required', true);
-            text.style.display = "block";
+            $('#hide-user').show();
         } else {
             $('#username').prop('required', false);
             $('#password').prop('required', false);
-            text.style.display = "none";
+            $('#hide-user').hide();
         }
     }
 
