@@ -11,7 +11,7 @@ public class TPr{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "outlet_id", referencedColumnName = "id", nullable = false)
     private MstOutlet outletId;
 
@@ -119,19 +119,19 @@ public class TPr{
         this.modifiedOn = modifiedOn;
     }
 
-    @Override
-    public String toString() {
-        return "TPr{" +
-                "id=" + id +
-                ", outletId=" + outletId +
-                ", readyTime=" + readyTime +
-                ", prNo='" + prNo + '\'' +
-                ", notes='" + notes + '\'' +
-                ", status='" + status + '\'' +
-                ", createdBy='" + createdBy + '\'' +
-                ", createdOn=" + createdOn +
-                ", modifiedBy='" + modifiedBy + '\'' +
-                ", modifiedOn=" + modifiedOn +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "TPr{" +
+//                "id=" + id +
+//                ", outletId=" + outletId +
+//                ", readyTime=" + readyTime +
+//                ", prNo='" + prNo + '\'' +
+//                ", notes='" + notes + '\'' +
+//                ", status='" + status + '\'' +
+//                ", createdBy='" + createdBy + '\'' +
+//                ", createdOn=" + createdOn +
+//                ", modifiedBy='" + modifiedBy + '\'' +
+//                ", modifiedOn=" + modifiedOn +
+//                '}';
+//    }
 }

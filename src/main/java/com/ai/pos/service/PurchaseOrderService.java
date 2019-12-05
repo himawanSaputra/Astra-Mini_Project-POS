@@ -4,8 +4,11 @@ import com.ai.pos.dao.DAO;
 import com.ai.pos.model.TPo;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
+@org.springframework.stereotype.Service
+@Transactional
 public class PurchaseOrderService implements Service<TPo> {
 
     @Autowired

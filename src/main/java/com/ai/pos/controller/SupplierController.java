@@ -23,8 +23,6 @@ import java.util.Map;
 @RequestMapping("/supplier")
 public class SupplierController {
 
-
-
     @Autowired
     private Service<MstSupplier> supplierService;
 

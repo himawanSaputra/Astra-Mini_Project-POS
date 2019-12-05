@@ -1,5 +1,7 @@
 package com.ai.pos.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -25,14 +27,17 @@ public class MstOutlet {
 
     @ManyToOne(targetEntity = MstProvince.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "province_id", referencedColumnName = "id", nullable = false)
+    @JsonIgnore
     private MstProvince provinceId;
 
     @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id", referencedColumnName = "id", nullable = false)
+    @JsonIgnore
     private MstRegion regionId;
 
     @ManyToOne(targetEntity = MstDistrict.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "district_id", referencedColumnName = "id", nullable = false)
+    @JsonIgnore
     private MstDistrict districtId;
 
     @Column(name = "postal_code", length = 6)

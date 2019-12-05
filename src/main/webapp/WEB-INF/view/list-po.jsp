@@ -11,7 +11,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 
-    <title>List Supplier</title>
+    <title>List Purchase Order</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -26,13 +26,188 @@
 
 </head>
 <body>
-<!-- Modal-->
+
+<!-- Edit PO Modal-->
 <div class="modal" id="editPOModal" tabindex="-1" role="dialog" aria-labelledby="editPOModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="editPOModalLabel">PURCHASE ORDER</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form:form action="/update" modelAttribute="poForm" method="POST">
+                <form:hidden path="id" id="id"/>
+                <div class="modal-body">
+                        <%--                <form:form action="savePO" method="POST">--%>
+                        <%--                <form:hidden path="id" id="id"/>--%>
+                    <div class="container">
+
+                        <!-- Title -->
+                        <div class="form-group">
+                            <div class="form-row">
+
+                                <label class="col-form-label"><h6>Edit NEW PO : OUTLET Login</h6></label>
+
+                            </div>
+                        </div>
+
+                        <!-- Choose Supplier -->
+                        <div class="form-group">
+                            <div class="form-row">
+
+                                <label for="chooseSupplier" class="col-form-label">Choose Supplier</label>
+                                <form:select path="mstSupplier.id" id="chooseSupplier" class="form-control-lg custom-select">
+                                    <option value="0" disabled>-- Choose Supplier --</option>
+                                    <form:options items="${supplierList}" itemValue="id" itemLabel="name"/>
+<%--                                    <c:forEach var="supplier" items="${supplierList}">--%>
+<%--                                        <option value="${supplier.id}">${supplier.name}</option>--%>
+<%--                                    </c:forEach>--%>
+
+                                </form:select>
+                                    <%--                            <form:select path="mstProvince.id" id="province" class="form-control custom-select">--%>
+                                    <%--                                <form:option value="0" label="-- Choose --" disabled="true"/>--%>
+                                    <%--                                <form:options items="${provinces}"  itemValue="id" itemLabel="name"/>--%>
+                                    <%--                            </form:select>--%>
+
+
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="form-group">
+                            <div class="form-row">
+                                <label for="exampleFormControlTextarea1">Notes</label>
+                                <textarea style="min-width: 100%" class="form-control col-5"
+                                          id="exampleFormControlTextarea1" rows="4"></textarea>
+
+
+                                    <%--                            <label for="postalCode" class="col-form-label">Postal Code</label>--%>
+                                    <%--                            <form:input path="postalCode" id="postalCode" placeholder="Postal Code"--%>
+                                    <%--                                        class="form-control"/>--%>
+
+
+                                <div class="form-group col-md-8">
+                                        <%--                            <label for="phone" class="col-form-label">Phone</label>--%>
+                                        <%--                            <form:input path="phone" id="phone" placeholder="Phone" class="form-control"/>--%>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                    <%--                        <label for="email" class="col-form-label">Email</label>--%>
+                                    <%--                        <form:input path="email" id="email" placeholder="Email" class="form-control"/>--%>
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Table PO in Modal -->
+                        <div class="form-group">
+                            <label class="col-form-label">Purchase Order</label>
+                            <hr id="hr">
+                            <table id="editTable" class="table">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">In Stock</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Unit Cost</th>
+                                    <th scope="col">SubTotal</th>
+
+                                </tr>
+
+                                </thead>
+
+
+                                <tbody>
+                                <!-- loop over and print out customers -->
+                                    <%--        <c:forEach var="tempSupplier" items="${suppliers}">--%>
+
+                                <!-- construct an "update" link with customer id -->
+                                    <%--            <c:url var="updateLink" value="/rest/supplier/get/">--%>
+                                    <%--                <c:param name="supplierId" value="${tempSupplier.id}"/>--%>
+                                    <%--            </c:url>--%>
+                                <tr>
+                                    <td>Baju Merah</td>
+                                    <td>3</td>
+                                    <td>10</td>
+                                    <td>50000</td>
+                                    <td>500000</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Baju Biru</td>
+                                    <td>2</td>
+                                    <td>10</td>
+                                    <td>40000</td>
+                                    <td>400000</td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><b>TOTAL</b></td>
+                                    <td colspan="1">Rp. 900000</td>
+                                </tr>
+
+
+                                    <%--            <tr>--%>
+                                    <%--                <td>${tempSupplier.name}</td>--%>
+                                    <%--                <td>${tempSupplier.phone}</td>--%>
+                                    <%--                <td>${tempSupplier.email}</td>--%>
+                                    <%--                <td>--%>
+                                    <%--                    <!-- display the update button -->--%>
+                                    <%--                    <button type="button" id="tesBtn" class="btn btn-info" onclick="toLink(${tempSupplier.id})">Edit--%>
+                                    <%--                    </button>--%>
+
+                                    <%--                </td>--%>
+                                    <%--                <td>--%>
+
+                                    <%--                </td>--%>
+                                    <%--            </tr>--%>
+
+                                    <%--        </c:forEach>--%>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" value="cancel" align="right" class="btn btn-secondary"
+                           onclick="window.location.href='list';return false;"/>
+
+                    <input type="submit" value="save" class="btn btn-primary"/>
+                </div>
+
+            </form:form>
+
+            <%--            </form:form>--%>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" id="viewPOModal" tabindex="-1" role="dialog" aria-labelledby="editPOModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable " role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title" id="viewPOModalLabel">PURCHASE ORDER DETAIL</h4>
+                <div class="col-sm-1"></div>
+
+                <select class="custom-select col-sm-2">
+                    <option value="volvo">More</option>
+                    <option value="saab">Approve</option>
+                    <option value="mercedes">Reject</option>
+                    <option value="asdf">Process</option>
+                    <option value="print">Print</option>
+
+                </select>
+
+                <button type="button col-sm-1" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -43,33 +218,29 @@
                 <div class="container">
 
                     <div class="form-group">
+                        PT Maju Jaya Sekali
+                        <table class="table table-borderless table-sm" >
+                            <tbody>
+                            <tr >
+                                <td style="border: 1px dashed;">021-1234678</td>
+                                <td colspan="2" style="border: 1px dashed;">mjs@email.com</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="border: 1px dashed;">Jl Bangun woy udah pagi</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px dashed;">Jawa Barat</td>
+                                <td style="border: 1px dashed;">Bandung</td>
+                                <td style="border: 1px dashed;">21345</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <!-- Notes -->
+                    <div class="form-group">
                         <div class="form-row">
-                            <label class="col-form-label"><h6>Edit NEW PO : OUTLET Login</h6></label>
-
-                        </div>
-
-
-                        <div class="form-row">
-
-                            <label for="chooseSupplier" class="col-form-label">Choose Supplier</label>
-                            <select id="chooseSupplier" class="form-control-lg custom-select">
-                                <option value="volvo">PT. Dannpa Abadi</option>
-                                <option value="saab">PT. Yoga Sejahtera</option>
-                                <option value="mercedes">PT. John Doo</option>
-
-                            </select>
-                            <%--                            <form:select path="mstProvince.id" id="province" class="form-control custom-select">--%>
-                            <%--                                <form:option value="0" label="-- Choose --" disabled="true"/>--%>
-                            <%--                                <form:options items="${provinces}"  itemValue="id" itemLabel="name"/>--%>
-                            <%--                            </form:select>--%>
-
-
-                        </div>
-
-
-                        <div class="form-row">
-
-
                             <label for="exampleFormControlTextarea1">Notes</label>
                             <textarea style="min-width: 100%" class="form-control col-5"
                                       id="exampleFormControlTextarea1" rows="4"></textarea>
@@ -93,23 +264,113 @@
 
 
                     </div>
+
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>PO Number : PO0001</td></tr>
+                        <tr><td>Created By</td></tr>
+                        <tr><td>Email</td></tr>
+                        <tr><td>Outlet</td></tr>
+                        <tr><td>Phone</td></tr>
+                        <tr><td>Address</td></tr>
+                        <tr><td>PO Status</td></tr>
+                        </tbody>
+                    </table>
+
+                    <br>
+                    <br>
+
+                    Status History
+                    <hr/>
+                    On 01/01/2016 - PO0012 isCreated <br>
+                    On 01/01/2016 - PO0023 is Modified
+
+                    <br><br>
+
+                    <!-- Table PO in Modal -->
+                    <div class="form-group">
+                        <label class="col-form-label">Purchase Order</label>
+                        <hr id="hr1">
+                        <table class="table">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">In Stock</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Unit Cost</th>
+                                <th scope="col">SubTotal</th>
+
+                            </tr>
+
+                            </thead>
+
+
+                            <tbody>
+                            <!-- loop over and print out customers -->
+                            <%--        <c:forEach var="tempSupplier" items="${suppliers}">--%>
+
+
+                            <!-- construct an "update" link with customer id -->
+                            <%--            <c:url var="updateLink" value="/rest/supplier/get/">--%>
+                            <%--                <c:param name="supplierId" value="${tempSupplier.id}"/>--%>
+                            <%--            </c:url>--%>
+                            <tr>
+                                <td>Baju Merah</td>
+                                <td>3</td>
+                                <td>10</td>
+                                <td>50000</td>
+                                <td>500000</td>
+
+                            </tr>
+                            <tr>
+                                <td>Baju Biru</td>
+                                <td>2</td>
+                                <td>10</td>
+                                <td>40000</td>
+                                <td>400000</td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="4"><b>TOTAL</b></td>
+                                <td colspan="1">Rp. 900000</td>
+                            </tr>
+
+
+                            <%--            <tr>--%>
+                            <%--                <td>${tempSupplier.name}</td>--%>
+                            <%--                <td>${tempSupplier.phone}</td>--%>
+                            <%--                <td>${tempSupplier.email}</td>--%>
+                            <%--                <td>--%>
+                            <%--                    <!-- display the update button -->--%>
+                            <%--                    <button type="button" id="tesBtn" class="btn btn-info" onclick="toLink(${tempSupplier.id})">Edit--%>
+                            <%--                    </button>--%>
+
+                            <%--                </td>--%>
+                            <%--                <td>--%>
+
+                            <%--                </td>--%>
+                            <%--            </tr>--%>
+
+                            <%--        </c:forEach>--%>
+                            </tbody>
+
+                        </table>
+
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <input type="button" value="cancel" align="right" class="btn btn-secondary"
-                       onclick="window.location.href='list';return false;"/>
+<%--                <input type="button" value="cancel" align="right" class="btn btn-secondary"--%>
+<%--                       onclick="window.location.href='list';return false;"/>--%>
 
-                <input type="submit" id="formSubmit" value="save" class="btn btn-primary"/>
+                <input type="submit" id="formSubmit" value="Done" class="btn btn-primary"/>
             </div>
             <%--            </form:form>--%>
         </div>
     </div>
 </div>
 
-
-<%--<div id="exampleModalHolder"></div>--%>
-
-<!-- Modal-->
 
 <div class="container-fluid">
 
@@ -166,6 +427,8 @@
                 </select>
 
             </div>
+
+            <!-- Notes -->
             <div class="form-group col-sm-3">
                 <label for="searchGroup">Search</label>
                 <div class="input-group mb-3" id="searchGroup">
@@ -179,10 +442,11 @@
 
             <div class="form-group col-sm-3"></div>
 
-            <div class="form-group col-sm-2">
+            <div class="form-group col-sm-2 col-md-offset-3 column">
 
-                <button type="button" id="btnExport" class="btn btn-secondary form-control" data-toggle="modal"
-                        data-target="#editPOModal">Export
+                <label for="btnExport" style="color: white">dlsdjklfsd</label>
+                <button type="button" id="btnExport" class="btn btn-secondary form-control text-center">
+                    Export
                 </button>
 
             </div>
@@ -223,23 +487,31 @@
 
 
         <tbody>
+
         <!-- loop over and print out customers -->
         <%--        <c:forEach var="tempSupplier" items="${suppliers}">--%>
 
+        <c:forEach var="tempPO" items="${orderList}">
+            <td>${tempPO.createdOn}</td>
+            <td>${tempPO.mstSupplier.name}</td>
+            <td>${tempPO.poNo}</td>
+            <td>${tempPO.grandTotal}</td>
+            <td>${tempPO.status}</td>
+            <td>
+                <button class="btn btn-primary" data-toggle="modal"
+                        data-target="#editPOModal">Edit</button>
+                <button class="btn btn-primary" data-toggle="modal"
+                        data-target="#viewPOModal">View</button>
+            </td>
+
+
+        </c:forEach>
         <!-- construct an "update" link with customer id -->
         <%--            <c:url var="updateLink" value="/rest/supplier/get/">--%>
         <%--                <c:param name="supplierId" value="${tempSupplier.id}"/>--%>
         <%--            </c:url>--%>
         <tr>
-            <td>30/07/97</td>
-            <td>Dannpa</td>
-            <td>PO001</td>
-            <td>500000</td>
-            <td>Approve</td>
-            <td>
-                <button class="btn btn-primary">Edit</button>
-                <button class="btn btn-primary">View</button>
-            </td>
+
 
 
         </tr>

@@ -3,10 +3,13 @@ package com.ai.pos.dao;
 import com.ai.pos.model.TPo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class PurchaseOrderDAO implements DAO<TPo>{
 
     @Autowired
@@ -21,8 +24,8 @@ public class PurchaseOrderDAO implements DAO<TPo>{
     @Override
     public List<TPo> getAll() {
         Session session = currentSession.getCurrentSession();
-
-        return session.createCriteria(TPo.class).list();
+        Query<TPo> theQuery = session.createSQLQuery("select * from pos_t_po").addEntity(TPo.class);
+        return theQuery.getResultList();
     }
 
     @Override
