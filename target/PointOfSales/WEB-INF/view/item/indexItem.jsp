@@ -75,9 +75,13 @@
                     <c:if test="${item.endingQty > item.alertAtQty}">
                         <td>Normal</td>
                     </c:if></td>
+<<<<<<< HEAD
                     <td><button data-toggle="modal" class="btn btn-primary" data-target="#create-editItem">Edit</button></td>
 
 
+=======
+                    <td><a data-toggle="modal" data-target="#create-editItem">Edit</a></td>
+>>>>>>> e1bbd412862ecaa9f63704ffa893447e16d3f3d2
                 </tr>
             </c:forEach>
             </tbody>

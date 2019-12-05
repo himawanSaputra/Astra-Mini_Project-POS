@@ -10,16 +10,6 @@
 <body>
 
 
-<div class="container">
-<%--    modal--%>
-
-
-    <h2>Outlets</h2>
-    <div>
-
-    <hr>
-        <div class="container">
-
     <div class="row">
         <div class="col-12">
             <div class="row">
@@ -54,7 +44,9 @@
                             <td>${cur_outlet.phone}</td>
                             <td>${cur_outlet.email}</td>
                             <td>
+
                                 <button class="btn btn-outline-primary" data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#createOutlet">
+
                                     Edit
                                 </button>
                             </td>
@@ -65,6 +57,7 @@
             </div>
         </div>
     </div>
+
 <!-- Create New Outlet -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

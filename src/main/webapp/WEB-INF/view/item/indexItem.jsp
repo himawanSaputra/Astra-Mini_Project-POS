@@ -53,6 +53,7 @@
             <tbody id="myTable">
             <c:forEach var="item" items="${items}">
                 <tr>
+<<<<<<< HEAD
 <%--<<<<<<< HEAD--%>
 <%--                    <td>${item.mstItemVariant.mstItem.name}</td>--%>
 <%--                    <td>${item.mstItemVariant.mstItem.category_id.name}</td>--%>
@@ -62,6 +63,8 @@
 <%--                    <td><a data-toggle="modal" data-target="#editItem">Edit</a></td>--%>
 <%--=======--%>
 
+=======
+>>>>>>> e1bbd412862ecaa9f63704ffa893447e16d3f3d2
                     <td>${item.mstItemVariant.mstItem.name}</td>
                     <td>${item.mstItemVariant.mstItem.category_id.name}</td>
                     <td>
@@ -75,8 +78,8 @@
                     <c:if test="${item.endingQty > item.alertAtQty}">
                         <td>Normal</td>
                     </c:if></td>
-                    <td><button data-toggle="modal" class="btn btn-primary" data-target="#create-editItem">Edit</button></td>
 
+                    <td><button data-toggle="modal" class="btn btn-primary" data-target="#create-editItem">Edit</button></td>
 
                 </tr>
             </c:forEach>
