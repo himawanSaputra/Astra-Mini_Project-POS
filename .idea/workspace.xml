@@ -8,22 +8,26 @@
   <component name="ChangeListManager">
     <list default="true" id="4749ae5c-c72b-46fe-b5dd-8b16b0cf063e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/MstCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/controller/OutletController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPrDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPrDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPrHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ai/pos/model/TPrHistory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/category/indexCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/category/indexCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/outlet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/outlet.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/MstCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/MstCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/controller/OutletController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TPr.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TPr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TPrDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TPrDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TPrHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/classes/com/ai/pos/model/TPrHistory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/category/indexCategory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/category/indexCategory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/outlet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/outlet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/employee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PointOfSales/WEB-INF/view/new.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/MstCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/controller/OutletController.class" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TPr.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TPr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TPrDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TPrDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TPrHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ai/pos/model/TPrHistory.class" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,9 +56,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="jsf" />
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -111,6 +115,18 @@
       <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\model" />
       <recent name="D:\Work\Bootcamp\Astra International\Mini Project\PointOfSales\src\main\java\com\ai\pos\dao" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.29">
     <configuration name="Tomcat 7.0.561" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.561" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -266,30 +282,6 @@
       <item itemvalue="Tomcat Server.Tomcat 9.0.29" />
     </list>
   </component>
-
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
-
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -313,13 +305,12 @@
       <workItem from="1575253086998" duration="10802000" />
       <workItem from="1575274427203" duration="18000" />
       <workItem from="1575274452901" duration="272000" />
-
       <workItem from="1575275251825" duration="7232000" />
       <workItem from="1575341194678" duration="16966000" />
       <workItem from="1575366015259" duration="8195000" />
       <workItem from="1575426391242" duration="13080000" />
-
-
+      <workItem from="1575452441545" duration="6583000" />
+      <workItem from="1575513475763" duration="17966000" />
     </task>
     <task id="LOCAL-00001" summary="//">
       <created>1574309925236</created>
@@ -462,14 +453,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/controller/TransferStockController.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/controller/Employee_Controller.java</url>
           <line>163</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ai/pos/controller/PurchaseRequestController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

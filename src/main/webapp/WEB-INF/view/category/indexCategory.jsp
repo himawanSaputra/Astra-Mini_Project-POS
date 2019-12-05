@@ -152,8 +152,8 @@
             method: 'GET',
             dataType: 'json',
             success: function (data) {
-                asd = JSON.stringify(data);
-                console.log(asd);
+                // asd = JSON.stringify(data);
+                // console.log(asd);
                 $('#id').val(data.id);
                 $('#active').val(data.active);
                 $('#name').val(data.name);

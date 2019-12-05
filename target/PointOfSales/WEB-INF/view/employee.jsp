@@ -120,7 +120,9 @@
                 </thead>
                 <tbody>
                 <c:forEach var="cur_employee" items="${employees}">
+
                     <c:if test="${cur_employee.active}">
+
                         <tr>
                             <td>${cur_employee.firstName}</td>
                             <td>${cur_employee.email}</td>
@@ -128,6 +130,7 @@
                             <td>${cur_employee.mstUser.mstRole.description} </td>
                             <td>${cur_employee.mstUser.mstRole.name} </td>
                             <td>
+
                                 <a href="<c:url value='/edit_employee/${cur_employee.id}'/>">Edit</a>
                                 <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
                             </td>
