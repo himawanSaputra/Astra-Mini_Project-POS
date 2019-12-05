@@ -46,8 +46,6 @@ public class MstCategoryController {
 //        return new ModelAndView("category/indexCategory", "category", mstCategory );
 //    }
 
-
-
     @RequestMapping(value = "/editCategory", method = RequestMethod.POST)
     public String editCategory(@ModelAttribute("category") MstCategory mstCategory){
         this.mstCategoryService.saveOrUpdate(mstCategory);

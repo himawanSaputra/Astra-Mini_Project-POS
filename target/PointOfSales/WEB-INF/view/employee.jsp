@@ -20,18 +20,21 @@
 
 <div class="row">
     <div class="col-12">
-        <div class="mb-5">
-            <h3 >
+        <div>
+            <h3>
                 ADD EMPLOYEE
             </h3>
-            <c:if test="${error != null}">
-                <div class="alert alert-danger" role="alert">
-                    ${error}
-                </div>
-            </c:if>
         </div>
 
+        <hr>
+
         <div>
+            <c:if test="${error != null}">
+                <div class="alert alert-danger" role="alert">
+                        ${error}
+                </div>
+            </c:if>
+
             <form:form action="/add_employee" name="employeeForm" method="post" modelAttribute="employee" >
                 <div class="row">
                     <form:hidden class="form-control"  id="idmstuser" path="id"/>
@@ -100,11 +103,15 @@
             </form:form>
         </div>
 
+        <hr>
+
         <div style="margin-top: 50px">
-            <h4>
+            <h3>
                 Staff List
-            </h4>
+            </h3>
         </div>
+
+        <hr>
 
         <div>
             <table class="table">
@@ -120,7 +127,9 @@
                 </thead>
                 <tbody>
                 <c:forEach var="cur_employee" items="${employees}">
+
                     <c:if test="${cur_employee.active}">
+
                         <tr>
                             <td>${cur_employee.firstName}</td>
                             <td>${cur_employee.email}</td>
@@ -128,6 +137,7 @@
                             <td>${cur_employee.mstUser.mstRole.description} </td>
                             <td>${cur_employee.mstUser.mstRole.name} </td>
                             <td>
+
                                 <a href="<c:url value='/edit_employee/${cur_employee.id}'/>">Edit</a>
                                 <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
                             </td>

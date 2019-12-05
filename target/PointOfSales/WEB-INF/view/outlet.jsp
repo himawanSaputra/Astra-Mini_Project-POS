@@ -8,84 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<<<<<<< HEAD
     <div class="row">
         <div class="col-12">
             <div class="row">
                 <div class="col-6">
                     <input class="form-control" type="text" placeholder="Search" id="myInput"/>
-=======
-
-<div class="container">
-<%--    modal--%>
-    <div id="createOutlet" class="modal fade">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title">Input Outlet</h1>
-                </div>
-                <div class="modal-body">
-                    <form:form method="post" name="outletForm" action="outlet" modelAttribute="outlet">
-                        <form:input type="hidden" name="id" value="" path="id" id="id"/>
-                        <form:input type="hidden" name="active" value="" path="active" id="active"/>
-                        <div class="form-group">
-                            <div>
-                                <form:input placeholder="Outlet Name" type="outletname" class="form-control input-lg" name="outletname" path="name" id="outletname"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <form:input placeholder="Address" type="address" class="form-control input-lg" name="address" path="address" id="address"/>
-                            </div>
-                        </div>
-                        <div class="form-inline row" style="display: inline-block; text-align: center; justify-content: center">
-
-                                <form:select path="provinceId.id"  class="form-control select2" id="provinceId" >
-                                    <form:option value="0" label="- Select Province-" />
-                                    <form:options items="${provinceList}" />
-                                </form:select>
-
-                                <form:select path="regionId.id"  class="form-control select2" id="regionId">
-                                    <form:option value="0" label="- Select Region-" />
-                                    <form:options items="${regionList}"/>
-                                </form:select>
-
-                                <form:select path="districtId.id"  class="form-control select2" id="disctrictId">
-                                    <form:option  value="0" label="- Select District-"/>
-                                    <form:options items="${districtList}" />
-                                </form:select>
-
-                        </div>
-                        <div class="form-inline row " style="display: inline-block; text-align: center; justify-content: center">
-                            <div class="form-group col-sm" align="left">
-                                <form:input placeholder="Postal Code" type="postalcode" class="form-control input-lg" name="postalcode" path="postalCode" id="postalcode"/>
-                            </div>
-                            <div class="form-group col-sm" align="center">
-                                <form:input placeholder="Phone" type="phone" class="form-control input-lg" name="phone" path="phone" id="phone"/>
-                            </div>
-                            <div class="form-group col-sm" align="right">
-                                <form:input placeholder="Email" type="email" class="form-control input-lg" name="email" path="email" id="email"/>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Save</button>
-                        </div>
-                    </form:form>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <h2>Outlets</h2>
-    <div>
-
-    <hr>
-        <div class="container">
-
-            <div class="row col-md">
-                <div>
-                    <input class="form-group col-sm-10 " align="left" type="text" placeholder="Search" id="myInput"/>
->>>>>>> b63fe3309260b522f39e12bba3718ed471433961
                 </div>
                 <div class="col-6 form-group text-right">
                     <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#exampleModal" onclick="clearForm()">
@@ -210,7 +137,6 @@
         });
     });
 
-<<<<<<< HEAD
     function clearForm(){
         $(".form-control").each(function(){
             $(this).val('');
@@ -219,25 +145,6 @@
         $("#region").val(0);
         $("#district").val(0);
     }
-=======
-                $.ajax({
-                    url: '${pageContext.request.contextPath}/rest/outlet/get/'+id,
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function (data) {
-                        asd = JSON.stringify(data);
-                        console.log(asd);
-                        $('#id').val(data.id);
-                        $('#active').val(data.active);
-                        $('#outletname').val(data.name);
-                        $('#address').val(data.address);
-                        $('#provinceId').val(data.provinceId);
-                        $('#regionId').val(data.regionId);
-                        $('#districtId').val(data.districtId);
-                        $('#postalcode').val(data.postalCode);
-                        $('#phone').val(data.phone);
-                        $('#email').val(data.email);
->>>>>>> b63fe3309260b522f39e12bba3718ed471433961
 
    function toLink(id) {
         $.ajax({

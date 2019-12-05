@@ -43,5 +43,11 @@ public class SupplierService implements Service<MstSupplier> {
         mstSupplierDAO.delete(object);
     }
 
+    @Override
+    @Transactional
+    public List<MstSupplier> searchSuppliers(String theSearchName) {
+        return mstSupplierDAO.search(theSearchName);
+    }
+
 
 }
