@@ -14,7 +14,7 @@
 <div class="container">
 <%--    modal--%>
     <div id="createOutlet" class="modal fade">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title">Input Outlet</h1>
@@ -82,6 +82,15 @@
         <div class="container">
 
             <div class="row col-md">
+<<<<<<< HEAD
+                <div>
+                    <input class="form-control col-sm-12 " align="left" type="search" placeholder="Search" id="myInput"/>
+                </div>
+                <div class="form-group col-sm-9" align="right">
+                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">
+                            Create
+                        </button>
+=======
                 <div class="form-group ">
                     <form:form modelAttribute="outlets">
                         <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createOutlet">Create</button>
@@ -100,6 +109,7 @@
                         Create
                     </button>
 >>>>>>> 5221519aa7f51d823f669bf5d388673b46c14c87
+>>>>>>> 0f100f4690022d50412a45bbf7d3fef4381f3364
                 </div>
             </div>
 

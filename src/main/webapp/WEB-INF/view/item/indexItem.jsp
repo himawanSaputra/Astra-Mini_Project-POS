@@ -1,20 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Arman
-  Date: 11/29/2019
-  Time: 2:10 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Arman
-  Date: 11/25/2019
-  Time: 3:12 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -66,6 +53,14 @@
             <tbody id="myTable">
             <c:forEach var="item" items="${items}">
                 <tr>
+<<<<<<< HEAD
+                    <td>${item.mstItemVariant.mstItem.name}</td>
+                    <td>${item.mstItemVariant.mstItem.category_id.name}</td>
+                    <td>${item.mstItemVariant.price}</td>
+                    <td>${item.mstItemVariant.sku}</td>
+                    <td>${item.alertAtQty}</td>
+                    <td><a data-toggle="modal" data-target="#editItem">Edit</a></td>
+=======
 
                     <td>${item.mstItemVariant.mstItem.name}</td>
                     <td>${item.mstItemVariant.mstItem.category_id.name}</td>
@@ -82,6 +77,7 @@
                     </c:if></td>
                     <td><a data-toggle="modal" data-target="#create-editItem">Edit</a></td>
 
+>>>>>>> 0f100f4690022d50412a45bbf7d3fef4381f3364
                 </tr>
             </c:forEach>
             </tbody>
