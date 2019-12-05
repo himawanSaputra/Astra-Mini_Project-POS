@@ -13,8 +13,10 @@
     <title>Category</title>
 </head>
 <body>
+
 <div class="row">
     <div class="col-12">
+
         <div class="row">
             <div class="form-group col-sm-3" align="left">
                 <input id="myInput" class="form-control" type="search" placeholder="Search"/>
@@ -67,6 +69,7 @@
 <!-- CREATE CATEGORY MODEL -->
 <div class="modal fade" id="createCategory" role="dialog">
     <div class="modal-dialog">
+
         <form:form method="post" action="/saveCategory" modelAttribute="category"
                    class="form-horizontal">
             <div class="modal-content">
@@ -83,6 +86,7 @@
                             <button type="reset"  class="btn btn-secondary">Cancel</button>
                             <button type="submit" class="btn btn-primary">Save</button>
                         </div>
+
                     </div>
                 </div>
             </div>
