@@ -55,7 +55,6 @@
                 <tr>
                     <td>${item.mstItemVariant.mstItem.name}</td>
                     <td>${item.mstItemVariant.mstItem.category_id.name}</td>
-<<<<<<< HEAD
                     <td>
                         <fmt:formatNumber type="currency" currencySymbol="Rp. " value="${item.mstItemVariant.price}">
                         </fmt:formatNumber>
@@ -68,12 +67,6 @@
                         <td>Normal</td>
                     </c:if></td>
                     <td><a data-toggle="modal" data-target="#create-editItem">Edit</a></td>
-=======
-                    <td>${item.mstItemVariant.price}</td>
-                    <td>${item.mstItemVariant.sku}</td>
-                    <td>${item.alertAtQty}</td>
-                    <td><a data-toggle="modal" data-target="#editItem">Edit</a></td>
->>>>>>> 5221519aa7f51d823f669bf5d388673b46c14c87
                 </tr>
             </c:forEach>
             </tbody>
