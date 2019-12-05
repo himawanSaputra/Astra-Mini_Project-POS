@@ -68,9 +68,19 @@ public class Employee_DaoImpl implements Employee_Dao {
 
     @Override
     public List<MstEmployee> listMstEmployes() {
+//        Session session = sessionFactory.getCurrentSession();
+//        Criteria criteria = session.createCriteria(MstEmployee.class);
+//        criteria.add(Restrictions.eq("active","1"));
+//        return session.createCriteria(MstEmployee.class).list();
+
         Session session = sessionFactory.getCurrentSession();
-        Criteria criteria = session.createCriteria(MstEmployee.class);
-        criteria.add(Restrictions.eq("active","1"));
-        return session.createCriteria(MstEmployee.class).list();
+        CriteriaBuilder cb = session.getCriteriaBuilder();
+        CriteriaQuery<MstEmployee> query = cb.createQuery(MstEmployee.class);
+        Root<MstEmployee> root = query.from(MstEmployee.class);
+        query.select(root);
+
+        Query q = session.createQuery(query);
+        return q.getResultList();
+
     }
 }

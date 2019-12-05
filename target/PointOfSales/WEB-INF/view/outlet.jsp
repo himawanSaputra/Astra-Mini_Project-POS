@@ -8,6 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<<<<<<< HEAD
+
+
+<div class="container">
+<%--    modal--%>
+
+
+    <h2>Outlets</h2>
+    <div>
+
+    <hr>
+        <div class="container">
+
+=======
+>>>>>>> e1bbd412862ecaa9f63704ffa893447e16d3f3d2
     <div class="row">
         <div class="col-12">
             <div class="row">
@@ -42,9 +57,13 @@
                             <td>${cur_outlet.phone}</td>
                             <td>${cur_outlet.email}</td>
                             <td>
+<<<<<<< HEAD
+                                <button class="btn btn-outline-primary" data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#createOutlet">
+=======
                                 <a data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#exampleModal">
+>>>>>>> e1bbd412862ecaa9f63704ffa893447e16d3f3d2
                                     Edit
-                                </a>
+                                </button>
                             </td>
                         </tr>
                     </c:forEach>

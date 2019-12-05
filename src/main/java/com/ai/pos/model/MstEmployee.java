@@ -1,7 +1,7 @@
 package com.ai.pos.model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
 
 @Entity
 @Table(name = "pos_mst_employee")
@@ -13,6 +13,9 @@ public class MstEmployee {
 
     @OneToOne(mappedBy = "mstEmployee")
     private MstUser mstUser;
+
+    @OneToMany(mappedBy = "mstEmployee", fetch = FetchType.EAGER)
+    private List<EmployeeOutlet> employeeOutlet = new ArrayList<>();
 
     @Column(name = "first_name", length = 50, nullable = false)
     private String firstName;
@@ -37,6 +40,14 @@ public class MstEmployee {
 
     @Column(name="modifiedBy")
     private String modifiedBy;
+
+    public List<EmployeeOutlet> getEmployeeOutlet() {
+        return employeeOutlet;
+    }
+
+    public void setEmployeeOutlet(List<EmployeeOutlet> employeeOutlet) {
+        this.employeeOutlet = employeeOutlet;
+    }
 
     @Column(name = "modified_on")
     private Date modifiedOn;

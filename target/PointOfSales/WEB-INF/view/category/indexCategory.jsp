@@ -51,9 +51,9 @@
                                 <td style="display: none"> ${category.active}</td>
                                 <td>
                                     <c:if test="${sessionScope.user.mstRole.id == 1}">
-                                        <a href="#" id="edit-data" data-toggle="modal" onclick="toLink(${category.id})" data-target="#editCategory">
+                                        <button class="btn btn-outline-primary" href="#" id="edit-data" data-toggle="modal" onclick="toLink(${category.id})" data-target="#editCategory">
                                             Edit
-                                        </a>
+                                        </button>
                                     </c:if>
                                 </td>
                             </tr>
@@ -110,7 +110,7 @@
                     <form:hidden path="id" cssStyle="display: none" id="idEdit" />
                 </div>
                 <div class="modal-footer">
-                    <button type="reset" class="btn btn-primary">Cancel</button>
+                    <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                     <button type="submit" class="btn btn-primary">Save </button>
                 </div>
             </form:form>

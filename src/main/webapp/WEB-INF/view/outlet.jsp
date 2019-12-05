@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
+
     <div class="row">
         <div class="col-12">
             <div class="row">
@@ -42,9 +44,11 @@
                             <td>${cur_outlet.phone}</td>
                             <td>${cur_outlet.email}</td>
                             <td>
-                                <a data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#exampleModal">
+
+                                <button class="btn btn-outline-primary" data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#createOutlet">
+
                                     Edit
-                                </a>
+                                </button>
                             </td>
                         </tr>
                     </c:forEach>
