@@ -2,19 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="<c:url value="/resources/css/home.css" />">
-    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap-min.css" />">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<%--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--%>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/js/bootstrap-min.js" />">
-
-    <!------ Include the above in your HEAD tag ---------->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-=======
     <title>Point Of Sales</title>
     <link rel="stylesheet" href="<c:url value="/resources/css/home.css" />">
 <%--    <link rel="stylesheet" href="<c:url value="/resources/bootstrap/css/bootstrap-min.css" />">--%>
@@ -44,7 +31,6 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
 </head>
 <body class="home m-0 p-0">
     <div class="container-fluid display-table">
@@ -71,45 +57,26 @@
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2)}">
-<<<<<<< HEAD
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Category</a></li>
-=======
                                         <li><a href="<c:url value="/category"/>" class="pr-5 text-center bg-secondary">Category</a></li>
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2)}">
-<<<<<<< HEAD
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Supplier</a></li>
-                                    </c:if>
-                                    <c:if test="${sessionScope.user.mstRole.id == 1}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Outlet</a></li>
-=======
                                         <li><a href="<c:url value="/supplier/list"/>" class="pr-5 text-center bg-secondary">Supplier</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 1}">
                                         <li><a href="<c:url value="/outlet"/>" class="pr-5 text-center bg-secondary">Outlet</a></li>
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2) ||
                                         (sessionScope.user.mstRole.id == 3)}">
-<<<<<<< HEAD
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Items</a></li>
-=======
                                         <li><a href="<c:url value="/item"/>" class="pr-5 text-center bg-secondary">Items</a></li>
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                                     </c:if>
                                     <c:if test="${
                                         (sessionScope.user.mstRole.id == 1) ||
                                         (sessionScope.user.mstRole.id == 2)}">
-<<<<<<< HEAD
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Employee</a></li>
-=======
                                         <li><a href="<c:url value="/employee"/>" class="pr-5 text-center bg-secondary">Employee</a></li>
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                                     </c:if>
                                 </ul>
                             </div>
@@ -122,17 +89,10 @@
                             <div class="collapse" id="txCollapse">
                                 <ul>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-<<<<<<< HEAD
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Purchase Request</a></li>
-                                    </c:if>
-                                    <c:if test="${sessionScope.user.mstRole.id == 2}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Purchase Order</a></li>
-=======
                                         <li><a href="<c:url value="/purchase_request"/>" class="pr-5 text-center bg-secondary">Purchase Request</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
                                         <li><a href="<c:url value="/po/list"/>" class="pr-5 text-center bg-secondary">Purchase Order</a></li>
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
                                         <li><a href="#" class="pr-5 text-center bg-secondary">Adjustment</a></li>
@@ -146,11 +106,7 @@
                                         <li><a href="#" class="pr-5 text-center bg-secondary">Sales Order</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-<<<<<<< HEAD
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Summary</a></li>
-=======
                                         <li><a href="<c:url value="/summary"/>" class="pr-5 text-center bg-secondary">Summary</a></li>
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                                     </c:if>
                                 </ul>
                             </div>
@@ -160,15 +116,6 @@
             </div>
             <div class="col-md-9 col-sm-10 display-table-cell v-align">
                 <div class="row">
-<<<<<<< HEAD
-                    <header>
-                        <div class="col-md-12">
-                            <div class="row h-100 p-0 m-0 align-middle">
-                                <div class="col-8 h-100 align-middle p-0 m-0">
-                                    <h1 class="m-0 p-0">${page_title}</h1>
-                                </div>
-                                <div class="col-3 align-middle text-right m-0 p-0">
-=======
                     <header class="border-bottom">
                         <div class="col-md-12">
                             <div class="row h-100 p-0 m-0 align-middle">
@@ -176,7 +123,6 @@
                                     <h1 class="m-0 p-0">${page_title}</h1>
                                 </div>
                                 <div class="col-5 align-middle text-right m-0 p-0">
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                                     <h4 align="right">
                                         Hello, ${sessionScope.user.username}
                                     </h4>

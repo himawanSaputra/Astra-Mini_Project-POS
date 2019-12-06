@@ -38,13 +38,8 @@
     </div>
     <div class="row justify-content-center align-items-center">
         <div class="col-12 p-0 mt-3">
-<<<<<<< HEAD
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-=======
             <table class="table">
                 <thead>
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                 <tr>
                     <th scope="col">Transfer Date</th>
                     <th scope="col">From Outlet</th>
@@ -154,12 +149,9 @@
             <div class="modal-body">
                 <div clas="row">
                     <input id="input_search_transfer_item" type="text" placeholder="Item Name - Variant Name"/>
-<<<<<<< HEAD
-=======
                     <div id="transfer_item_search_container">
 
                     </div>
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                 </div>
                 <div clas="row">
                     <table class="table table-bordered">
@@ -168,10 +160,6 @@
                             <th scope="col">Item</th>
                             <th scope="col">In Stock</th>
                             <th scope="col">Trans. Qty.</th>
-<<<<<<< HEAD
-                            <th scope="col">#</th>
-=======
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
                         </tr>
                         </thead>
                         <tbody id="add_transfer_item_tbody">
@@ -191,28 +179,6 @@
 
 <script>
     $(document).ready(function() {
-<<<<<<< HEAD
-        $('#input_search_transfer_item').autocomplete({
-            <%--serviceUrl: '${pageContext.request.contextPath}/search_transfer_item',--%>
-            <%--paramName: "name",--%>
-            <%--delimiter: "-",--%>
-            <%--transformResult: function(response) {--%>
-            <%--    return {--%>
-            <%--        //must convert json to javascript object before process--%>
-            <%--        suggestions: $.map($.parseJSON(response), function(item) {--%>
-            <%--            return { value: item.name, data: item.id };--%>
-            <%--        })--%>
-            <%--    };--%>
-            <%--}--%>
-            source: function (request, response) {
-                $.getJSON("${pageContext.request.contextPath}/search_transfer_item", {
-                    term: request.term,
-                    success: function (data) {
-                        
-                    }
-                }, response);
-            }
-=======
         $('#input_search_transfer_item').change(function () {
             $.ajax({
                 url: '${pageContext.request.contextPath}/search_transfer_item',
@@ -231,7 +197,6 @@
                     })
                 }
             });
->>>>>>> 3152b73369d364c110c5706b73821bb6bffee09a
         });
     });
 </script>
