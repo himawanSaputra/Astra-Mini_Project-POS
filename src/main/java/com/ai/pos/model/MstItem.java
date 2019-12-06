@@ -2,6 +2,9 @@ package com.ai.pos.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "pos_mst_item")
@@ -14,9 +17,12 @@ public class MstItem {
     @Column(name = "name", length = 255)
     private String name;
 
+    @OneToMany(mappedBy = "mstItem", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<MstItemVariant> mstItemVariantSet = new HashSet<>();
+
     @ManyToOne(targetEntity = MstCategory.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
-    private MstCategory category_id;
+    private MstCategory mstCategory;
 
     @Column(name="created_by")
     private String createdBy;
@@ -49,12 +55,28 @@ public class MstItem {
         this.name = name;
     }
 
-    public MstCategory getCategory_id() {
-        return category_id;
+    public Set<MstItemVariant> getMstItemVariantSet() {
+        return mstItemVariantSet;
     }
 
-    public void setCategory_id(MstCategory category_id) {
-        this.category_id = category_id;
+    public void setMstItemVariantSet(Set<MstItemVariant> mstItemVariantSet) {
+        this.mstItemVariantSet = mstItemVariantSet;
+    }
+
+    public MstCategory getMstCategory() {
+        return mstCategory;
+    }
+
+    public void setMstCategory(MstCategory mstCategory) {
+        this.mstCategory = mstCategory;
+    }
+
+    public MstCategory getCategory_id() {
+        return mstCategory;
+    }
+
+    public void setCategory_id(MstCategory mstCategory) {
+        this.mstCategory = mstCategory;
     }
 
     public String getCreatedBy() {
@@ -102,7 +124,7 @@ public class MstItem {
         return "MstItem{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", category_id=" + category_id +
+                ", category_id=" + mstCategory +
                 ", createdBy='" + createdBy + '\'' +
                 ", createdOn=" + createdOn +
                 ", modifiedBy='" + modifiedBy + '\'' +

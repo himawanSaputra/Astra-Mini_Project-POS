@@ -1,10 +1,13 @@
 package com.ai.pos.dao;
 
 import com.ai.pos.model.MstEmployee;
+import com.ai.pos.model.MstRole;
+import com.ai.pos.model.MstUser;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.Query;
@@ -12,15 +15,13 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
+import java.util.Map;
+
 @Repository
 public class Employee_DaoImpl implements Employee_Dao {
-    @Autowired
-    @Qualifier("sessionFactory")
-    private SessionFactory sessionFactory;
 
-    public void setSessionFactory(SessionFactory sf){
-        this.sessionFactory = sf;
-    }
+    @Autowired
+    SessionFactory sessionFactory;
 
     @Override
     public void addEmployee(MstEmployee mstEmployee) {
@@ -66,8 +67,20 @@ public class Employee_DaoImpl implements Employee_Dao {
     }
 
     @Override
-    public List<MstEmployee> listMstEmployee() {
+    public List<MstEmployee> listMstEmployes() {
+//        Session session = sessionFactory.getCurrentSession();
+//        Criteria criteria = session.createCriteria(MstEmployee.class);
+//        criteria.add(Restrictions.eq("active","1"));
+//        return session.createCriteria(MstEmployee.class).list();
+
         Session session = sessionFactory.getCurrentSession();
-        return session.createCriteria(MstEmployee.class).list();
+        CriteriaBuilder cb = session.getCriteriaBuilder();
+        CriteriaQuery<MstEmployee> query = cb.createQuery(MstEmployee.class);
+        Root<MstEmployee> root = query.from(MstEmployee.class);
+        query.select(root);
+
+        Query q = session.createQuery(query);
+        return q.getResultList();
+
     }
 }

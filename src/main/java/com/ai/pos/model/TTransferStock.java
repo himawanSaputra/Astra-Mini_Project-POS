@@ -13,11 +13,11 @@ public class TTransferStock {
 
     @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.EAGER)
     @JoinColumn(name="from_outlet", referencedColumnName = "id", nullable = false)
-    private  MstOutlet fromMstOutlet;
+    private MstOutlet fromMstOutlet;
 
     @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.EAGER)
     @JoinColumn(name="to_outlet", referencedColumnName = "id", nullable = false)
-    private  MstOutlet toMstOutlet;
+    private MstOutlet toMstOutlet;
 
     @Column(name = "notes")
     private String notes;

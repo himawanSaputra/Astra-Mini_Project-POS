@@ -11,11 +11,11 @@ public class ItemInventory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstItemVariant.class, fetch = FetchType.EAGER)
     @JoinColumn(name="variant_id", referencedColumnName = "id")
     private  MstItemVariant mstItemVariant;
 
-    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.EAGER)
     @JoinColumn(name="outlet_id", referencedColumnName = "id", nullable = false)
     private  MstOutlet mstOutlet;
 

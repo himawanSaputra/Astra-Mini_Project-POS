@@ -11,7 +11,7 @@ public class MstRegion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne(targetEntity = MstProvince.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstProvince.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "province_id", referencedColumnName = "id")
     private MstProvince provinceId;
 

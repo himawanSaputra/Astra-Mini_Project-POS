@@ -13,7 +13,7 @@ import javax.persistence.criteria.Root;
 import java.util.List;
 
 @Repository
-public class UserDAOImpl implements UserDAO{
+public class UserDAOImpl implements UserDAO {
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -34,8 +34,9 @@ public class UserDAOImpl implements UserDAO{
         CriteriaQuery<MstUser> query = cb.createQuery(MstUser.class);
         Root<MstUser> root = query.from(MstUser.class);
         query.select(root)
-                .where(cb.equal(root.get("username"), username))
-                .where(cb.equal(root.get("password"), password));
+                .where(cb.equal(root.get("username"), username),
+                        cb.equal(root.get("password"), password));
+//                .where(cb.equal(root.get("password"), password));
         Query q = session.createQuery(query);
         List<MstUser> user = q.getResultList();
         if(user.isEmpty()){

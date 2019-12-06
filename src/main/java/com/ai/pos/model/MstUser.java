@@ -17,12 +17,12 @@ public class MstUser {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @ManyToOne(targetEntity = MstRole.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstRole.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false)
     private MstRole mstRole;
 
-    @OneToOne(targetEntity = MstEmployee.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "employee_id", referencedColumnName = "id", nullable = false)
+    @OneToOne(targetEntity = MstEmployee.class, fetch = FetchType.EAGER)
+    @JoinColumn(name = "employee_id", referencedColumnName = "id",nullable = false)
     private MstEmployee mstEmployee;
 
     @Column(name = "created_by")
@@ -120,19 +120,19 @@ public class MstUser {
         this.active = active;
     }
 
-    @Override
-    public String toString() {
-        return "MstUser{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", roleId=" + mstRole +
-                ", employeeId=" + mstEmployee +
-                ", createdBy='" + createdBy + '\'' +
-                ", createdOn=" + createdOn +
-                ", modifiedBy='" + modifiedBy + '\'' +
-                ", modifiedOn=" + modifiedOn +
-                ", active=" + active +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "MstUser{" +
+//                "id=" + id +
+//                ", username='" + username + '\'' +
+//                ", password='" + password + '\'' +
+//                ", mstRole=" + mstRole +
+//                ", mstEmployee=" + mstEmployee +
+//                ", createdBy='" + createdBy + '\'' +
+//                ", createdOn=" + createdOn +
+//                ", modifiedBy='" + modifiedBy + '\'' +
+//                ", modifiedOn=" + modifiedOn +
+//                ", active=" + active +
+//                '}';
+//    }
 }

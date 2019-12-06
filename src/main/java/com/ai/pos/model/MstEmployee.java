@@ -1,15 +1,21 @@
 package com.ai.pos.model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
 
 @Entity
-@Table(name = "post_mst_employee")
+@Table(name = "pos_mst_employee")
 public class MstEmployee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @OneToOne(mappedBy = "mstEmployee")
+    private MstUser mstUser;
+
+    @OneToMany(mappedBy = "mstEmployee", fetch = FetchType.EAGER)
+    private List<EmployeeOutlet> employeeOutlet = new ArrayList<>();
 
     @Column(name = "first_name", length = 50, nullable = false)
     private String firstName;
@@ -34,6 +40,14 @@ public class MstEmployee {
 
     @Column(name="modifiedBy")
     private String modifiedBy;
+
+    public List<EmployeeOutlet> getEmployeeOutlet() {
+        return employeeOutlet;
+    }
+
+    public void setEmployeeOutlet(List<EmployeeOutlet> employeeOutlet) {
+        this.employeeOutlet = employeeOutlet;
+    }
 
     @Column(name = "modified_on")
     private Date modifiedOn;
@@ -129,20 +143,29 @@ public class MstEmployee {
         this.active = active;
     }
 
-    @Override
-    public String toString() {
-        return "MstEmployee{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", title='" + title + '\'' +
-                ", haveAccount=" + haveAccount +
-                ", createdBy='" + createdBy + '\'' +
-                ", createdOn=" + createdOn +
-                ", modifiedBy='" + modifiedBy + '\'' +
-                ", modifiedOn=" + modifiedOn +
-                ", active=" + active +
-                '}';
+    public MstUser getMstUser() {
+        return mstUser;
     }
+
+    public void setMstUser(MstUser mstUser) {
+        this.mstUser = mstUser;
+    }
+
+//    @Override
+//    public String toString() {
+//        return "MstEmployee{" +
+//                "id=" + id +
+//                ", mstUser=" + mstUser +
+//                ", firstName='" + firstName + '\'' +
+//                ", lastName='" + lastName + '\'' +
+//                ", email='" + email + '\'' +
+//                ", title='" + title + '\'' +
+//                ", haveAccount=" + haveAccount +
+//                ", createdBy='" + createdBy + '\'' +
+//                ", createdOn=" + createdOn +
+//                ", modifiedBy='" + modifiedBy + '\'' +
+//                ", modifiedOn=" + modifiedOn +
+//                ", active=" + active +
+//                '}';
+//    }
 }

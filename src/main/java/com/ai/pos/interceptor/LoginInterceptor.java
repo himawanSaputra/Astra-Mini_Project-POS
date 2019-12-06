@@ -1,7 +1,6 @@
 package com.ai.pos.interceptor;
 
 import com.ai.pos.model.MstUser;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;

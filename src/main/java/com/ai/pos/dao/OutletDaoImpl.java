@@ -51,4 +51,11 @@ public class OutletDaoImpl implements OutletDao{
         Session session = sessionFactory.getCurrentSession();
         return session.createCriteria(MstOutlet.class).list();
     }
+
+    @Override
+    public void saveOrUpdateOutlet(MstOutlet mstOutlet) {
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(mstOutlet);
+        session.flush();
+    }
 }

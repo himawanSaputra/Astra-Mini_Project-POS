@@ -11,6 +11,7 @@ public interface EmployeeOutlet_Dao {
     public void deleteEmployeeOutlet(EmployeeOutlet employeeOutlet);
 
     public EmployeeOutlet findOne(int id);
+    public List<EmployeeOutlet> getByEmployeeId(int id);
     public List<EmployeeOutlet> getEmployeeOutletByEmployeeId(int id);
     public List<EmployeeOutlet> employeeOutlet();
 }

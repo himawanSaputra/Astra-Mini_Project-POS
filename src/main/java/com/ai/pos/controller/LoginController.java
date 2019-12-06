@@ -99,7 +99,7 @@ public class LoginController {
 
     @RequestMapping(value = "/login_outlet", method = RequestMethod.GET)
     public String loginOutlet(HttpSession session,
-                       Model m){
+                              Model m){
         MstUser user = (MstUser) session.getAttribute("user");
         List<EmployeeOutlet> employeeOutlets = this.employeeOutlet_service.getEmployeeOutletByEmployeeId(user.getMstEmployee().getId());
         //TRANSLATE TO HASHMAP

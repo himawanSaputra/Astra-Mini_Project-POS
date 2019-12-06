@@ -2,7 +2,6 @@ package com.ai.pos.controller;
 
 import com.ai.pos.model.MstItem;
 import com.ai.pos.model.MstOutlet;
-import com.ai.pos.model.MstUser;
 import com.ai.pos.model.TTransferStock;
 import com.ai.pos.service.MstItemService;
 import com.ai.pos.service.Outlet_Service;
@@ -68,7 +67,9 @@ public class TransferStockController {
     public @ResponseBody
     List<MstItem> searchTransferItem(
             @RequestParam("term") String name){
-        System.out.println(name);
+        if(name.isEmpty()){
+            return null;
+        }
         List<MstItem> lit = mstItemService.getByItemVariantName(name);
         return this.mstItemService.getByItemVariantName(name);
     }

@@ -21,6 +21,11 @@ public class Outlet_ServiceImpl implements Outlet_Service {
     }
 
     @Override
+    public void saveOrUpdateOutlet(MstOutlet mstOutlet) {
+        this.outletDao.saveOrUpdateOutlet(mstOutlet);
+    }
+
+    @Override
     public void updateOutlet(MstOutlet mstOutlet) {
         this.outletDao.updateOutlet(mstOutlet);
     }
