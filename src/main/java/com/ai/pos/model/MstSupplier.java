@@ -1,5 +1,7 @@
 package com.ai.pos.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -9,9 +11,10 @@ public class MstSupplier {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
 
-    @Column(name = "name", length = 50, nullable = false)
+    @Column(name = "name", length = 50, nullable = true)
     private String name;
 
     @Column(name = "address", length = 255, nullable = true)
@@ -23,35 +26,43 @@ public class MstSupplier {
     @Column(name = "email", nullable = true)
     private String email;
 
-    @ManyToOne(targetEntity = MstProvince.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "province_id", referencedColumnName = "id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "province_id")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private MstProvince mstProvince;
 
-    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "region_id", referencedColumnName = "id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "region_id")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private MstRegion mstRegion;
 
-    @ManyToOne(targetEntity = MstDistrict.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "district_id", referencedColumnName = "id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "district_id")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private MstDistrict mstDistrict;
 
     @Column(name = "postal_code", length = 50, nullable = true)
     private String postalCode;
 
-    @Column(name="created_by")
-    private String createdBy;
+    @ManyToOne
+    @JoinColumn(name="created_by")
+    private MstUser createdBy;
 
-    @Column(name = "created_on")
+    @Column(name = "created_on", nullable = true)
     private Date createdOn;
 
-    @Column(name="modifiedBy")
-    private String modifiedBy;
+    @ManyToOne
+    @JoinColumn(name="modified_by")
+    private MstUser modifiedBy;
 
-    @Column(name = "modified_on")
+    @Column(name = "modified_on", nullable = true)
     private Date modifiedOn;
 
-    @Column(name = "active", nullable = false)
+    @Column(name = "active", nullable = true)
     private Boolean active;
+
+    public MstSupplier() {
+    }
 
     public Integer getId() {
         return id;
@@ -125,11 +136,11 @@ public class MstSupplier {
         this.postalCode = postalCode;
     }
 
-    public String getCreatedBy() {
+    public MstUser getCreatedBy() {
         return createdBy;
     }
 
-    public void setCreatedBy(String createdBy) {
+    public void setCreatedBy(MstUser createdBy) {
         this.createdBy = createdBy;
     }
 
@@ -141,11 +152,11 @@ public class MstSupplier {
         this.createdOn = createdOn;
     }
 
-    public String getModifiedBy() {
+    public MstUser getModifiedBy() {
         return modifiedBy;
     }
 
-    public void setModifiedBy(String modifiedBy) {
+    public void setModifiedBy(MstUser modifiedBy) {
         this.modifiedBy = modifiedBy;
     }
 
@@ -164,7 +175,6 @@ public class MstSupplier {
     public void setActive(Boolean active) {
         this.active = active;
     }
-
     @Override
     public String toString() {
         return "MstSupplier{" +
@@ -177,9 +187,9 @@ public class MstSupplier {
                 ", mstRegion=" + mstRegion +
                 ", mstDistrict=" + mstDistrict +
                 ", postalCode='" + postalCode + '\'' +
-                ", createdBy='" + createdBy + '\'' +
+                ", createdBy=" + createdBy +
                 ", createdOn=" + createdOn +
-                ", modifiedBy='" + modifiedBy + '\'' +
+                ", modifiedBy=" + modifiedBy +
                 ", modifiedOn=" + modifiedOn +
                 ", active=" + active +
                 '}';

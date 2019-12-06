@@ -2,6 +2,7 @@ package com.ai.pos.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "pos_mst_user")

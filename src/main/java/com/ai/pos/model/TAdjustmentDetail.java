@@ -37,6 +37,11 @@ public class TAdjustmentDetail {
     @Column(name = "modified_on")
     private Date modifiedOn;
 
+
+    public TAdjustmentDetail() {
+    }
+
+
     public Integer getId() {
         return Id;
     }

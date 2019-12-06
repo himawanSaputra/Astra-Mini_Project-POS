@@ -1,37 +1,55 @@
 package com.ai.pos.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "pos_mst_district")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MstDistrict {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = MstRegion.class, fetch = FetchType.LAZY)
-    @JoinColumn(name="region_id", referencedColumnName = "id", nullable = false)
+    @ManyToOne(
+            cascade= {CascadeType.PERSIST, CascadeType.MERGE,
+                    CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "region_id")
     private  MstRegion mstRegion;
 
-    @Column(name = "name", length = 50, nullable = false)
+    @Column(name = "name", length = 50)
     private String name;
 
-    @Column(name="created_by")
-    private String createdBy;
+    @ManyToOne
+    @JoinColumn(name="created_by")
+    private MstUser createdBy;
 
     @Column(name = "created_on")
     private Date createdOn;
 
-    @Column(name="modifiedBy")
-    private String modifiedBy;
+    @ManyToOne
+    @JoinColumn(name="modified_by")
+    private MstUser modifiedBy;
 
     @Column(name = "modified_on")
     private Date modifiedOn;
 
-    @Column(name = "active", nullable = false)
+    @Column(name = "active")
     private Boolean active;
+
+    @JsonIgnore
+    @OneToMany( mappedBy = "mstRegion",
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE,
+                    CascadeType.DETACH, CascadeType.REFRESH})
+    private List<MstSupplier> mstSupplierList;
+
+    public MstDistrict() {
+    }
 
     public Integer getId() {
         return id;
@@ -57,11 +75,11 @@ public class MstDistrict {
         this.name = name;
     }
 
-    public String getCreatedBy() {
+    public MstUser getCreatedBy() {
         return createdBy;
     }
 
-    public void setCreatedBy(String createdBy) {
+    public void setCreatedBy(MstUser createdBy) {
         this.createdBy = createdBy;
     }
 
@@ -73,11 +91,11 @@ public class MstDistrict {
         this.createdOn = createdOn;
     }
 
-    public String getModifiedBy() {
+    public MstUser getModifiedBy() {
         return modifiedBy;
     }
 
-    public void setModifiedBy(String modifiedBy) {
+    public void setModifiedBy(MstUser modifiedBy) {
         this.modifiedBy = modifiedBy;
     }
 
@@ -97,15 +115,23 @@ public class MstDistrict {
         this.active = active;
     }
 
+    public List<MstSupplier> getMstSupplierList() {
+        return mstSupplierList;
+    }
+
+    public void setMstSupplierList(List<MstSupplier> mstSupplierList) {
+        this.mstSupplierList = mstSupplierList;
+    }
+
     @Override
     public String toString() {
         return "MstDistrict{" +
                 "id=" + id +
                 ", mstRegion=" + mstRegion +
                 ", name='" + name + '\'' +
-                ", createdBy='" + createdBy + '\'' +
+                ", createdBy=" + createdBy +
                 ", createdOn=" + createdOn +
-                ", modifiedBy='" + modifiedBy + '\'' +
+                ", modifiedBy=" + modifiedBy +
                 ", modifiedOn=" + modifiedOn +
                 ", active=" + active +
                 '}';
