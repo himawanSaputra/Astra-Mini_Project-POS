@@ -88,6 +88,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-4">
+                                    <label for="province" class="col-form-label"> Province </label>
                                     <form:select path="provinceId.id"  class="form-control" id="province" required="required">
                                         <form:option value="0" label="-Select Province-" disabled="true"/>
                                         <form:options items="${provinceList}" />
@@ -95,6 +96,7 @@
                                 </div>
 
                                 <div class="col-4">
+                                    <label for="region" class="col-form-label"> Region </label>
                                     <form:select path="regionId.id"  class="form-control" id="region" required="required">
                                         <form:option value="0" label="-Select Region-" disabled="true"/>
                                         <form:options items="${regionList}"/>

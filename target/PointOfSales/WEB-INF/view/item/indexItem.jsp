@@ -24,11 +24,7 @@
                 <input class="form-control" id="myInput" type="search" placeholder="Search"/>
             </div>
             <div class="form-group col-sm-8" align="right">
-<<<<<<< HEAD
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createCategory">
-=======
-                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#createCategory">
->>>>>>> d492fc9dc0e3c7bd2ec6e11584060a45db59be75
                     Export
                 </button>
             </div>
@@ -57,14 +53,12 @@
             <tbody id="myTable">
             <c:forEach var="item" items="${items}">
                 <tr>
-<%--<<<<<<< HEAD--%>
 <%--                    <td>${item.mstItemVariant.mstItem.name}</td>--%>
 <%--                    <td>${item.mstItemVariant.mstItem.category_id.name}</td>--%>
 <%--                    <td>${item.mstItemVariant.price}</td>--%>
 <%--                    <td>${item.mstItemVariant.sku}</td>--%>
 <%--                    <td>${item.alertAtQty}</td>--%>
 <%--                    <td><a data-toggle="modal" data-target="#editItem">Edit</a></td>--%>
-<%--=======--%>
 
                     <td>${item.mstItemVariant.mstItem.name}</td>
                     <td>${item.mstItemVariant.mstItem.category_id.name}</td>
@@ -79,13 +73,9 @@
                     <c:if test="${item.endingQty > item.alertAtQty}">
                         <td>Normal</td>
                     </c:if></td>
-<<<<<<< HEAD
-                    <td><button data-toggle="modal" class="btn btn-primary" data-target="#create-editItem">Edit</button></td>
 
+                    <td><button data-toggle="modal" class="btn btn-outline-primary" data-target="#create-editItem">Edit</button></td>
 
-=======
-                    <td><a data-toggle="modal" data-target="#create-editItem">Edit</a></td>
->>>>>>> e1bbd412862ecaa9f63704ffa893447e16d3f3d2
                 </tr>
             </c:forEach>
             </tbody>

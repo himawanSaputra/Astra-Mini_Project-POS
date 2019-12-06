@@ -74,7 +74,7 @@
                         <td>Normal</td>
                     </c:if></td>
 
-                    <td><button data-toggle="modal" class="btn btn-primary" data-target="#create-editItem">Edit</button></td>
+                    <td><button data-toggle="modal" class="btn btn-outline-primary" data-target="#create-editItem">Edit</button></td>
 
                 </tr>
             </c:forEach>

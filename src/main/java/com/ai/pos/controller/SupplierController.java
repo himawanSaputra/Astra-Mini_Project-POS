@@ -19,8 +19,6 @@ import java.util.List;
 @RequestMapping("/supplier")
 public class SupplierController {
 
-
-
     @Autowired
     private Service<MstSupplier> supplierService;
 

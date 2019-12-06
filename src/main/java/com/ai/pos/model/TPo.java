@@ -11,15 +11,15 @@ public class TPo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = TPr.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "pr_id", referencedColumnName = "id", nullable = false)
     private TPr tPr;
 
-    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstOutlet.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "outlet_id", referencedColumnName = "id", nullable = false)
     private MstOutlet mstOutlet;
 
-    @ManyToOne(targetEntity = MstSupplier.class, fetch = FetchType.LAZY)
+    @ManyToOne(targetEntity = MstSupplier.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "supplier_id", referencedColumnName = "id", nullable = false)
     private MstSupplier mstSupplier;
 

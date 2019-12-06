@@ -8,21 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<<<<<<< HEAD
 
 
-<div class="container">
-<%--    modal--%>
-
-
-    <h2>Outlets</h2>
-    <div>
-
-    <hr>
-        <div class="container">
-
-=======
->>>>>>> e1bbd412862ecaa9f63704ffa893447e16d3f3d2
     <div class="row">
         <div class="col-12">
             <div class="row">
@@ -57,11 +44,9 @@
                             <td>${cur_outlet.phone}</td>
                             <td>${cur_outlet.email}</td>
                             <td>
-<<<<<<< HEAD
+
                                 <button class="btn btn-outline-primary" data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#createOutlet">
-=======
-                                <a data-toggle="modal" href="#" id="edit-outlet" onclick="toLink(${cur_outlet.id})" data-target="#exampleModal">
->>>>>>> e1bbd412862ecaa9f63704ffa893447e16d3f3d2
+
                                     Edit
                                 </button>
                             </td>
@@ -103,6 +88,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-4">
+                                    <label for="province" class="col-form-label"> Province </label>
                                     <form:select path="provinceId.id"  class="form-control" id="province" required="required">
                                         <form:option value="0" label="-Select Province-" disabled="true"/>
                                         <form:options items="${provinceList}" />
@@ -110,6 +96,7 @@
                                 </div>
 
                                 <div class="col-4">
+                                    <label for="region" class="col-form-label"> Region </label>
                                     <form:select path="regionId.id"  class="form-control" id="region" required="required">
                                         <form:option value="0" label="-Select Region-" disabled="true"/>
                                         <form:options items="${regionList}"/>

@@ -227,7 +227,7 @@
 
         console.log("toLink " + id);
         $.ajax({
-            url: "${pageContext.request.contextPath}/rest/supplier/get/" + id,
+                url: "${pageContext.request.contextPath}/rest/supplier/get/" + id,
             contentType: 'application/json',
             dataType: 'json',
             success: function (data) {
@@ -253,6 +253,7 @@
                     province.prop('selectedIndex', 0);
                     region.empty();
                     district1.empty();
+                    district1.append('<option selected="true" disabled>--Choose--</option>');
 
                 }
 
@@ -339,7 +340,7 @@
         district.empty();
         region.append('<option selected="true" disabled>--Choose--</option>');
         region.prop('selectedIndex', 0);
-
+        district.append('<option selected="true" disabled>--Choose--</option>');
         if(this.value == 0){
             region.empty();
             district.empty();

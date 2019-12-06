@@ -78,7 +78,7 @@
                                 <td>${cur_listTPrDetail.tPr.notes}</td>
                                 <td>${cur_listTPrDetail.tPr.status} </td>
                                 <td>
-                                   <button class="btn btn-primary">
+                                   <button class="btn btn-outline-primary">
                                         Edit
                                    </button>
                                     <button class="btn btn-outline-primary">

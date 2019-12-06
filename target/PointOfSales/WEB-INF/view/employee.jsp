@@ -136,11 +136,19 @@
                             <td>${cur_employee.firstName}</td>
                             <td>${cur_employee.email}</td>
                             <td>${cur_employee.haveAccount}</td>
-                            <td>${cur_employee.mstUser.mstRole.description} </td>
+                            <td>
+                                <c:if test="${!cur_employee.employeeOutlet.isEmpty()}">
+                                ${cur_employee.employeeOutlet.get(0).mstOutlet.name}
+                                </c:if>
+                            </td>
                             <td>${cur_employee.mstUser.mstRole.name} </td>
                             <td>
                                 <c:if test="${sessionScope.user.mstRole.id == 1}">
-                                    <a href="<c:url value='/edit_employee/${cur_employee.id}'/>">Edit</a>
+                                    <button class="btn btn-outline-primary"
+                                            onclick="location.href='<c:url value="/edit_employee/${cur_employee.id}"/>'">
+                                        Edit
+                                    </button>
+<%--                                    <a href="<c:url value='/edit_employee/${cur_employee.id}'/>">Edit</a>--%>
                                     <button class="btn btn-danger" onclick="location.href='<c:url value="/remove_employee/${cur_employee.id}"/>'">X</button>
                                 </c:if>
                             </td>

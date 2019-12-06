@@ -92,7 +92,7 @@
                                         <li><a href="<c:url value="/purchase_request"/>" class="pr-5 text-center bg-secondary">Purchase Request</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
-                                        <li><a href="#" class="pr-5 text-center bg-secondary">Purchase Order</a></li>
+                                        <li><a href="<c:url value="/po/list"/>" class="pr-5 text-center bg-secondary">Purchase Order</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.user.mstRole.id == 2}">
                                         <li><a href="#" class="pr-5 text-center bg-secondary">Adjustment</a></li>
